@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClearSight - Theory of Constraints Analysis</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-container">
+                <div class="logo">
+                    <h1>🏥 ClearSight Analysis</h1>
+                    <p class="subtitle">Theory of Constraints & Process Engineering</p>
+                </div>
+                <nav class="nav-menu" aria-label="Main Navigation">
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="pages/context.html">Context</a></li>
+                        <li><a href="pages/challenges.html">Challenges</a></li>
+                        <li><a href="pages/actual-issues.html">Actual Issues</a></li>
+                        <li><a href="pages/financial-analysis.html">Financial Analysis</a></li>
+                        <li><a href="pages/strategy.html">Strategy</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>ClearSight Eye Care Center</h2>
+            <p>Strategic Process Engineering & Theory of Constraints Analysis</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">42</span>
+                    <span class="stat-label">Days Average Waiting</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">60%</span>
+                    <span class="stat-label">Capacity Utilization</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">$180K</span>
+                    <span class="stat-label">Monthly Revenue Loss</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Quick Overview Cards -->
+        <section class="overview-section">
+            <div class="overview-grid">
+                <div class="overview-card">
+                    <div class="card-icon">📋</div>
+                    <h3><a href="pages/context.html">Business Context</a></h3>
+                    <p>Market position & operations</p>
+                </div>
+
+                <div class="overview-card">
+                    <div class="card-icon">⚠️</div>
+                    <h3><a href="pages/challenges.html">Key Challenges</a></h3>
+                    <p>Operational bottlenecks</p>
+                </div>
+
+                <div class="overview-card">
+                    <div class="card-icon">🔍</div>
+                    <h3><a href="pages/actual-issues.html">Root Cause Analysis</a></h3>
+                    <p>TOC constraint identification</p>
+                </div>
+
+                <div class="overview-card">
+                    <div class="card-icon">💰</div>
+                    <h3><a href="pages/financial-analysis.html">Financial Impact</a></h3>
+                    <p>P&L analysis & revenue loss</p>
+                </div>
+
+                <div class="overview-card">
+                    <div class="card-icon">🚀</div>
+                    <h3><a href="pages/strategy.html">Strategic Solutions</a></h3>
+                    <p>TOC-based recommendations</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Theory of Constraints Visual -->
+        <section class="toc-primer">
+            <h2>Goldratt's Theory of Constraints</h2>
+            <div class="toc-visual">
+                <svg viewBox="0 0 600 200" class="toc-diagram">
+                    <defs>
+                        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+                        </marker>
+                    </defs>
+                    <text x="50" y="30" class="toc-step-text">1. IDENTIFY</text>
+                    <text x="50" y="50" class="toc-step-sub">the constraint</text>
+                    <line x1="150" y1="40" x2="200" y2="40" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+                    
+                    <text x="220" y="30" class="toc-step-text">2. EXPLOIT</text>
+                    <text x="220" y="50" class="toc-step-sub">maximize capacity</text>
+                    <line x1="320" y1="40" x2="370" y2="40" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+                    
+                    <text x="390" y="30" class="toc-step-text">3. SUBORDINATE</text>
+                    <text x="390" y="50" class="toc-step-sub">align resources</text>
+                    <line x1="490" y1="40" x2="540" y2="40" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+                    
+                    <text x="50" y="120" class="toc-step-text">4. ELEVATE</text>
+                    <text x="50" y="140" class="toc-step-sub">invest & redesign</text>
+                    <line x1="150" y1="130" x2="200" y2="130" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+                    
+                    <text x="220" y="120" class="toc-step-text">5. REPEAT</text>
+                    <text x="220" y="140" class="toc-step-sub">next constraint</text>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Key Metrics Dashboard -->
+        <section class="metrics-section">
+            <h2>📊 Current State</h2>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-icon">👥</div>
+                    <div class="metric-value">450</div>
+                    <div class="metric-label">Patients/Month</div>
+                    <div class="metric-bar"><div class="bar-fill" style="width: 100%"></div></div>
+                </div>
+                <div class="metric-card bottleneck">
+                    <div class="metric-icon">⏱️</div>
+                    <div class="metric-value">42</div>
+                    <div class="metric-label">Days Wait</div>
+                    <div class="metric-bar"><div class="bar-fill critical" style="width: 70%"></div></div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">🏥</div>
+                    <div class="metric-value">60%</div>
+                    <div class="metric-label">OR Utilization</div>
+                    <div class="metric-bar"><div class="bar-fill" style="width: 60%"></div></div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">💵</div>
+                    <div class="metric-value">$180K</div>
+                    <div class="metric-label">Revenue Loss</div>
+                    <div class="metric-bar"><div class="bar-fill loss" style="width: 40%"></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conveyor Belt Process Visualization -->
+        <section class="conveyor-section">
+            <div class="conveyor-container">
+                <h2>🏭 Cataract Surgery Process Flow</h2>
+                <p class="conveyor-description">Patient journey visualized as a production line with bottlenecks highlighted.</p>
+
+                <div class="conveyor-belt">
+                    <!-- Patient Intake -->
+                    <div class="process-stage" data-stage="intake" data-tooltip="Patient consultation and initial assessment">
+                        <div class="stage-icon">👁️</div>
+                        <h4>Intake</h4>
+                        <div class="stage-metrics">
+                            <span class="metric">450/mo</span>
+                        </div>
+                        <div class="stage-status">✅</div>
+                    </div>
+
+                    <div class="conveyor-arrow">→</div>
+
+                    <!-- Pre-Op Assessment -->
+                    <div class="process-stage" data-stage="assessment" data-tooltip="Comprehensive eye examination and surgical planning">
+                        <div class="stage-icon">🔍</div>
+                        <h4>Assessment</h4>
+                        <div class="stage-metrics">
+                            <span class="metric">380/mo</span>
+                        </div>
+                        <div class="stage-status">⚠️</div>
+                    </div>
+
+                    <div class="conveyor-arrow">→</div>
+
+                    <!-- Scheduling -->
+                    <div class="process-stage bottleneck critical-bottleneck" data-stage="scheduling" data-tooltip="OR scheduling and resource allocation - MAJOR BOTTLENECK">
+                        <div class="stage-icon">📅</div>
+                        <h4>OR Scheduling</h4>
+                        <div class="stage-metrics">
+                            <span class="metric">270/mo</span>
+                        </div>
+                        <div class="stage-status critical">🔴</div>
+                        <div class="bottleneck-indicator">
+                            <div class="backup-queue">42-day queue</div>
+                        </div>
+                    </div>
+
+                    <div class="conveyor-arrow blocked">→</div>
+
+                    <!-- Surgery -->
+                    <div class="process-stage" data-stage="surgery" data-tooltip="Cataract surgery procedure">
+                        <div class="stage-icon">⚕️</div>
+                        <h4>Surgery</h4>
+                        <div class="stage-metrics">
+                            <span class="metric">270/mo</span>
+                        </div>
+                        <div class="stage-status">⏳</div>
+                    </div>
+
+                    <div class="conveyor-arrow">→</div>
+
+                    <!-- Post-Op Care -->
+                    <div class="process-stage" data-stage="recovery" data-tooltip="Post-operative care and follow-up">
+                        <div class="stage-icon">🏥</div>
+                        <h4>Recovery</h4>
+                        <div class="stage-metrics">
+                            <span class="metric">270/mo</span>
+                        </div>
+                        <div class="stage-status">✅</div>
+                    </div>
+                </div>
+
+                <div class="conveyor-insights">
+                    <div class="insight-card">
+                        <h4>🎯 Key Constraint</h4>
+                        <p><strong>OR Scheduling</strong> limits throughput to 60% capacity</p>
+                    </div>
+                    <div class="insight-card">
+                        <h4>💰 Impact</h4>
+                        <p>$180K monthly revenue loss from 42-day waits</p>
+                    </div>
+                    <div class="insight-card">
+                        <h4>🔄 Flow</h4>
+                        <p>450 in → 270 out due to bottleneck</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Executive Summary -->
+        <section class="executive-summary">
+            <div class="summary-container">
+                <h2>🎯 The Bottleneck Crisis</h2>
+                <div class="summary-content">
+                    <div class="summary-stat">
+                        <div class="stat-icon">📉</div>
+                        <div class="stat-number">40%</div>
+                        <div class="stat-label">Capacity Lost</div>
+                    </div>
+                    <div class="summary-stat">
+                        <div class="stat-icon">💸</div>
+                        <div class="stat-number">$180K</div>
+                        <div class="stat-label">Monthly Loss</div>
+                    </div>
+                    <div class="summary-stat">
+                        <div class="stat-icon">⏳</div>
+                        <div class="stat-number">42</div>
+                        <div class="stat-label">Days Wait</div>
+                    </div>
+                </div>
+
+                <div class="summary-insight">
+                    <h3>🔍 Root Cause</h3>
+                    <p>OR Scheduling bottleneck creates 42-day backup, limiting surgery to 60% capacity.</p>
+
+                    <h3>🚀 Solution Path</h3>
+                    <p>Apply TOC: Exploit scheduling, Subordinate resources, Elevate with investment.</p>
+                </div>
+
+                <div class="call-to-action">
+                    <a href="pages/strategy.html" class="btn btn-primary">View Strategy →</a>
+                    <a href="pages/financial-analysis.html" class="btn btn-secondary">Financial Analysis →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p style="font-size: 1.1rem; margin-bottom: 1rem;">
+                <strong>ClearSight Analysis Portal</strong> | Theory of Constraints Applied to Healthcare
+            </p>
+            <p>Strategic Process Engineering & Operations Excellence Analysis</p>
+            <p style="font-size: 0.9rem; margin-top: 1.5rem; opacity: 0.8;">
+                Based on Eliyahu M. Goldratt's "The Goal" and Theory of Constraints (TOC) Principles
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Analysis - ClearSight</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <h1>🏥 ClearSight Analysis</h1>
+                <p class="subtitle">Theory of Constraints & Process Engineering</p>
+            </div>
+            <nav class="nav-menu" aria-label="Main Navigation">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="context.html">Context</a></li>
+                    <li><a href="challenges.html">Challenges</a></li>
+                    <li><a href="actual-issues.html">Actual Issues</a></li>
+                    <li><a href="financial-analysis.html" class="active">Financial Analysis</a></li>
+                    <li><a href="strategy.html">Strategy</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="content-section">
+            <h2>💰 Profit & Loss Analysis - Current vs. Potential</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 2rem; color: #666;">
+                Comprehensive financial analysis showing the impact of constraints on organizational profitability and cash flow.
+            </p>
+
+            <div class="subsection">
+                <h3>📈 Financial Performance Simulation</h3>
+                <p>Visual comparison of key financial metrics between Current State and Optimized State.</p>
+                
+                <div class="visual-container" style="text-align: center;">
+                    <svg id="financial-chart" width="100%" height="400" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid meet">
+                        <!-- Definitions for Gradients -->
+                        <defs>
+                            <linearGradient id="barCurrent" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#9ca3af" />
+                                <stop offset="100%" stop-color="#4b5563" />
+                            </linearGradient>
+                            <linearGradient id="barOptimized" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#34d399" />
+                                <stop offset="100%" stop-color="#059669" />
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- Axis Lines -->
+                        <line x1="80" y1="350" x2="750" y2="350" stroke="#333" stroke-width="2" /> <!-- X Axis -->
+                        <line x1="80" y1="50" x2="80" y2="350" stroke="#333" stroke-width="2" />  <!-- Y Axis -->
+                        
+                        <!-- Grid Lines -->
+                        <line x1="80" y1="275" x2="750" y2="275" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4" />
+                        <line x1="80" y1="200" x2="750" y2="200" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4" />
+                        <line x1="80" y1="125" x2="750" y2="125" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4" />
+                        
+                         <!-- Y Axis Labels -->
+                        <text x="70" y="355" text-anchor="end" font-size="12" fill="#666">$0M</text>
+                        <text x="70" y="280" text-anchor="end" font-size="12" fill="#666">$15M</text>
+                        <text x="70" y="205" text-anchor="end" font-size="12" fill="#666">$30M</text>
+                        <text x="70" y="130" text-anchor="end" font-size="12" fill="#666">$45M</text>
+                        <text x="70" y="55" text-anchor="end" font-size="12" fill="#666">$60M</text>
+
+                        <!-- Data Groups -->
+                        <!-- Revenue -->
+                        <g transform="translate(150, 0)">
+                            <!-- Current -->
+                            <rect x="0" y="140" width="60" height="210" fill="url(#barCurrent)" class="chart-bar" data-val="210" />
+                            <text x="30" y="130" text-anchor="middle" font-weight="bold" fill="#4b5563">$42M</text>
+                            
+                            <!-- Optimized -->
+                            <rect x="70" y="15" width="60" height="335" fill="url(#barOptimized)" class="chart-bar" data-val="335" style="opacity: 0.3" />
+                            <text x="100" y="10" text-anchor="middle" font-weight="bold" fill="#059669" style="opacity: 0.3">$67.5M</text>
+                            
+                            <text x="65" y="375" text-anchor="middle" font-weight="bold" fill="#333">REVENUE</text>
+                        </g>
+
+                        <!-- EBITDA -->
+                        <g transform="translate(350, 0)">
+                             <!-- Current -->
+                            <rect x="0" y="285" width="60" height="65" fill="url(#barCurrent)" class="chart-bar" />
+                            <text x="30" y="275" text-anchor="middle" font-weight="bold" fill="#4b5563">$13M</text>
+                            
+                            <!-- Optimized -->
+                            <rect x="70" y="180" width="60" height="170" fill="url(#barOptimized)" class="chart-bar" style="opacity: 0.3" />
+                            <text x="100" y="170" text-anchor="middle" font-weight="bold" fill="#059669" style="opacity: 0.3">$33.7M</text>
+
+                            <text x="65" y="375" text-anchor="middle" font-weight="bold" fill="#333">EBITDA</text>
+                        </g>
+
+                        <!-- Net Profit -->
+                        <g transform="translate(550, 0)">
+                             <!-- Current -->
+                            <rect x="0" y="295" width="60" height="55" fill="url(#barCurrent)" class="chart-bar" />
+                            <text x="30" y="285" text-anchor="middle" font-weight="bold" fill="#4b5563">$11M</text>
+                            
+                            <!-- Optimized -->
+                            <rect x="70" y="190" width="60" height="160" fill="url(#barOptimized)" class="chart-bar" style="opacity: 0.3" />
+                            <text x="100" y="180" text-anchor="middle" font-weight="bold" fill="#059669" style="opacity: 0.3">$31.8M</text>
+
+                            <text x="65" y="375" text-anchor="middle" font-weight="bold" fill="#333">NET PROFIT</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark);"><strong>Net Revenue</strong></td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right;"><strong>$56,778,525</strong></td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right;"><strong>84.1%</strong></td>
+                    </tr>
+                    <tr style="background: #efe;">
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark);"><strong>EBITDA</strong></td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right;"><strong>$33,713,525</strong></td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right;"><strong>49.9%</strong></td>
+                    </tr>
+                    <tr style="background: #fef3c7;">
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark);"><strong>Operating Profit (EBIT)</strong></td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right;"><strong>$32,363,525</strong></td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right;"><strong>47.9%</strong></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.8rem;">Interest Expense</td>
+                        <td style="padding: 0.8rem; text-align: right;">($600,000)</td>
+                        <td style="padding: 0.8rem; text-align: right;">-0.9%</td>
+                    </tr>
+                    <tr style="background: #fff3cd;">
+                        <td style="padding: 0.8rem;"><strong>Net Profit (Before Tax)</strong></td>
+                        <td style="padding: 0.8rem; text-align: right;"><strong>$31,763,525</strong></td>
+                        <td style="padding: 0.8rem; text-align: right;"><strong>47.0%</strong></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="overview-grid" style="margin-top: 2rem;">
+                <div style="background: linear-gradient(135deg, #e0f2fe 0%, #cffafe 100%); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--info); text-align: center;">
+                    <h4 style="color: var(--info); margin-bottom: 0.5rem;">Annual Revenue Increase</h4>
+                    <p style="font-size: 2rem; color: var(--info); font-weight: bold; margin: 0.5rem 0;">+$25.5M</p>
+                    <p style="color: #666; font-size: 0.9rem; margin: 0;">61% gross revenue increase</p>
+                </div>
+                <div style="background: linear-gradient(135deg, #e0f2fe 0%, #cffafe 100%); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--info); text-align: center;">
+                    <h4 style="color: var(--info); margin-bottom: 0.5rem;">Net Profit Increase</h4>
+                    <p style="font-size: 2rem; color: var(--info); font-weight: bold; margin: 0.5rem 0;">+$20.6M</p>
+                    <p style="color: #666; font-size: 0.9rem; margin: 0;">184% improvement in profitability</p>
+                </div>
+                <div style="background: linear-gradient(135deg, #e0f2fe 0%, #cffafe 100%); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--info); text-align: center;">
+                    <h4 style="color: var(--info); margin-bottom: 0.5rem;">EBITDA Margin</h4>
+                    <p style="font-size: 2rem; color: var(--info); font-weight: bold; margin: 0.5rem 0;">+18.5%</p>
+                    <p style="color: #666; font-size: 0.9rem; margin: 0;">From 31.4% to 49.9%</p>
+                </div>
+                <div style="background: linear-gradient(135deg, #e0f2fe 0%, #cffafe 100%); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--info); text-align: center;">
+                    <h4 style="color: var(--info); margin-bottom: 0.5rem;">Cash Flow Acceleration</h4>
+                    <p style="font-size: 2rem; color: var(--info); font-weight: bold; margin: 0.5rem 0;">+$19.5M</p>
+                    <p style="color: #666; font-size: 0.9rem; margin: 0;">Annual cash generation increase</p>
+                </div>
+            </div>
+
+            <div class="subsection" style="margin-top: 2rem;">
+                <h4>Constraint Impact Quantification</h4>
+                
+                <!-- Waterfall Chart for Impact Quantification -->
+                <div class="visual-container" style="background: white; padding: 2rem; border-radius: 12px; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                     <h5 style="text-align: center; margin-bottom: 1.5rem; color: #4b5563;">Potential Profit Improvement Waterfall ($ Millions)</h5>
+                     <svg width="100%" height="400" viewBox="0 0 800 400">
+                        <defs>
+                            <linearGradient id="gradGreen" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#86efac" />
+                                <stop offset="100%" stop-color="#22c55e" />
+                            </linearGradient>
+                             <linearGradient id="gradBlueBar" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#93c5fd" />
+                                <stop offset="100%" stop-color="#3b82f6" />
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- Axis -->
+                        <line x1="50" y1="350" x2="750" y2="350" stroke="#666" stroke-width="2"/>
+                        <line x1="50" y1="50" x2="50" y2="350" stroke="#666" stroke-width="1"/>
+                        
+                        <!-- Y Axis Labels -->
+                        <text x="40" y="350" text-anchor="end" font-size="10">$0</text>
+                        <text x="40" y="275" text-anchor="end" font-size="10">$10M</text>
+                        <text x="40" y="200" text-anchor="end" font-size="10">$20M</text>
+                        <text x="40" y="125" text-anchor="end" font-size="10">$30M</text>
+                        
+                        <!-- Bars -->
+                        <!-- 1. OR: +5.3M -->
+                        <rect x="80" y="310" width="60" height="40" fill="url(#gradGreen)" stroke="#166534"/>
+                        <text x="110" y="300" text-anchor="middle" font-size="10" font-weight="bold">+$5.3M</text>
+                        <text x="110" y="370" text-anchor="middle" font-size="10">OR Imp.</text>
+                        <line x1="80" y1="310" x2="140" y2="310" stroke="#9ca3af" stroke-dasharray="2"/>
+
+                        <!-- 2. Pre-Auth: +4.6M (Starts at 5.3) -->
+                        <rect x="160" y="275" width="60" height="35" fill="url(#gradGreen)" stroke="#166534"/>
+                        <text x="190" y="265" text-anchor="middle" font-size="10" font-weight="bold">+$4.6M</text>
+                         <text x="190" y="370" text-anchor="middle" font-size="10">Pre-Auth</text>
+                         
+                        <!-- 3. Billing: +4.2M (Starts at 9.9) -->
+                        <rect x="240" y="243" width="60" height="32" fill="url(#gradGreen)" stroke="#166534"/>
+                        <text x="270" y="233" text-anchor="middle" font-size="10" font-weight="bold">+$4.2M</text>
+                        <text x="270" y="370" text-anchor="middle" font-size="10">Billing</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark);"><strong>Net Revenue</strong></td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right;"><strong>$56,778,525</strong></td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right;"><strong>84.1%</strong></td>
+                    </tr>
+                    <tr style="background: #efe;">
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark);"><strong>EBITDA</strong></td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right;"><strong>$33,713,525</strong></td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right;"><strong>49.9%</strong></td>
+                    </tr>
+                    <tr style="background: #fef3c7;">
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark);"><strong>Operating Profit (EBIT)</strong></td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right;"><strong>$32,363,525</strong></td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right;"><strong>47.9%</strong></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.8rem;">Interest Expense</td>
+                        <td style="padding: 0.8rem; text-align: right;">($600,000)</td>
+                        <td style="padding: 0.8rem; text-align: right;">-0.9%</td>
+                    </tr>
+                    <tr style="background: #fff3cd;">
+                        <td style="padding: 0.8rem;"><strong>Net Profit (Before Tax)</strong></td>
+                        <td style="padding: 0.8rem; text-align: right;"><strong>$31,763,525</strong></td>
+                        <td style="padding: 0.8rem; text-align: right;"><strong>47.0%</strong></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="overview-grid" style="margin-top: 2rem;">
+                <div style="background: linear-gradient(135deg, #e0f2fe 0%, #cffafe 100%); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--info); text-align: center;">
+                    <h4 style="color: var(--info); margin-bottom: 0.5rem;">Annual Revenue Increase</h4>
+                    <p style="font-size: 2rem; color: var(--info); font-weight: bold; margin: 0.5rem 0;">+$25.5M</p>
+                    <p style="color: #666; font-size: 0.9rem; margin: 0;">61% gross revenue increase</p>
+                </div>
+                <div style="background: linear-gradient(135deg, #e0f2fe 0%, #cffafe 100%); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--info); text-align: center;">
+                    <h4 style="color: var(--info); margin-bottom: 0.5rem;">Net Profit Increase</h4>
+                    <p style="font-size: 2rem; color: var(--info); font-weight: bold; margin: 0.5rem 0;">+$20.6M</p>
+                    <p style="color: #666; font-size: 0.9rem; margin: 0;">184% improvement in profitability</p>
+                </div>
+                <div style="background: linear-gradient(135deg, #e0f2fe 0%, #cffafe 100%); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--info); text-align: center;">
+                    <h4 style="color: var(--info); margin-bottom: 0.5rem;">EBITDA Margin</h4>
+                    <p style="font-size: 2rem; color: var(--info); font-weight: bold; margin: 0.5rem 0;">+18.5%</p>
+                    <p style="color: #666; font-size: 0.9rem; margin: 0;">From 31.4% to 49.9%</p>
+                </div>
+                <div style="background: linear-gradient(135deg, #e0f2fe 0%, #cffafe 100%); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--info); text-align: center;">
+                    <h4 style="color: var(--info); margin-bottom: 0.5rem;">Cash Flow Acceleration</h4>
+                    <p style="font-size: 2rem; color: var(--info); font-weight: bold; margin: 0.5rem 0;">+$19.5M</p>
+                    <p style="color: #666; font-size: 0.9rem; margin: 0;">Annual cash generation increase</p>
+                </div>
+            </div>
+
+            <div class="subsection" style="margin-top: 2rem;">
+                <h4>Constraint Impact Quantification</h4>
+                
+                <!-- Waterfall Chart for Impact Quantification -->
+                <div class="visual-container" style="background: white; padding: 2rem; border-radius: 12px; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                     <h5 style="text-align: center; margin-bottom: 1.5rem; color: #4b5563;">Potential Profit Improvement Waterfall ($ Millions)</h5>
+                     <svg width="100%" height="400" viewBox="0 0 800 400">
+                        <defs>
+                            <linearGradient id="gradGreen" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#86efac" />
+                                <stop offset="100%" stop-color="#22c55e" />
+                            </linearGradient>
+                             <linearGradient id="gradBlueBar" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#93c5fd" />
+                                <stop offset="100%" stop-color="#3b82f6" />
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- Axis -->
+                        <line x1="50" y1="350" x2="750" y2="350" stroke="#666" stroke-width="2"/>
+                        <line x1="50" y1="50" x2="50" y2="350" stroke="#666" stroke-width="1"/>
+                        
+                        <!-- Y Axis Labels -->
+                        <text x="40" y="350" text-anchor="end" font-size="10">$0</text>
+                        <text x="40" y="275" text-anchor="end" font-size="10">$10M</text>
+                        <text x="40" y="200" text-anchor="end" font-size="10">$20M</text>
+                        <text x="40" y="125" text-anchor="end" font-size="10">$30M</text>
+                        
+                        <!-- Bars -->
+                        <!-- 1. OR: +5.3M -->
+                        <rect x="80" y="310" width="60" height="40" fill="url(#gradGreen)" stroke="#166534"/>
+                        <text x="110" y="300" text-anchor="middle" font-size="10" font-weight="bold">+$5.3M</text>
+                        <text x="110" y="370" text-anchor="middle" font-size="10">OR Imp.</text>
+                        <line x1="80" y1="310" x2="140" y2="310" stroke="#9ca3af" stroke-dasharray="2"/>
+
+                        <!-- 2. Pre-Auth: +4.6M (Starts at 5.3) -->
+                        <rect x="160" y="275" width="60" height="35" fill="url(#gradGreen)" stroke="#166534"/>
+                        <text x="190" y="265" text-anchor="middle" font-size="10" font-weight="bold">+$4.6M</text>
+                         <text x="190" y="370" text-anchor="middle" font-size="10">Pre-Auth</text>
+                         
+                        <!-- 3. Billing: +4.2M (Starts at 9.9) -->
+                        <rect x="240" y="243" width="60" height="32" fill="url(#gradGreen)" stroke="#166534"/>
+                        <text x="270" y="233" text-anchor="middle" font-size="10" font-weight="bold">+$4.2M</text>
+                        <text x="270" y="370" text-anchor="middle" font-size="10">Billing</text>
+                        
+                        <!-- 4. Staffing: +2.5M (Starts at 14.1) -->
+                        <rect x="320" y="224" width="60" height="19" fill="url(#gradGreen)" stroke="#166534"/>
+                        <text x="350" y="214" text-anchor="middle" font-size="10" font-weight="bold">+$2.5M</text>
+                        <text x="350" y="370" text-anchor="middle" font-size="10">Staffing</text>
+
+                         <!-- 5. Infection: +1.8M (Starts at 16.6) -->
+                        <rect x="400" y="210" width="60" height="14" fill="url(#gradGreen)" stroke="#166534"/>
+                        <text x="430" y="200" text-anchor="middle" font-size="10" font-weight="bold">+$1.8M</text>
+                        <text x="430" y="370" text-anchor="middle" font-size="10">Quality</text>
+                        
+                        <!-- 6. No-Show: +2.8M (Starts at 18.4) -->
+                        <rect x="480" y="189" width="60" height="21" fill="url(#gradGreen)" stroke="#166534"/>
+                        <text x="510" y="179" text-anchor="middle" font-size="10" font-weight="bold">+$2.8M</text>
+                        <text x="510" y="370" text-anchor="middle" font-size="10">No-Show</text>
+
+                         <!-- Total: +21.2M -->
+                         <rect x="580" y="189" width="80" height="161" fill="url(#gradBlueBar)" stroke="#1e40af"/>
+                         <text x="620" y="179" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e40af">+$21.2M</text>
+                         <text x="620" y="370" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e3a8a">TOTAL GAIN</text>
+
+                         <!-- Connecting Lines -->
+                         <path d="M140,310 L160,310 M220,275 L240,275 M300,243 L320,243 M380,224 L400,224 M460,210 L480,210 M540,189 L580,189" stroke="#6b7280" stroke-width="1" stroke-dasharray="2"/>
+                     </svg>
+                </div>
+                
+                <table style="width: 100%;">
+                    <tr style="background: var(--primary); color: white;">
+                        <th style="padding: 0.8rem; text-align: left;">Constraint Area</th>
+                        <th style="padding: 0.8rem; text-align: right;">Current Loss ($)</th>
+                        <th style="padding: 0.8rem; text-align: right;">Optimized Gain ($)</th>
+                        <th style="padding: 0.8rem; text-align: right;">Net Impact ($)</th>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark);">OR Inefficiency (longer surgery times)</td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right;">($3.2M)</td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right;">$2.1M</td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right; color: var(--success); font-weight: bold;">+$5.3M</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark);">Pre-Auth Delays (12% cancellations)</td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right;">($2.8M)</td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right;">$1.8M</td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right; color: var(--success); font-weight: bold;">+$4.6M</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark);">Billing Errors & Denials</td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right;">($3.7M)</td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right;">$500K</td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right; color: var(--success); font-weight: bold;">+$4.2M</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark);">Staff Turnover & Productivity Loss</td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right;">($1.7M)</td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right;">$820K</td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right; color: var(--success); font-weight: bold;">+$2.5M</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark);">Infection Rate Impact</td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right;">($1.2M)</td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right;">$600K</td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right; color: var(--success); font-weight: bold;">+$1.8M</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.8rem;">No-Show Rate Impact</td>
+                        <td style="padding: 0.8rem; text-align: right;">($1.9M)</td>
+                        <td style="padding: 0.8rem; text-align: right;">$950K</td>
+                        <td style="padding: 0.8rem; text-align: right; color: var(--success); font-weight: bold;">+$2.8M</td>
+                    </tr>
+                    <tr style="background: #efe;">
+                        <td style="padding: 1rem; font-weight: bold;">TOTAL CONSTRAINT IMPACT</td>
+                        <td style="padding: 1rem; text-align: right; font-weight: bold;">($14.5M)</td>
+                        <td style="padding: 1rem; text-align: right; font-weight: bold;">$6.8M</td>
+                        <td style="padding: 1rem; text-align: right; color: var(--success); font-weight: bold;">+$21.2M</td>
+                    </tr>
+                </table>
+                <p style="margin-top: 1rem; font-style: italic; color: #666; font-size: 0.95rem;">
+                    This quantification shows that resolving system constraints could unlock $21.2M+ in annual profit improvement. This represents the "hidden factory" of organizational waste identified by Goldratt's Theory of Constraints.
+                </p>
+            </div>
+
+            <div class="alert alert-success">
+                <strong>Key Finding:</strong> Every dollar invested in process engineering to remove constraints generates $6.15 in incremental profit within 12 months. This is an exceptional return on investment that should accelerate capital allocation to these initiatives.
+            </div>
+
+            <div class="subsection">
+                <h3 style="color: var(--primary); margin-bottom: 1.5rem;">Visual P&L Comparison: Current vs. Optimized State</h3>
+                <div style="text-align: center; margin: 2rem 0; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                    <svg width="900" height="500" viewBox="0 0 900 500" style="max-width: 100%; height: auto;">
+                        <defs>
+                            <linearGradient id="currentGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:#ef4444;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#dc2626;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="optimizedGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:#22c55e;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#16a34a;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+
+                        <!-- Title -->
+                        <text x="450" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Annual Profit & Loss Comparison (in millions $)</text>
+
+                        <!-- Y-axis -->
+                        <line x1="80" y1="50" x2="80" y2="400" stroke="#666" stroke-width="2"/>
+                        <text x="30" y="225" text-anchor="middle" font-size="14" fill="#666" transform="rotate(-90,30,225)">Amount ($M)</text>
+
+                        <!-- Y-axis labels -->
+                        <text x="60" y="400" text-anchor="end" font-size="12" fill="#666">0</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark);"><strong>Net Revenue</strong></td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right;"><strong>$56,778,525</strong></td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right;"><strong>84.1%</strong></td>
+                    </tr>
+                    <tr style="background: #efe;">
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark);"><strong>EBITDA</strong></td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right;"><strong>$33,713,525</strong></td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right;"><strong>49.9%</strong></td>
+                    </tr>
+                    <tr style="background: #fef3c7;">
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark);"><strong>Operating Profit (EBIT)</strong></td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right;"><strong>$32,363,525</strong></td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right;"><strong>47.9%</strong></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.8rem;">Interest Expense</td>
+                        <td style="padding: 0.8rem; text-align: right;">($600,000)</td>
+                        <td style="padding: 0.8rem; text-align: right;">-0.9%</td>
+                    </tr>
+                    <tr style="background: #fff3cd;">
+                        <td style="padding: 0.8rem;"><strong>Net Profit (Before Tax)</strong></td>
+                        <td style="padding: 0.8rem; text-align: right;"><strong>$31,763,525</strong></td>
+                        <td style="padding: 0.8rem; text-align: right;"><strong>47.0%</strong></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="subsection">
+                <h3 style="color: var(--primary); margin-bottom: 1.5rem;">Visual P&L Comparison: Current vs. Optimized State</h3>
+                <div style="text-align: center; margin: 2rem 0; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                    <svg width="900" height="500" viewBox="0 0 900 500" style="max-width: 100%; height: auto;">
+                        <defs>
+                            <linearGradient id="currentGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:#ef4444;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#dc2626;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="optimizedGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:#22c55e;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#16a34a;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+
+                        <!-- Title -->
+                        <text x="450" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Annual Profit & Loss Comparison (in millions $)</text>
+
+                        <!-- Y-axis -->
+                        <line x1="80" y1="50" x2="80" y2="400" stroke="#666" stroke-width="2"/>
+                        <text x="30" y="225" text-anchor="middle" font-size="14" fill="#666" transform="rotate(-90,30,225)">Amount ($M)</text>
+
+                        <!-- Y-axis labels -->
+                        <text x="60" y="400" text-anchor="end" font-size="12" fill="#666">0</text>
+                        <text x="60" y="350" text-anchor="end" font-size="12" fill="#666">10</text>
+                        <text x="60" y="300" text-anchor="end" font-size="12" fill="#666">20</text>
+                        <text x="60" y="250" text-anchor="end" font-size="12" fill="#666">30</text>
+                        <text x="60" y="200" text-anchor="end" font-size="12" fill="#666">40</text>
+                        <text x="60" y="150" text-anchor="end" font-size="12" fill="#666">50</text>
+                        <text x="60" y="100" text-anchor="end" font-size="12" fill="#666">60</text>
+
+                        <!-- X-axis -->
+                        <line x1="80" y1="400" x2="820" y2="400" stroke="#666" stroke-width="2"/>
+
+                        <!-- Current State Bars -->
+                        <rect x="120" y="250" width="80" height="150" fill="url(#currentGrad2)" rx="4"/>
+                        <text x="160" y="240" text-anchor="middle" font-size="12" fill="#dc2626" font-weight="bold">Current</text>
+                        <text x="160" y="430" text-anchor="middle" font-size="11" fill="#666">$32.0M</text>
+
+                        <rect x="240" y="300" width="80" height="100" fill="url(#currentGrad2)" rx="4"/>
+                        <text x="280" y="290" text-anchor="middle" font-size="12" fill="#dc2626" font-weight="bold">Current</text>
+                        <text x="280" y="430" text-anchor="middle" font-size="11" fill="#666">$13.2M</text>
+
+                        <rect x="360" y="320" width="80" height="80" fill="url(#currentGrad2)" rx="4"/>
+                        <text x="400" y="310" text-anchor="middle" font-size="12" fill="#dc2626" font-weight="bold">Current</text>
+                        <text x="400" y="430" text-anchor="middle" font-size="11" fill="#666">$11.2M</text>
+
+                        <!-- Optimized State Bars -->
+                        <rect x="180" y="120" width="80" height="280" fill="url(#optimizedGrad2)" rx="4"/>
+                        <text x="220" y="110" text-anchor="middle" font-size="12" fill="#16a34a" font-weight="bold">Optimized</text>
+                        <text x="220" y="440" text-anchor="middle" font-size="11" fill="#666">$56.8M</text>
+
+                        <rect x="300" y="180" width="80" height="220" fill="url(#optimizedGrad2)" rx="4"/>
+                        <text x="340" y="170" text-anchor="middle" font-size="12" fill="#16a34a" font-weight="bold">Optimized</text>
+                        <text x="340" y="440" text-anchor="middle" font-size="11" fill="#666">$33.7M</text>
+
+                        <rect x="420" y="200" width="80" height="200" fill="url(#optimizedGrad2)" rx="4"/>
+                        <text x="460" y="190" text-anchor="middle" font-size="12" fill="#16a34a" font-weight="bold">Optimized</text>
+                        <text x="460" y="440" text-anchor="middle" font-size="11" fill="#666">$31.8M</text>
+
+                        <!-- Labels -->
+                        <text x="160" y="460" text-anchor="middle" font-size="14" fill="#333" font-weight="bold">Net Revenue</text>
+                        <text x="280" y="460" text-anchor="middle" font-size="14" fill="#333" font-weight="bold">EBITDA</text>
+                        <text x="400" y="460" text-anchor="middle" font-size="14" fill="#333" font-weight="bold">Net Profit</text>
+
+                        <!-- Legend -->
+                        <rect x="550" y="80" width="20" height="20" fill="url(#currentGrad2)" rx="2"/>
+                        <text x="580" y="95" font-size="14" fill="#333">Current State</text>
+                        <rect x="550" y="110" width="20" height="20" fill="url(#optimizedGrad2)" rx="2"/>
+                        <text x="580" y="125" font-size="14" fill="#333">After Optimization</text>
+
+                        <!-- Improvement arrows and labels -->
+                        <path d="M 160 250 L 160 120" stroke="#16a34a" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+                        <text x="170" y="185" font-size="12" fill="#16a34a" font-weight="bold">+$24.8M</text>
+
+                        <path d="M 280 300 L 280 180" stroke="#16a34a" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+                        <text x="290" y="240" font-size="12" fill="#16a34a" font-weight="bold">+$20.5M</text>
+
+                        <path d="M 400 320 L 400 200" stroke="#16a34a" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+                        <text x="410" y="260" font-size="12" fill="#16a34a" font-weight="bold">+$20.6M</text>
+
+                        <!-- Arrow marker -->
+                        <defs>
+                            <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                                <path d="M0,0 L0,6 L9,3 z" fill="#16a34a"/>
+                            </marker>
+                        </defs>
+                    </svg>
+                </div>
+                <p style="font-style: italic; color: #666; text-align: center; margin-top: 1rem;">
+                    This bar chart demonstrates the dramatic financial impact of removing system constraints, showing improvements across all key financial metrics.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 ClearSight Analysis Portal. Theory of Constraints Applied to Healthcare Operations.</p>
+            <p>Based on Eliyahu M. Goldratt's "The Goal" and Theory of Constraints Principles</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
