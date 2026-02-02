@@ -40,12 +40,12 @@
                     <span class="stat-label">Days Average Waiting</span>
                 </div>
                 <div class="stat">
-                    <span class="stat-number">60%</span>
+                    <span class="stat-number">50%</span>
                     <span class="stat-label">Capacity Utilization</span>
                 </div>
                 <div class="stat">
-                    <span class="stat-number">$180K</span>
-                    <span class="stat-label">Monthly Revenue Loss</span>
+                    <span class="stat-number">$250K</span>
+                    <span class="stat-label">Monthly Opportunity Cost</span>
                 </div>
             </div>
         </div>
@@ -143,8 +143,8 @@
             <div class="metrics-grid">
                 <div class="metric-card">
                     <h4>Patient Volume</h4>
-                    <p class="metric-value">450</p>
-                    <p class="metric-label">patients/month</p>
+                    <p class="metric-value">250</p>
+                    <p class="metric-label">surgeries/month</p>
                 </div>
                 <div class="metric-card">
                     <h4>Average Waiting Time</h4>
@@ -153,23 +153,23 @@
                 </div>
                 <div class="metric-card">
                     <h4>Operating Rooms Utilization</h4>
-                    <p class="metric-value">60%</p>
+                    <p class="metric-value">50%</p>
                     <p class="metric-label">average capacity</p>
                 </div>
                 <div class="metric-card">
                     <h4>Revenue per Patient</h4>
-                    <p class="metric-value">$2,400</p>
+                    <p class="metric-value">$2,000</p>
                     <p class="metric-label">average</p>
                 </div>
                 <div class="metric-card">
                     <h4>Monthly Revenue</h4>
-                    <p class="metric-value">$1.08M</p>
+                    <p class="metric-value">$500K</p>
                     <p class="metric-label">current</p>
                 </div>
                 <div class="metric-card">
-                    <h4>Operating Expense Ratio</h4>
-                    <p class="metric-value">65%</p>
-                    <p class="metric-label">of revenue</p>
+                    <h4>Operating Profit Margin</h4>
+                    <p class="metric-value">8.3%</p>
+                    <p class="metric-label">current ($500k/yr)</p>
                 </div>
             </div>
         </section>
@@ -185,11 +185,11 @@
 
                 <div class="conveyor-belt" role="region" aria-label="Patient Journey Process Flow">
                     <!-- Patient Intake -->
-                    <button class="process-stage" data-stage="intake" data-tooltip="Patient consultation and initial assessment" aria-label="Patient Intake Stage: 450 per month, 95% efficiency, Flowing">
+                    <button class="process-stage" data-stage="intake" data-tooltip="Patient consultation and initial assessment" aria-label="Patient Intake Stage: 400 per month, 95% efficiency, Flowing">
                         <div class="stage-icon" aria-hidden="true">👁️</div>
                         <h4>Patient Intake</h4>
                         <div class="stage-metrics">
-                            <span class="metric">450/month</span>
+                            <span class="metric">400/month</span>
                             <span class="efficiency">95% efficiency</span>
                         </div>
                         <div class="stage-status">✅ Flowing</div>
@@ -198,11 +198,11 @@
                     <div class="conveyor-arrow" aria-hidden="true">→</div>
 
                     <!-- Pre-Op Assessment -->
-                    <button class="process-stage" data-stage="assessment" data-tooltip="Comprehensive eye examination and surgical planning" aria-label="Pre-Op Assessment Stage: 380 per month, 84% efficiency, Bottleneck">
+                    <button class="process-stage" data-stage="assessment" data-tooltip="Comprehensive eye examination and surgical planning" aria-label="Pre-Op Assessment Stage: 350 per month, 84% efficiency, Bottleneck">
                         <div class="stage-icon" aria-hidden="true">🔍</div>
                         <h4>Pre-Op Assessment</h4>
                         <div class="stage-metrics">
-                            <span class="metric">380/month</span>
+                            <span class="metric">350/month</span>
                             <span class="efficiency">84% efficiency</span>
                         </div>
                         <div class="stage-status">⚠️ Bottleneck</div>
@@ -211,12 +211,12 @@
                     <div class="conveyor-arrow" aria-hidden="true">→</div>
 
                     <!-- Scheduling -->
-                    <button class="process-stage bottleneck critical-bottleneck" data-stage="scheduling" data-tooltip="OR scheduling and resource allocation - MAJOR BOTTLENECK" aria-label="OR Scheduling Stage: Critical Bottleneck, 270 per month, 60% efficiency, 42-day queue">
+                    <button class="process-stage bottleneck critical-bottleneck" data-stage="scheduling" data-tooltip="OR scheduling and resource allocation - MAJOR BOTTLENECK" aria-label="OR Scheduling Stage: Critical Bottleneck, 250 per month, 50% efficiency, 42-day queue">
                         <div class="stage-icon" aria-hidden="true">📅</div>
                         <h4>OR Scheduling</h4>
                         <div class="stage-metrics">
-                            <span class="metric">270/month</span>
-                            <span class="efficiency">60% efficiency</span>
+                            <span class="metric">250/month</span>
+                            <span class="efficiency">50% efficiency</span>
                         </div>
                         <div class="stage-status critical">🔴 CRITICAL BOTTLENECK</div>
                         <div class="bottleneck-indicator">
@@ -227,11 +227,11 @@
                     <div class="conveyor-arrow blocked" aria-hidden="true">→</div>
 
                     <!-- Surgery -->
-                    <button class="process-stage" data-stage="surgery" data-tooltip="Cataract surgery procedure" aria-label="Surgery Stage: 270 per month, 100% efficiency, Waiting for patients">
+                    <button class="process-stage" data-stage="surgery" data-tooltip="Cataract surgery procedure" aria-label="Surgery Stage: 250 per month, 100% efficiency, Waiting for patients">
                         <div class="stage-icon" aria-hidden="true">⚕️</div>
                         <h4>Surgery</h4>
                         <div class="stage-metrics">
-                            <span class="metric">270/month</span>
+                            <span class="metric">250/month</span>
                             <span class="efficiency">100% efficiency</span>
                         </div>
                         <div class="stage-status">⏳ Waiting</div>
@@ -240,11 +240,11 @@
                     <div class="conveyor-arrow" aria-hidden="true">→</div>
 
                     <!-- Post-Op Care -->
-                    <button class="process-stage" data-stage="recovery" data-tooltip="Post-operative care and follow-up" aria-label="Recovery Stage: 270 per month, 92% efficiency, Flowing">
+                    <button class="process-stage" data-stage="recovery" data-tooltip="Post-operative care and follow-up" aria-label="Recovery Stage: 250 per month, 92% efficiency, Flowing">
                         <div class="stage-icon" aria-hidden="true">🏥</div>
                         <h4>Recovery & Follow-up</h4>
                         <div class="stage-metrics">
-                            <span class="metric">270/month</span>
+                            <span class="metric">250/month</span>
                             <span class="efficiency">92% efficiency</span>
                         </div>
                         <div class="stage-status">✅ Flowing</div>
@@ -254,15 +254,15 @@
                 <div class="conveyor-insights">
                     <div class="insight-card">
                         <h4>🎯 Key Constraint Identified</h4>
-                        <p><strong>OR Scheduling & Resource Allocation</strong> is the primary constraint limiting throughput to just 60% of capacity.</p>
+                        <p><strong>OR Scheduling & Resource Allocation</strong> is the primary constraint limiting throughput to just 50% of capacity.</p>
                     </div>
                     <div class="insight-card">
                         <h4>💰 Financial Impact</h4>
-                        <p>The bottleneck creates a 42-day waiting list, resulting in <strong>$180K monthly revenue loss</strong> from unserved patients.</p>
+                        <p>The bottleneck creates a 42-day waiting list, resulting in <strong>$250K monthly opportunity loss</strong> from unserved patients.</p>
                     </div>
                     <div class="insight-card">
                         <h4>🔄 Process Flow</h4>
-                        <p>450 patients enter the system monthly, but only 270 complete surgery due to scheduling constraints.</p>
+                        <p>400 patients enter the system monthly, but only 250 complete surgery due to scheduling constraints.</p>
                     </div>
                 </div>
 
