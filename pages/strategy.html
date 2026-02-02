@@ -290,6 +290,65 @@
             <!-- ROI Table (Preserved but styled) -->
             <div class="subsection" style="margin-top: 4rem;">
                 <h3 style="color: var(--primary); margin-bottom: 1.5rem;">📊 Cumulative Financial Impact (Year 1)</h3>
+                
+                <!-- Financial Impact Chart -->
+                <div class="visual-container" style="background: white; padding: 2rem; border-radius: 12px; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                    <svg width="100%" height="300" viewBox="0 0 800 300">
+                        <defs>
+                             <linearGradient id="gradInvestment" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#fca5a5" />
+                                <stop offset="100%" stop-color="#ef4444" />
+                            </linearGradient>
+                            <linearGradient id="gradBenefit" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#86efac" />
+                                <stop offset="100%" stop-color="#22c55e" />
+                            </linearGradient>
+                        </defs>
+
+                        <!-- Legend -->
+                        <rect x="550" y="20" width="15" height="15" fill="url(#gradInvestment)" />
+                        <text x="575" y="32" font-size="12" fill="#555">Investment</text>
+                        <rect x="650" y="20" width="15" height="15" fill="url(#gradBenefit)" />
+                        <text x="675" y="32" font-size="12" fill="#555">Benefit (Gain)</text>
+
+                        <!-- Axis -->
+                        <line x1="100" y1="250" x2="700" y2="250" stroke="#666" stroke-width="2"/>
+
+                        <!-- Horizon 1 Group -->
+                        <g transform="translate(150, 0)">
+                             <text x="60" y="270" text-anchor="middle" font-weight="bold" fill="#333">Horizon 1</text>
+                             <!-- Investment -->
+                             <rect x="20" y="230" width="30" height="20" fill="url(#gradInvestment)"/>
+                             <text x="35" y="225" text-anchor="middle" font-size="10" fill="#dc2626">$0.8M</text>
+                             <!-- Benefit -->
+                             <rect x="60" y="100" width="30" height="150" fill="url(#gradBenefit)"/>
+                             <text x="75" y="95" text-anchor="middle" font-size="10" fill="#16a34a">$14M</text>
+                        </g>
+
+                        <!-- Horizon 2 Group -->
+                        <g transform="translate(350, 0)">
+                             <text x="60" y="270" text-anchor="middle" font-weight="bold" fill="#333">Horizon 2</text>
+                             <!-- Investment -->
+                             <rect x="20" y="210" width="30" height="40" fill="url(#gradInvestment)"/>
+                             <text x="35" y="205" text-anchor="middle" font-size="10" fill="#dc2626">$1.5M</td>
+                             <!-- Benefit -->
+                             <rect x="60" y="150" width="30" height="100" fill="url(#gradBenefit)"/>
+                             <text x="75" y="145" text-anchor="middle" font-size="10" fill="#16a34a">$10M</text>
+                        </g>
+
+                        <!-- Horizon 3 Group -->
+                        <g transform="translate(550, 0)">
+                             <text x="60" y="270" text-anchor="middle" font-weight="bold" fill="#333">Horizon 3</text>
+                             <!-- Investment -->
+                             <rect x="20" y="200" width="30" height="50" fill="url(#gradInvestment)"/>
+                             <text x="35" y="195" text-anchor="middle" font-size="10" fill="#dc2626">$2.2M</text>
+                             <!-- Benefit -->
+                             <rect x="60" y="180" width="30" height="70" fill="url(#gradBenefit)"/>
+                             <text x="75" y="175" text-anchor="middle" font-size="10" fill="#16a34a">TBD</text>
+                        </g>
+                    </svg>
+                </div>
+
                 <table style="width: 100%; border-collapse: collapse; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-radius: 8px; overflow: hidden;">
                     <thead style="background: #1f2937; color: white;">
                         <tr>

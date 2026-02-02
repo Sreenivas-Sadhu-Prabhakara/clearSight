@@ -273,6 +273,14 @@ function initializeConveyorBelt() {
             showStageDetails(stage, index);
         });
 
+        // Add keyboard support (Enter or Space) - native buttons handle this but good for custom behavior
+        stage.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                showStageDetails(stage, index);
+            }
+        });
+
         // Add hover effects
         stage.addEventListener('mouseenter', () => {
             highlightStage(stage);
