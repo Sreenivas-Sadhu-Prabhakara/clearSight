@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Context - clearSight Case Study</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-logo">clearSight</h1>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="context.html" class="nav-link active">Context</a></li>
+                <li><a href="challenges.html" class="nav-link">Challenges</a></li>
+                <li><a href="actual-issues.html" class="nav-link">Actual Issues</a></li>
+                <li><a href="financial-analysis.html" class="nav-link">P&L Analysis</a></li>
+                <li><a href="strategy.html" class="nav-link">Strategy</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="hero-section">
+            <h1>Understanding clearSight: Context & Business Model</h1>
+            <p>A comprehensive analysis of clearSight's cataract surgery operations through systems thinking and process engineering</p>
+        </section>
+
+        <section class="content-section">
+            <h2>1. What is clearSight?</h2>
+            <div class="text-content">
+                <p>
+                    <strong>clearSight</strong> is a specialized eye care facility in India providing cataract surgeries and post-operative care 
+                    to patients from lower-income segments. The facility operates with a mission to deliver affordable quality cataract surgery, 
+                    positioning itself as a cost-effective alternative to premium eye hospitals while maintaining good surgical outcomes.
+                </p>
+                <div class="highlight-box">
+                    <h3>Key Facts:</h3>
+                    <ul>
+                        <li>Specializes in high-volume, low-cost cataract surgeries</li>
+                        <li>Serves lower-income and middle-income populations</li>
+                        <li>Operating in a competitive healthcare market</li>
+                        <li>Limited infrastructure and capital constraints</li>
+                        <li>Focused on surgical excellence with cost efficiency</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section svg-section">
+            <h2>2. Patient Journey Funnel: The Complete Flow</h2>
+            <p class="section-description">
+                Understanding how patients move through clearSight's entire system - from initial awareness to post-operative follow-up. 
+                This funnel shows where patients are lost, where bottlenecks occur, and where value is created.
+            </p>
+            
+            <svg viewBox="0 0 1000 1400" class="svg-diagram">
+                <!-- Title -->
+                <text x="500" y="40" text-anchor="middle" font-size="28" font-weight="bold" fill="#1a472a">
+                    clearSight: Patient Journey & Process Funnel
+                </text>
+
+                <!-- Stage 1: Awareness -->
+                <g id="stage1">
+                    <rect x="150" y="80" width="700" height="100" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="8"/>
+                    <text x="500" y="115" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a472a">Stage 1: Awareness & Screening</text>
+                    <text x="500" y="150" text-anchor="middle" font-size="14" fill="#333">
+                        Community outreach, word-of-mouth, referrals, media
+                    </text>
+                    <circle cx="100" cy="130" r="35" fill="#4caf50"/>
+                    <text x="100" y="140" text-anchor="middle" font-size="24" font-weight="bold" fill="white">100%</text>
+                </g>
+
+                <!-- Arrow 1 -->
+                <path d="M 500 180 L 500 240" stroke="#666" stroke-width="3" marker-end="url(#arrowhead)"/>
+                <text x="530" y="215" font-size="12" fill="#666">Conversion</text>
+                <text x="530" y="230" font-size="12" fill="#666">Rate: 45%</text>
+
+                <!-- Stage 2: Initial Consultation -->
+                <g id="stage2">
+                    <rect x="150" y="240" width="700" height="100" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="8"/>
+                    <text x="500" y="275" text-anchor="middle" font-size="20" font-weight="bold" fill="#0d47a1">Stage 2: Initial Consultation</text>
+                    <text x="500" y="310" text-anchor="middle" font-size="14" fill="#333">
+                        Eye examination, diagnosis, feasibility assessment, counseling
+                    </text>
+                    <circle cx="100" cy="290" r="35" fill="#2196f3"/>
+                    <text x="100" y="300" text-anchor="middle" font-size="24" font-weight="bold" fill="white">45%</text>
+                </g>
+
+                <!-- Arrow 2 -->
+                <path d="M 500 340 L 500 400" stroke="#666" stroke-width="3" marker-end="url(#arrowhead)"/>
+                <text x="530" y="375" font-size="12" fill="#666">Conversion</text>
+                <text x="530" y="390" font-size="12" fill="#666">Rate: 85%</text>
+
+                <!-- Stage 3: Pre-operative Assessment -->
+                <g id="stage3">
+                    <rect x="150" y="400" width="700" height="100" fill="#fff3e0" stroke="#e65100" stroke-width="2" rx="8"/>
+                    <text x="500" y="435" text-anchor="middle" font-size="20" font-weight="bold" fill="#bf360c">Stage 3: Pre-operative Assessment</text>
+                    <text x="500" y="470" text-anchor="middle" font-size="14" fill="#333">
+                        Lab tests, cardiac fitness, medication review, scheduling
+                    </text>
+                    <circle cx="100" cy="450" r="35" fill="#ff9800"/>
+                    <text x="100" y="460" text-anchor="middle" font-size="24" font-weight="bold" fill="white">38%</text>
+                </g>
+
+                <!-- Arrow 3 -->
+                <path d="M 500 500 L 500 560" stroke="#666" stroke-width="3" marker-end="url(#arrowhead)"/>
+                <text x="530" y="535" font-size="12" fill="#666">Conversion</text>
+                <text x="530" y="550" font-size="12" fill="#666">Rate: 92%</text>
+
+                <!-- Stage 4: Surgery Scheduling & Admission -->
+                <g id="stage4">
+                    <rect x="150" y="560" width="700" height="100" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2" rx="8"/>
+                    <text x="500" y="595" text-anchor="middle" font-size="20" font-weight="bold" fill="#4a148c">Stage 4: Surgery Scheduling & Admission</text>
+                    <text x="500" y="630" text-anchor="middle" font-size="14" fill="#333">
+                        Bed allocation, pre-op prep, final clearance, informed consent
+                    </text>
+                    <circle cx="100" cy="610" r="35" fill="#9c27b0"/>
+                    <text x="100" y="620" text-anchor="middle" font-size="24" font-weight="bold" fill="white">35%</text>
+                </g>
+
+                <!-- Arrow 4 -->
+                <path d="M 500 660 L 500 720" stroke="#666" stroke-width="3" marker-end="url(#arrowhead)"/>
+                <text x="530" y="695" font-size="12" fill="#666">Conversion</text>
+                <text x="530" y="710" font-size="12" fill="#666">Rate: 88%</text>
+
+                <!-- Stage 5: Surgery Execution -->
+                <g id="stage5">
+                    <rect x="150" y="720" width="700" height="100" fill="#fce4ec" stroke="#c2185b" stroke-width="2" rx="8"/>
+                    <text x="500" y="755" text-anchor="middle" font-size="20" font-weight="bold" fill="#880e4f">Stage 5: Cataract Surgery</text>
+                    <text x="500" y="790" text-anchor="middle" font-size="14" fill="#333">
+                        Phacoemulsification, IOL implant, wound closure, ~15-20 minutes per eye
+                    </text>
+                    <circle cx="100" cy="770" r="35" fill="#e91e63"/>
+                    <text x="100" y="780" text-anchor="middle" font-size="24" font-weight="bold" fill="white">31%</text>
+                </g>
+
+                <!-- Arrow 5 -->
+                <path d="M 500 820 L 500 880" stroke="#666" stroke-width="3" marker-end="url(#arrowhead)"/>
+                <text x="530" y="855" font-size="12" fill="#666">Conversion</text>
+                <text x="530" y="870" font-size="12" fill="#666">Rate: 99%</text>
+
+                <!-- Stage 6: Post-operative Care -->
+                <g id="stage6">
+                    <rect x="150" y="880" width="700" height="100" fill="#e0f2f1" stroke="#00695c" stroke-width="2" rx="8"/>
+                    <text x="500" y="915" text-anchor="middle" font-size="20" font-weight="bold" fill="#004d40">Stage 6: Post-operative Care (1 day)</text>
+                    <text x="500" y="950" text-anchor="middle" font-size="14" fill="#333">
+                        Overnight stay, eye drops, dressing care, discharge preparation, caregiver education
+                    </text>
+                    <circle cx="100" cy="930" r="35" fill="#009688"/>
+                    <text x="100" y="940" text-anchor="middle" font-size="24" font-weight="bold" fill="white">31%</text>
+                </g>
+
+                <!-- Arrow 6 -->
+                <path d="M 500 980 L 500 1040" stroke="#666" stroke-width="3" marker-end="url(#arrowhead)"/>
+                <text x="530" y="1015" font-size="12" fill="#666">Conversion</text>
+                <text x="530" y="1030" font-size="12" fill="#666">Rate: 95%</text>
+
+                <!-- Stage 7: Follow-up & Monitoring -->
+                <g id="stage7">
+                    <rect x="150" y="1040" width="700" height="100" fill="#ede7f6" stroke="#512da8" stroke-width="2" rx="8"/>
+                    <text x="500" y="1075" text-anchor="middle" font-size="20" font-weight="bold" fill="#311b92">Stage 7: Follow-up & Monitoring</text>
+                    <text x="500" y="1110" text-anchor="middle" font-size="14" fill="#333">
+                        Day 7 check-up, refraction, glasses prescription, 1-month review, complication management
+                    </text>
+                    <circle cx="100" cy="1090" r="35" fill="#7e57c2"/>
+                    <text x="100" y="1100" text-anchor="middle" font-size="24" font-weight="bold" fill="white">29%</text>
+                </g>
+
+                <!-- Arrow 7 -->
+                <path d="M 500 1140 L 500 1200" stroke="#666" stroke-width="3" marker-end="url(#arrowhead)"/>
+                <text x="530" y="1175" font-size="12" fill="#666">Conversion</text>
+                <text x="530" y="1190" font-size="12" fill="#666">Rate: 90%</text>
+
+                <!-- Stage 8: Outcome -->
+                <g id="stage8">
+                    <rect x="150" y="1200" width="700" height="120" fill="#c8e6c9" stroke="#1b5e20" stroke-width="3" rx="8"/>
+                    <text x="500" y="1240" text-anchor="middle" font-size="20" font-weight="bold" fill="#1b5e20">Stage 8: Successful Treatment Outcome</text>
+                    <text x="500" y="1270" text-anchor="middle" font-size="14" fill="#333">
+                        Vision improvement verified, patient satisfaction measured, repeat referral potential
+                    </text>
+                    <circle cx="100" cy="1260" r="35" fill="#4caf50"/>
+                    <text x="100" y="1270" text-anchor="middle" font-size="24" font-weight="bold" fill="white">26%</text>
+                </g>
+
+                <!-- Arrow marker definition -->
+                <defs>
+                    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+                        <polygon points="0 0, 10 5, 0 10" fill="#666"/>
+                    </marker>
+                </defs>
+
+                <!-- Key metrics on the side -->
+                <text x="850" y="100" font-size="14" font-weight="bold" fill="#1a472a">Attrition:</text>
+                <text x="850" y="125" font-size="12" fill="#333">100 → 26 patients</text>
+                <text x="850" y="145" font-size="12" fill="#d32f2f" font-weight="bold">74% Loss Rate</text>
+
+                <text x="850" y="185" font-size="14" font-weight="bold" fill="#1a472a">Key Constraints:</text>
+                <text x="850" y="210" font-size="12" fill="#333">• Bed availability</text>
+                <text x="850" y="230" font-size="12" fill="#333">• Doctor capacity</text>
+                <text x="850" y="250" font-size="12" fill="#333">• Patient affordability</text>
+                <text x="850" y="270" font-size="12" fill="#333">• Follow-up access</text>
+            </svg>
+        </section>
+
+        <section class="content-section svg-section">
+            <h2>3. Daily Operations at clearSight: A Single Day Flow</h2>
+            <p class="section-description">
+                This diagram shows how operations work on any given day at clearSight - from patient arrival 
+                to discharge, highlighting the sequential dependencies and resource utilization.
+            </p>
+
+            <svg viewBox="0 0 1200 900" class="svg-diagram">
+                <!-- Title -->
+                <text x="600" y="40" text-anchor="middle" font-size="26" font-weight="bold" fill="#1a472a">
+                    Daily Operations Flow at clearSight
+                </text>
+
+                <!-- Timeline -->
+                <line x1="50" y1="100" x2="1150" y2="100" stroke="#ccc" stroke-width="2"/>
+
+                <!-- Time markers -->
+                <g id="timeline">
+                    <circle cx="100" cy="100" r="6" fill="#2196f3"/>
+                    <text x="100" y="125" text-anchor="middle" font-size="12" font-weight="bold">6:00 AM</text>
+                    <text x="100" y="140" text-anchor="middle" font-size="11">Facility Open</text>
+
+                    <circle cx="250" cy="100" r="6" fill="#2196f3"/>
+                    <text x="250" y="125" text-anchor="middle" font-size="12" font-weight="bold">8:00 AM</text>
+                    <text x="250" y="140" text-anchor="middle" font-size="11">Pre-op Checks</text>
+
+                    <circle cx="400" cy="100" r="6" fill="#2196f3"/>
+                    <text x="400" y="125" text-anchor="middle" font-size="12" font-weight="bold">9:00 AM</text>
+                    <text x="400" y="140" text-anchor="middle" font-size="11">Surgeries Begin</text>
+
+                    <circle cx="600" cy="100" r="6" fill="#2196f3"/>
+                    <text x="600" y="125" text-anchor="middle" font-size="12" font-weight="bold">1:00 PM</text>
+                    <text x="600" y="140" text-anchor="middle" font-size="11">Peak Surgery</text>
+
+                    <circle cx="800" cy="100" r="6" fill="#2196f3"/>
+                    <text x="800" y="125" text-anchor="middle" font-size="12" font-weight="bold">4:00 PM</text>
+                    <text x="800" y="140" text-anchor="middle" font-size="11">Post-op Care</text>
+
+                    <circle cx="950" cy="100" r="6" fill="#2196f3"/>
+                    <text x="950" y="125" text-anchor="middle" font-size="12" font-weight="bold">6:00 PM</text>
+                    <text x="950" y="140" text-anchor="middle" font-size="11">Evening Care</text>
+
+                    <circle cx="1100" cy="100" r="6" fill="#2196f3"/>
+                    <text x="1100" y="125" text-anchor="middle" font-size="12" font-weight="bold">10:00 PM</text>
+                    <text x="1100" y="140" text-anchor="middle" font-size="11">Night Watch</text>
+                </g>
+
+                <!-- Operations Phases -->
+                <!-- Morning Phase -->
+                <g id="morning">
+                    <rect x="50" y="200" width="150" height="280" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="8"/>
+                    <text x="125" y="225" text-anchor="middle" font-size="14" font-weight="bold" fill="#1976d2">MORNING PHASE</text>
+                    <text x="125" y="250" text-anchor="middle" font-size="11" fill="#333">6:00 - 8:30 AM</text>
+                    
+                    <text x="60" y="280" font-size="10" font-weight="bold" fill="#1a472a">Activities:</text>
+                    <text x="60" y="298" font-size="9" fill="#333">• Staff briefing</text>
+                    <text x="60" y="313" font-size="9" fill="#333">• Facility prep</text>
+                    <text x="60" y="328" font-size="9" fill="#333">• Patient arrival</text>
+                    <text x="60" y="343" font-size="9" fill="#333">• Pre-op checks</text>
+                    <text x="60" y="358" font-size="9" fill="#333">• Lab verification</text>
+                    <text x="60" y="373" font-size="9" fill="#333">• Final consent</text>
+                    
+                    <text x="60" y="400" font-size="10" font-weight="bold" fill="#d32f2f">Resources:</text>
+                    <text x="60" y="415" font-size="9" fill="#333">• 5 staff members</text>
+                    <text x="60" y="430" font-size="9" fill="#333">• 1 doctor</text>
+                    <text x="60" y="445" font-size="9" fill="#333">• 2 nurses</text>
+                    <text x="60" y="460" font-size="9" fill="#333">• 1 admin</text>
+                </g>
+
+                <!-- Surge Phase -->
+                <g id="surge">
+                    <rect x="220" y="200" width="150" height="280" fill="#fff3e0" stroke="#f57c00" stroke-width="2" rx="8"/>
+                    <text x="295" y="225" text-anchor="middle" font-size="14" font-weight="bold" fill="#f57c00">SURGE PHASE</text>
+                    <text x="295" y="250" text-anchor="middle" font-size="11" fill="#333">8:30 - 1:00 PM</text>
+                    
+                    <text x="230" y="280" font-size="10" font-weight="bold" fill="#1a472a">Activities:</text>
+                    <text x="230" y="298" font-size="9" fill="#333">• Simultaneous prep</text>
+                    <text x="230" y="313" font-size="9" fill="#333">• 3-4 surgeries</text>
+                    <text x="230" y="328" font-size="9" fill="#333">• High intensity</text>
+                    <text x="230" y="343" font-size="9" fill="#333">• Recovery area</text>
+                    <text x="230" y="358" font-size="9" fill="#333">• Bed utilization</text>
+                    <text x="230" y="373" font-size="9" fill="#333">• Focused care</text>
+                    
+                    <text x="230" y="400" font-size="10" font-weight="bold" fill="#d32f2f">Constraint:</text>
+                    <text x="230" y="415" font-size="9" fill="#d32f2f">LIMITED BED</text>
+                    <text x="230" y="430" font-size="9" fill="#d32f2f">CAPACITY = 4-6</text>
+                    <text x="230" y="445" font-size="9" fill="#d32f2f">BOTTLENECK!</text>
+                </g>
+
+                <!-- Peak Phase -->
+                <g id="peak">
+                    <rect x="390" y="200" width="150" height="280" fill="#fce4ec" stroke="#c2185b" stroke-width="3" rx="8"/>
+                    <text x="465" y="225" text-anchor="middle" font-size="14" font-weight="bold" fill="#c2185b">PEAK PHASE</text>
+                    <text x="465" y="250" text-anchor="middle" font-size="11" fill="#333">1:00 - 3:00 PM</text>
+                    
+                    <text x="400" y="280" font-size="10" font-weight="bold" fill="#1a472a">Activities:</text>
+                    <text x="400" y="298" font-size="9" fill="#333">• Maximum surgery</text>
+                    <text x="400" y="313" font-size="9" fill="#333">• Full bed occupancy</text>
+                    <text x="400" y="328" font-size="9" fill="#333">• Doctor switching</text>
+                    <text x="400" y="343" font-size="9" fill="#333">• Nursing strain</text>
+                    <text x="400" y="358" font-size="9" fill="#333">• Patient queueing</text>
+                    <text x="400" y="373" font-size="9" fill="#333">• Waiting list</text>
+                    
+                    <text x="400" y="400" font-size="10" font-weight="bold" fill="#d32f2f">Critical Issue:</text>
+                    <text x="400" y="415" font-size="9" fill="#d32f2f">Doctor time is</text>
+                    <text x="400" y="430" font-size="9" fill="#d32f2f">CONSTRAINT</text>
+                    <text x="400" y="445" font-size="9" fill="#d32f2f">~20 min/surgery</text>
+                </g>
+
+                <!-- Wind Down Phase -->
+                <g id="winddown">
+                    <rect x="560" y="200" width="150" height="280" fill="#e8f5e9" stroke="#388e3c" stroke-width="2" rx="8"/>
+                    <text x="635" y="225" text-anchor="middle" font-size="14" font-weight="bold" fill="#388e3c">WIND DOWN</text>
+                    <text x="635" y="250" text-anchor="middle" font-size="11" fill="#333">3:00 - 5:00 PM</text>
+                    
+                    <text x="570" y="280" font-size="10" font-weight="bold" fill="#1a472a">Activities:</text>
+                    <text x="570" y="298" font-size="9" fill="#333">• Final surgeries</text>
+                    <text x="570" y="313" font-size="9" fill="#333">• Recovery focus</text>
+                    <text x="570" y="328" font-size="9" fill="#333">• Eye drops</text>
+                    <text x="570" y="343" font-size="9" fill="#333">• Pain management</text>
+                    <text x="570" y="358" font-size="9" fill="#333">• Bed preparation</text>
+                    <text x="570" y="373" font-size="9" fill="#333">• Staff briefing</text>
+                    
+                    <text x="570" y="400" font-size="10" font-weight="bold" fill="#1a472a">Opportunity:</text>
+                    <text x="570" y="415" font-size="9" fill="#333">Staff cooling down</text>
+                    <text x="570" y="430" font-size="9" fill="#333">Reduced intensity</text>
+                    <text x="570" y="445" font-size="9" fill="#333">Documentation time</text>
+                </g>
+
+                <!-- Evening Phase -->
+                <g id="evening">
+                    <rect x="730" y="200" width="150" height="280" fill="#e0f2f1" stroke="#00796b" stroke-width="2" rx="8"/>
+                    <text x="805" y="225" text-anchor="middle" font-size="14" font-weight="bold" fill="#00796b">EVENING PHASE</text>
+                    <text x="805" y="250" text-anchor="middle" font-size="11" fill="#333">5:00 - 8:00 PM</text>
+                    
+                    <text x="740" y="280" font-size="10" font-weight="bold" fill="#1a472a">Activities:</text>
+                    <text x="740" y="298" font-size="9" fill="#333">• Discharge prep</text>
+                    <text x="740" y="313" font-size="9" fill="#333">• Caregiver edu</text>
+                    <text x="740" y="328" font-size="9" fill="#333">• Medication dist</text>
+                    <text x="740" y="343" font-size="9" fill="#333">• Post-op check</text>
+                    <text x="740" y="358" font-size="9" fill="#333">• Appointment set</text>
+                    <text x="740" y="373" font-size="9" fill="#333">• Billing/admin</text>
+                    
+                    <text x="740" y="400" font-size="10" font-weight="bold" fill="#1a472a">Throughput:</text>
+                    <text x="740" y="415" font-size="9" fill="#333">4-6 surgeries</text>
+                    <text x="740" y="430" font-size="9" fill="#333">per day</text>
+                    <text x="740" y="445" font-size="9" fill="#333">100% discharge</text>
+                </g>
+
+                <!-- Night Phase -->
+                <g id="night">
+                    <rect x="900" y="200" width="250" height="280" fill="#f3e5f5" stroke="#512da8" stroke-width="2" rx="8"/>
+                    <text x="1025" y="225" text-anchor="middle" font-size="14" font-weight="bold" fill="#512da8">NIGHT WATCH & OVERNIGHT CARE</text>
+                    <text x="1025" y="250" text-anchor="middle" font-size="11" fill="#333">8:00 PM - 6:00 AM</text>
+                    
+                    <text x="910" y="280" font-size="10" font-weight="bold" fill="#1a472a">Activities:</text>
+                    <text x="910" y="298" font-size="9" fill="#333">• Monitoring</text>
+                    <text x="910" y="313" font-size="9" fill="#333">• Vital checks</text>
+                    <text x="910" y="328" font-size="9" fill="#333">• Medication</text>
+                    <text x="910" y="343" font-size="9" fill="#333">• Complication watch</text>
+                    <text x="910" y="358" font-size="9" fill="#333">• Emergency prep</text>
+                    <text x="910" y="373" font-size="9" fill="#333">• Next day prep</text>
+                    
+                    <text x="910" y="400" font-size="10" font-weight="bold" fill="#1a472a">Staffing:</text>
+                    <text x="910" y="415" font-size="9" fill="#333">1 nurse</text>
+                    <text x="910" y="430" font-size="9" fill="#333">1 attendant</text>
+                    <text x="910" y="445" font-size="9" fill="#333">On-call doctor</text>
+                </g>
+
+                <!-- Resource utilization indicators -->
+                <g id="resources">
+                    <rect x="50" y="550" width="1100" height="300" fill="#f5f5f5" stroke="#999" stroke-width="2" rx="8"/>
+                    <text x="600" y="580" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a472a">Resource Constraints & Utilization</text>
+
+                    <!-- Doctor Time -->
+                    <g id="doctor-resource">
+                        <text x="70" y="620" font-size="12" font-weight="bold" fill="#1a472a">Surgeon Time:</text>
+                        <rect x="250" y="605" width="300" height="30" fill="#e3f2fd" stroke="#1976d2" stroke-width="1" rx="4"/>
+                        <rect x="250" y="605" width="270" height="30" fill="#1976d2" rx="4"/>
+                        <text x="405" y="625" text-anchor="middle" font-size="12" font-weight="bold" fill="white">90% UTILIZED</text>
+                        <text x="70" y="650" font-size="11" fill="#333">8-9 surgeries/day, 20 min each + breaks</text>
+                    </g>
+
+                    <!-- Bed Capacity -->
+                    <g id="bed-resource">
+                        <text x="70" y="690" font-size="12" font-weight="bold" fill="#1a472a">Bed Capacity:</text>
+                        <rect x="250" y="675" width="300" height="30" fill="#fff3e0" stroke="#f57c00" stroke-width="1" rx="4"/>
+                        <rect x="250" y="675" width="270" height="30" fill="#f57c00" rx="4"/>
+                        <text x="405" y="695" text-anchor="middle" font-size="12" font-weight="bold" fill="white">90% UTILIZED</text>
+                        <text x="70" y="720" font-size="11" fill="#333">4-6 beds, overnight occupancy limits daily throughput</text>
+                    </g>
+
+                    <!-- Nursing Staff -->
+                    <g id="nursing-resource">
+                        <text x="70" y="760" font-size="12" font-weight="bold" fill="#1a472a">Nursing Staff:</text>
+                        <rect x="250" y="745" width="300" height="30" fill="#fce4ec" stroke="#c2185b" stroke-width="1" rx="4"/>
+                        <rect x="250" y="745" width="240" height="30" fill="#c2185b" rx="4"/>
+                        <text x="405" y="765" text-anchor="middle" font-size="12" font-weight="bold" fill="white">80% UTILIZED</text>
+                        <text x="70" y="790" font-size="11" fill="#333">2-3 nurses manage all surgical and post-operative care</text>
+                    </g>
+
+                    <!-- Operation Theater -->
+                    <g id="ot-resource">
+                        <text x="70" y="830" font-size="12" font-weight="bold" fill="#1a472a">Operation Theater:</text>
+                        <rect x="250" y="815" width="300" height="30" fill="#e8f5e9" stroke="#388e3c" stroke-width="1" rx="4"/>
+                        <rect x="250" y="815" width="285" height="30" fill="#388e3c" rx="4"/>
+                        <text x="405" y="835" text-anchor="middle" font-size="12" font-weight="bold" fill="white">95% UTILIZED</text>
+                        <text x="70" y="860" font-size="11" fill="#333">Single OT, continuous use from 9 AM - 4 PM</text>
+                    </g>
+                </g>
+            </svg>
+        </section>
+
+        <section class="content-section">
+            <h2>4. Key Business Model Elements</h2>
+            
+            <div class="model-grid">
+                <div class="model-card">
+                    <h3>Revenue Model</h3>
+                    <ul>
+                        <li><strong>Per Surgery Revenue:</strong> ₹8,000-12,000 per cataract surgery</li>
+                        <li><strong>Overnight Stay:</strong> Additional ₹1,000-1,500</li>
+                        <li><strong>Post-op Follow-ups:</strong> ₹500-1,000 per visit</li>
+                        <li><strong>Total per Patient:</strong> ₹10,000-15,000</li>
+                    </ul>
+                </div>
+
+                <div class="model-card">
+                    <h3>Cost Structure</h3>
+                    <ul>
+                        <li><strong>Fixed Costs:</strong> Facility, staff salaries (~60% of revenue)</li>
+                        <li><strong>Variable Costs:</strong> Consumables, IOLs, medications (~25% of revenue)</li>
+                        <li><strong>Overhead:</strong> Admin, utilities, maintenance (~15% of revenue)</li>
+                        <li><strong>Gross Margin:</strong> ~35-40% on each surgery</li>
+                    </ul>
+                </div>
+
+                <div class="model-card">
+                    <h3>Current Throughput</h3>
+                    <ul>
+                        <li><strong>Daily Surgeries:</strong> 4-6 per day</li>
+                        <li><strong>Bed Capacity:</strong> 4-6 overnight beds</li>
+                        <li><strong>Monthly Volume:</strong> ~100-120 surgeries</li>
+                        <li><strong>Annual Revenue:</strong> ~₹14-18 lakhs</li>
+                    </ul>
+                </div>
+
+                <div class="model-card">
+                    <h3>Patient Demographics</h3>
+                    <ul>
+                        <li><strong>Age Group:</strong> 50-75 years (primary)</li>
+                        <li><strong>Income Bracket:</strong> Lower to middle-income</li>
+                        <li><strong>Payment Type:</strong> Cash + Insurance (Gov schemes)</li>
+                        <li><strong>Primary Challenge:</strong> Affordability</li>
+                    </ul>
+                </div>
+
+                <div class="model-card">
+                    <h3>Competitive Position</h3>
+                    <ul>
+                        <li><strong>Premium Hospitals:</strong> ₹30,000-50,000 per surgery</li>
+                        <li><strong>Mid-tier Clinics:</strong> ₹15,000-20,000</li>
+                        <li><strong>clearSight Position:</strong> ₹8,000-12,000 (cost leader)</li>
+                        <li><strong>Trade-off:</strong> Volume over margin</li>
+                    </ul>
+                </div>
+
+                <div class="model-card">
+                    <h3>Operational Constraints</h3>
+                    <ul>
+                        <li><strong>Limiting Factor 1:</strong> Single surgeon availability</li>
+                        <li><strong>Limiting Factor 2:</strong> Bed capacity (overnight stay requirement)</li>
+                        <li><strong>Limiting Factor 3:</strong> Patient affordability threshold</li>
+                        <li><strong>Limiting Factor 4:</strong> Access to new patients</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section svg-section">
+            <h2>5. Funnel Visualization: Where Patients Are Lost</h2>
+            <p class="section-description">
+                A visual representation of patient attrition across the entire journey. 
+                Every stage shows where potential revenue is lost due to system constraints.
+            </p>
+
+            <svg viewBox="0 0 1000 600" class="svg-diagram">
+                <!-- Title -->
+                <text x="500" y="40" text-anchor="middle" font-size="24" font-weight="bold" fill="#1a472a">
+                    Patient Attrition Funnel: Revenue Loss Analysis
+                </text>
+
+                <!-- Awareness - 100 -->
+                <polygon points="150,80 850,80 800,150 200,150" fill="#4caf50" opacity="0.7"/>
+                <text x="500" y="125" text-anchor="middle" font-size="16" font-weight="bold" fill="white">
+                    Awareness: 100 Potential Patients
+                </text>
+                <text x="900" y="120" font-size="14" font-weight="bold" fill="#4caf50">₹15,00,000</text>
+
+                <!-- Arrow & Loss -->
+                <path d="M 500 150 L 500 170" stroke="#666" stroke-width="2"/>
+                <circle cx="520" cy="160" r="20" fill="#d32f2f"/>
+                <text x="520" y="167" text-anchor="middle" font-size="12" font-weight="bold" fill="white">55</text>
+                <text x="560" y="165" font-size="12" fill="#d32f2f" font-weight="bold">55% Lost</text>
+
+                <!-- Consultation - 45 -->
+                <polygon points="200,170 800,170 750,240 250,240" fill="#2196f3" opacity="0.7"/>
+                <text x="500" y="215" text-anchor="middle" font-size="16" font-weight="bold" fill="white">
+                    Initial Consultation: 45 Patients | ₹6,75,000
+                </text>
+
+                <!-- Arrow & Loss -->
+                <path d="M 500 240 L 500 260" stroke="#666" stroke-width="2"/>
+                <circle cx="520" cy="250" r="20" fill="#d32f2f"/>
+                <text x="520" cy="257" text-anchor="middle" font-size="12" font-weight="bold" fill="white">7</text>
+                <text x="560" y="255" font-size="12" fill="#d32f2f" font-weight="bold">15% Lost</text>
+
+                <!-- Pre-op - 38 -->
+                <polygon points="250,260 750,260 700,330 300,330" fill="#ff9800" opacity="0.7"/>
+                <text x="500" y="305" text-anchor="middle" font-size="16" font-weight="bold" fill="white">
+                    Pre-op Assessment: 38 Patients | ₹5,70,000
+                </text>
+
+                <!-- Arrow & Loss -->
+                <path d="M 500 330 L 500 350" stroke="#666" stroke-width="2"/>
+                <circle cx="520" cy="340" r="20" fill="#d32f2f"/>
+                <text x="520" cy="347" text-anchor="middle" font-size="12" font-weight="bold" fill="white">3</text>
+                <text x="560" y="345" font-size="12" fill="#d32f2f" font-weight="bold">8% Lost</text>
+
+                <!-- Surgery Ready - 35 -->
+                <polygon points="300,350 700,350 650,420 350,420" fill="#9c27b0" opacity="0.7"/>
+                <text x="500" y="395" text-anchor="middle" font-size="16" font-weight="bold" fill="white">
+                    Surgery Scheduled: 35 Patients | ₹5,25,000
+                </text>
+
+                <!-- Arrow & Loss -->
+                <path d="M 500 420 L 500 440" stroke="#666" stroke-width="2"/>
+                <circle cx="520" cy="430" r="20" fill="#d32f2f"/>
+                <text x="520" cy="437" text-anchor="middle" font-size="12" font-weight="bold" fill="white">4</text>
+                <text x="560" y="435" font-size="12" fill="#d32f2f" font-weight="bold">12% Lost</text>
+
+                <!-- Completed Surgery - 31 -->
+                <polygon points="350,440 650,440 600,510 400,510" fill="#e91e63" opacity="0.7"/>
+                <text x="500" y="485" text-anchor="middle" font-size="16" font-weight="bold" fill="white">
+                    Surgery Completed: 31 Patients | ₹4,65,000
+                </text>
+
+                <!-- Arrow & Loss -->
+                <path d="M 500 510 L 500 530" stroke="#666" stroke-width="2"/>
+                <circle cx="520" cy="520" r="20" fill="#d32f2f"/>
+                <text x="520" cy="527" text-anchor="middle" font-size="12" font-weight="bold" fill="white">2</text>
+                <text x="560" y="525" font-size="12" fill="#d32f2f" font-weight="bold">5% Lost</text>
+
+                <!-- Final Outcome - 29 -->
+                <polygon points="400,530 600,530 550,580 450,580" fill="#4caf50" opacity="0.8"/>
+                <text x="500" y="560" text-anchor="middle" font-size="16" font-weight="bold" fill="white">
+                    Satisfied Patients: 29 | ₹4,35,000
+                </text>
+
+                <!-- Loss metrics -->
+                <g id="loss-metrics">
+                    <text x="50" y="450" font-size="13" font-weight="bold" fill="#1a472a">Lost Revenue:</text>
+                    <text x="50" y="475" font-size="12" fill="#d32f2f">71 Patients</text>
+                    <text x="50" y="495" font-size="12" fill="#d32f2f">₹10,65,000</text>
+                    <text x="50" y="515" font-size="11" fill="#333">71% Loss Rate</text>
+                </g>
+            </svg>
+        </section>
+
+        <section class="content-section">
+            <h2>6. Core Insights from Context</h2>
+            <div class="insights-grid">
+                <div class="insight-card">
+                    <h3>📊 Business Reality</h3>
+                    <p>
+                        clearSight operates on a high-volume, low-margin model constrained by 
+                        physical bed capacity and a single surgeon. The facility has room to potentially 
+                        double revenue but is hitting structural bottlenecks.
+                    </p>
+                </div>
+                <div class="insight-card">
+                    <h3>🎯 Strategic Position</h3>
+                    <p>
+                        As a cost leader serving lower-income segments, clearSight must 
+                        compete on affordability and accessibility while maintaining quality. 
+                        This is fundamentally a systems optimization problem.
+                    </p>
+                </div>
+                <div class="insight-card">
+                    <h3>⚙️ System Design</h3>
+                    <p>
+                        The patient journey shows 74% attrition from awareness to satisfied outcome. 
+                        This isn't primarily a quality issue but a capacity and access constraint 
+                        requiring systematic redesign.
+                    </p>
+                </div>
+                <div class="insight-card">
+                    <h3>💰 Financial Pressure</h3>
+                    <p>
+                        With ₹1+ crore in annual potential revenue lost due to attrition, 
+                        clearSight faces a critical need to improve throughput without increasing 
+                        fixed costs proportionally.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h3>Ready to explore the challenges?</h3>
+            <a href="challenges.html" class="cta-button">View Dr. Connors' Challenges →</a>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 clearSight Case Analysis. Theory of Constraints & Process Engineering Study.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Diagram Guide - clearSight</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            padding: 2rem;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        .subtitle {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 3rem;
+            font-size: 1.2rem;
+        }
+        .diagrams-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .diagram-card {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .diagram-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+        .diagram-card h2 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        .diagram-card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+        .features {
+            list-style: none;
+            margin-bottom: 1rem;
+        }
+        .features li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 0.9rem;
+            color: #555;
+        }
+        .features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4caf50;
+            font-weight: bold;
+        }
+        .button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+        .button:hover {
+            transform: scale(1.05);
+        }
+        .stats-section {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .stats-section h2 {
+            color: #667eea;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+        .stat-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        .process-flow {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .process-flow h2 {
+            color: #667eea;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+        .flow-steps {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .flow-step {
+            flex: 1;
+            min-width: 150px;
+            background: #f5f5f5;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid #667eea;
+        }
+        .flow-step.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-weight: bold;
+        }
+        .arrow {
+            font-size: 2rem;
+            color: #667eea;
+        }
+        .footer {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .diagrams-grid { grid-template-columns: 1fr; }
+            .flow-steps { flex-direction: column; }
+            .arrow { transform: rotate(90deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 clearSight SVG Diagram Gallery</h1>
+        <p class="subtitle">Visual Analysis of Cataract Surgery Operations Through Theory of Constraints</p>
+
+        <!-- Stats Section -->
+        <div class="stats-section">
+            <h2>📊 Key Metrics at a Glance</h2>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-number">74%</div>
+                    <div class="stat-label">Patient Attrition Rate</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">₹10.65L</div>
+                    <div class="stat-label">Annual Lost Revenue</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">90%</div>
+                    <div class="stat-label">Surgeon Utilization</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">4-6</div>
+                    <div class="stat-label">Daily Surgery Capacity</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Process Flow -->
+        <div class="process-flow">
+            <h2>🔄 Website Navigation Flow</h2>
+            <div class="flow-steps">
+                <div class="flow-step active">
+                    <strong>Context</strong>
+                    <small>Business Overview</small>
+                </div>
+                <div class="arrow">→</div>
+                <div class="flow-step">
+                    <strong>Challenges</strong>
+                    <small>Dr. Connors' View</small>
+                </div>
+                <div class="arrow">→</div>
+                <div class="flow-step">
+                    <strong>Actual Issues</strong>
+                    <small>Root Causes</small>
+                </div>
+                <div class="arrow">→</div>
+                <div class="flow-step">
+                    <strong>P&L Analysis</strong>
+                    <small>Financial Impact</small>
+                </div>
+                <div class="arrow">→</div>
+                <div class="flow-step">
+                    <strong>Strategy</strong>
+                    <small>Solutions</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Diagram Cards -->
+        <div class="diagrams-grid">
+            <!-- Diagram 1: Patient Funnel -->
+            <div class="diagram-card">
+                <div class="icon">📊</div>
+                <h2>Patient Journey Funnel</h2>
+                <p>
+                    Comprehensive 8-stage visualization showing where patients are lost in the system, 
+                    from initial awareness through final satisfied outcome.
+                </p>
+                <ul class="features">
+                    <li>8-Stage patient flow mapping</li>
+                    <li>Conversion rates per stage</li>
+                    <li>Revenue impact visualization</li>
+                    <li>Color-coded stages</li>
+                    <li>Interactive hover effects</li>
+                    <li>74% total attrition display</li>
+                </ul>
+                <a href="context.html#stage-funnel" class="button">View Diagram</a>
+            </div>
+
+            <!-- Diagram 2: Daily Operations -->
+            <div class="diagram-card">
+                <div class="icon">⏰</div>
+                <h2>Daily Operations Timeline</h2>
+                <p>
+                    Hour-by-hour breakdown of operations from 6 AM to 10 PM, showing how resources 
+                    are utilized throughout the day and where bottlenecks emerge.
+                </p>
+                <ul class="features">
+                    <li>6-phase operational flow</li>
+                    <li>Timeline visualization</li>
+                    <li>Resource allocation tracking</li>
+                    <li>Utilization percentages</li>
+                    <li>Activity breakdown per phase</li>
+                    <li>Constraint identification</li>
+                </ul>
+                <a href="context.html#daily-ops" class="button">View Diagram</a>
+            </div>
+
+            <!-- Diagram 3: Revenue Loss Funnel -->
+            <div class="diagram-card">
+                <div class="icon">💰</div>
+                <h2>Revenue Loss Funnel</h2>
+                <p>
+                    Visual representation of how potential revenue ₹15,00,000 shrinks to actual 
+                    revenue ₹3,90,000, with ₹10,65,000 lost to system constraints.
+                </p>
+                <ul class="features">
+                    <li>Polygon-based funnel design</li>
+                    <li>Revenue tracking per stage</li>
+                    <li>Lost revenue calculation</li>
+                    <li>Patient count visualization</li>
+                    <li>Percentage loss per stage</li>
+                    <li>Financial impact emphasis</li>
+                </ul>
+                <a href="context.html#revenue-funnel" class="button">View Diagram</a>
+            </div>
+
+            <!-- Diagram 4: Business Model -->
+            <div class="diagram-card">
+                <div class="icon">🏢</div>
+                <h2>Business Model Analysis</h2>
+                <p>
+                    Comprehensive breakdown of clearSight's business model including revenue streams, 
+                    cost structure, demographics, and competitive positioning.
+                </p>
+                <ul class="features">
+                    <li>Revenue model breakdown</li>
+                    <li>Cost structure analysis</li>
+                    <li>Throughput metrics</li>
+                    <li>Patient demographics</li>
+                    <li>Competitive analysis</li>
+                    <li>Operational constraints</li>
+                </ul>
+                <a href="context.html#business-model" class="button">View Details</a>
+            </div>
+
+            <!-- Diagram 5: Resource Utilization -->
+            <div class="diagram-card">
+                <div class="icon">⚙️</div>
+                <h2>Resource Utilization Metrics</h2>
+                <p>
+                    Detailed visualization of how each critical resource (Surgeon, Beds, Nursing, OT) 
+                    is utilized, showing where constraints exist.
+                </p>
+                <ul class="features">
+                    <li>Surgeon utilization: 90%</li>
+                    <li>Bed capacity utilization: 90%</li>
+                    <li>Nursing staff: 80%</li>
+                    <li>Operation theater: 95%</li>
+                    <li>Progress bar visualization</li>
+                    <li>Constraint ranking</li>
+                </ul>
+                <a href="context.html#resource-util" class="button">View Metrics</a>
+            </div>
+
+            <!-- Diagram 6: Insights -->
+            <div class="diagram-card">
+                <div class="icon">💡</div>
+                <h2>Strategic Insights</h2>
+                <p>
+                    Key takeaways about business reality, strategic position, system design, 
+                    and financial pressures facing clearSight.
+                </p>
+                <ul class="features">
+                    <li>Business reality assessment</li>
+                    <li>Strategic positioning</li>
+                    <li>System design analysis</li>
+                    <li>Financial pressure summary</li>
+                    <li>Theory of Constraints intro</li>
+                    <li>Process engineering principles</li>
+                </ul>
+                <a href="context.html#insights" class="button">View Insights</a>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="stats-section">
+            <h2>✨ Website Features</h2>
+            <div class="stats-grid">
+                <div>
+                    <h3>🎨 Design</h3>
+                    <ul class="features">
+                        <li>Professional color scheme</li>
+                        <li>Modern gradient backgrounds</li>
+                        <li>Smooth animations</li>
+                        <li>Responsive layout</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>🎯 Interactivity</h3>
+                    <ul class="features">
+                        <li>SVG hover effects</li>
+                        <li>Tooltip system</li>
+                        <li>Smooth transitions</li>
+                        <li>Click navigation</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>📱 Accessibility</h3>
+                    <ul class="features">
+                        <li>Mobile responsive</li>
+                        <li>Semantic HTML</li>
+                        <li>Clear typography</li>
+                        <li>High contrast</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>📊 Data</h3>
+                    <ul class="features">
+                        <li>Real case data</li>
+                        <li>Quantified metrics</li>
+                        <li>Revenue impact</li>
+                        <li>Performance data</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="stats-section" style="text-align: center;">
+            <h2>🚀 Ready to Explore?</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 2rem; color: #666;">
+                Start with the Context page to understand clearSight's business flow, then follow the journey through
+                Challenges, Actual Issues, Financial Analysis, and finally Strategic Solutions.
+            </p>
+            <a href="context.html" class="button" style="padding: 1rem 3rem; font-size: 1.1rem;">
+                Start Exploring → 
+            </a>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>
+                <strong>clearSight Case Study Analysis</strong><br>
+                Theory of Constraints (Goldratt) + Process Engineering<br>
+                Multi-page interactive website with extensive SVG visualizations<br>
+                <small>Created February 2024</small>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
