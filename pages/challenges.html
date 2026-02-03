@@ -34,27 +34,139 @@
                 Dr. Connors, the Chief Medical Officer of ClearSight, identifies the following business and operational challenges that are constraining the organization's growth and profitability.
             </p>
 
-            <div class="alert alert-danger">
+            <div class="content-section" style="margin: 3rem 0; background: linear-gradient(to bottom, #f9fafb, #fff); border-radius: 12px;">
+                <h3 style="color: #1f2937; margin-bottom: 2rem; text-align: center;">🗺️ End-to-End Operational Process Map</h3>
+                <p style="text-align: center; color: #6b7280; margin-bottom: 3rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+                    A visual flow of the ten operational challenges mapped across the patient journey, highlighting critical bottlenecks.
+                </p>
+
+                <div class="visual-container" style="background: white; padding: 2rem 1rem; border-radius: 12px; border: 1px solid #e5e7eb; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+                    <svg width="100%" height="220" viewBox="0 0 1000 220" style="overflow: visible;">
+                        <defs>
+                            <marker id="arrow-flow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                                <path d="M0,0 L0,6 L9,3 z" fill="#9ca3af" />
+                            </marker>
+                            <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+                                <feDropShadow dx="2" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.1"/>
+                            </filter>
+                        </defs>
+
+                        <!-- Process Line -->
+                        <line x1="50" y1="110" x2="950" y2="110" stroke="#e5e7eb" stroke-width="4" stroke-linecap="round"/>
+
+                        <!-- Step 1: Outreach & Intake -->
+                        <circle cx="100" cy="110" r="8" fill="#3b82f6" stroke="white" stroke-width="2"/>
+                        <rect x="50" y="50" width="100" height="40" rx="4" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+                        <text x="100" y="65" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e40af">1. Intake</text>
+                        <text x="100" y="80" text-anchor="middle" font-size="9" fill="#60a5fa">Paperwork Issues</text>
+                         <path d="M100 90 L100 110" stroke="#bfdbfe" stroke-width="1" stroke-dasharray="2,2"/>
+                        
+                        <!-- Challenge 9: Communication -->
+                         <g transform="translate(100, 150)">
+                            <rect x="-40" y="0" width="80" height="20" rx="4" fill="#fee2e2" stroke="#fca5a5"/>
+                            <text x="0" y="14" text-anchor="middle" font-size="9" fill="#991b1b">#9 Comm. Gaps</text>
+                             <path d="M0 -30 L0 0" stroke="#fca5a5" stroke-width="1"/>
+                        </g>
+
+
+                        <!-- Step 2: Pre-Op -->
+                        <circle cx="300" cy="110" r="8" fill="#3b82f6" stroke="white" stroke-width="2"/>
+                         <rect x="250" y="50" width="100" height="40" rx="4" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+                        <text x="300" y="65" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e40af">2. Pre-Op</text>
+                        <text x="300" y="80" text-anchor="middle" font-size="9" fill="#60a5fa">Assessments</text>
+                         <path d="M300 90 L300 110" stroke="#bfdbfe" stroke-width="1" stroke-dasharray="2,2"/>
+
+                         <!-- Challenge 3: Inefficiency -->
+                        <g transform="translate(260, 130)">
+                            <rect x="-40" y="0" width="80" height="20" rx="4" fill="#fee2e2" stroke="#fca5a5"/>
+                            <text x="0" y="14" text-anchor="middle" font-size="9" fill="#991b1b">#3 Process Time</text>
+                            <path d="M0 -10 L0 0" stroke="#fca5a5" stroke-width="1"/>
+                        </g>
+                         <!-- Challenge 6: Insurance -->
+                        <g transform="translate(340, 160)">
+                            <rect x="-40" y="0" width="80" height="20" rx="4" fill="#fee2e2" stroke="#fca5a5"/>
+                            <text x="0" y="14" text-anchor="middle" font-size="9" fill="#991b1b">#6 Auth Delays</text>
+                             <path d="M-40 -40 L0 0" stroke="#fca5a5" stroke-width="1" fill="none"/>
+                        </g>
+
+
+                        <!-- Step 3: Surgery (Bottleneck) -->
+                        <g filter="url(#shadow)">
+                         <rect x="450" y="90" width="100" height="40" rx="20" fill="#dc2626" stroke="#b91c1c" stroke-width="2"/>
+                         <text x="500" y="115" text-anchor="middle" font-size="12" font-weight="bold" fill="white">SURGERY</text>
+                        </g>
+
+                         <!-- Challenge 1, 2, 5 -->
+                         <line x1="500" y1="90" x2="500" y2="40" stroke="#fca5a5" stroke-width="2"/>
+                         <g transform="translate(500, 10)">
+                            <rect x="-70" y="0" width="140" height="60" rx="4" fill="#fff1f2" stroke="#fecdd3"/>
+                            <text x="0" y="15" text-anchor="middle" font-size="10" font-weight="bold" fill="#be123c">⚠️ BOTTLENECK</text>
+                            <text x="0" y="30" text-anchor="middle" font-size="9" fill="#9f1239">#1 Suite Utilization</text>
+                            <text x="0" y="42" text-anchor="middle" font-size="9" fill="#9f1239">#2 Duration Variance</text>
+                            <text x="0" y="54" text-anchor="middle" font-size="9" fill="#9f1239">#5 Material Stockouts</text>
+                        </g>
+
+
+                        <!-- Step 4: Post-Op -->
+                        <circle cx="700" cy="110" r="8" fill="#3b82f6" stroke="white" stroke-width="2"/>
+                        <rect x="650" y="50" width="100" height="40" rx="4" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+                        <text x="700" y="65" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e40af">4. Post-Op</text>
+                        <text x="700" y="80" text-anchor="middle" font-size="9" fill="#60a5fa">Recovery</text>
+                         <path d="M700 90 L700 110" stroke="#bfdbfe" stroke-width="1" stroke-dasharray="2,2"/>
+
+                         <!-- Challenge 7 -->
+                        <g transform="translate(700, 130)">
+                            <rect x="-40" y="0" width="80" height="20" rx="4" fill="#fee2e2" stroke="#fca5a5"/>
+                            <text x="0" y="14" text-anchor="middle" font-size="9" fill="#991b1b">#7 Quality/Infection</text>
+                             <path d="M0 -10 L0 0" stroke="#fca5a5" stroke-width="1"/>
+                        </g>
+
+
+                        <!-- Step 5: Billing & Admin -->
+                        <circle cx="900" cy="110" r="8" fill="#3b82f6" stroke="white" stroke-width="2"/>
+                        <rect x="850" y="50" width="100" height="40" rx="4" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+                        <text x="900" y="65" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e40af">5. Admin</text>
+                        <text x="900" y="80" text-anchor="middle" font-size="9" fill="#60a5fa">Revenue Cycle</text>
+                         <path d="M900 90 L900 110" stroke="#bfdbfe" stroke-width="1" stroke-dasharray="2,2"/>
+
+                        <!-- Challenge 8, 10 -->
+                        <g transform="translate(900, 130)">
+                            <rect x="-50" y="0" width="100" height="32" rx="4" fill="#fee2e2" stroke="#fca5a5"/>
+                            <text x="0" y="12" text-anchor="middle" font-size="9" fill="#991b1b">#8 Billing Lag</text>
+                             <text x="0" y="24" text-anchor="middle" font-size="9" fill="#991b1b">#10 Tech Silos</text>
+                             <path d="M0 -10 L0 0" stroke="#fca5a5" stroke-width="1"/>
+                        </g>
+
+                         <!-- Challenge 4: Workforce (Underlying) -->
+                         <rect x="200" y="190" width="600" height="25" rx="12" fill="#fff7ed" stroke="#fdba74"/>
+                         <text x="500" y="207" text-anchor="middle" font-size="11" font-weight="bold" fill="#c2410c">#4 Workforce Instability affects ALL stages</text>
+
+                    </svg>
+                </div>
+            </div>
+
+            <div class="alert alert-danger" style="display: none;">
+                <!-- Hidden original list items to be replaced by the visual map above, but keeping text for accessibility/SEO if needed -->
                 <strong>1. Surgical Suite Bottleneck</strong>
                 <p>Operating rooms are not being fully utilized. While we have the capacity to perform 6,000 surgeries annually, we're only achieving 3,000 due to inefficient scheduling and excessive setup times between procedures.</p>
             </div>
 
-            <div class="alert alert-danger">
+            <div class="alert alert-danger" style="display: none;">
                 <strong>2. Extended Procedure Duration</strong>
                 <p>Average cataract surgery takes 45 minutes, but our best performers can do it in 32 minutes. The 13-minute gap represents a 41% productivity loss per surgery. This is driven by surgeon variability, poor OR preparation, and inefficient instrumentation sequencing.</p>
             </div>
 
-            <div class="alert alert-warning">
+            <div class="alert alert-warning" style="display: none;">
                 <strong>3. Pre-Operative Process Inefficiency</strong>
                 <p>Our pre-op assessments take an average of 90 minutes per patient. Insurance pre-authorizations cause 15% of surgeries to be postponed or cancelled. Patient intake paperwork is repetitive and often contains errors requiring rework.</p>
             </div>
 
-            <div class="alert alert-warning">
+            <div class="alert alert-warning" style="display: none;">
                 <strong>4. Workforce Instability & Morale Issues</strong>
                 <p>Staff turnover exceeds 28% annually, compared to healthcare industry average of 16%. Surgical nurses and technicians report burnout due to understaffing, lack of proper training, and insufficient recognition. This creates a vicious cycle of poor service quality and patient dissatisfaction.</p>
             </div>
 
-            <div class="subsection">
+            <div class="subsection" style="display: none;">
                 <h4>More Challenges Identified</h4>
 
                 <div class="highlight" style="margin-bottom: 1rem;">
@@ -91,7 +203,7 @@
             <div class="content-section" style="margin-top: 2rem; background: linear-gradient(135deg, #fef3c7 0%, #fef08a 100%); border-left: 4px solid var(--warning);">
                 <h3 style="color: #92400e; margin-bottom: 1rem;">Dr. Connors' Assessment Summary</h3>
                 <p style="color: #333; line-height: 1.8;">
-                    "ClearSight has excellent clinical talent and infrastructure, but we're leaving substantial revenue on the table due to operational inefficiencies. We're operating at 65% capacity when we could be at 90%+. The combination of surgical delays, pre-op bottlenecks, and workforce instability creates a constrained system where our theoretical maximum throughput far exceeds our actual output."
+                    "ClearSight has excellent clinical talent and infrastructure, but we're leaving substantial revenue on the table due to operational inefficiencies. We're operating at 50% capacity (3,000 surgeries) when we could be at 6,000.  The combination of surgical delays, pre-op bottlenecks, and workforce instability creates a constrained system where our theoretical maximum throughput far exceeds our actual output."
                 </p>
                 <p style="color: #333; line-height: 1.8; margin-top: 1rem;">
                     "We need to apply systematic problem-solving methodology to identify and break these constraints. The question is: what is the single most limiting factor preventing us from achieving our full potential? And how do we subordinate all other decisions to removing that constraint?"
@@ -183,10 +295,6 @@
                 </div>
             </div>
 
-            <div class="alert alert-info">
-                <strong>Theory of Constraints Connection:</strong> These challenges represent symptoms of deeper systemic constraints. Dr. Connors observes the effects (low utilization, delays, turnover) but the root causes are embedded in organizational processes and policies. The TOC methodology helps us move beyond treating symptoms to identifying and removing the fundamental constraints.
-            </div>
-
             <div class="content-section" style="margin: 3rem 0; background: linear-gradient(135deg, #1f2937, #111827); border-radius: 12px; color: white;">
                 <div style="padding: 2rem;">
                     <h3 style="color: white; margin-bottom: 2rem; text-align: center;">🗺️ Visualizing the Operational Gridlock</h3>
@@ -256,153 +364,6 @@
                         </svg>
                     </div>
                 </div>
-            </div>
-
-            <div class="content-section" style="background: #fff;">
-                <h3>📊 Detailed Challenge Breakdown</h3>
-                <p>The following grid breaks down each challenge by severity and impact, providing a structured view of the operational landscape.</p>
-
-                <!-- Challenge Severity Heatmap Grid -->
-                <div class="challenges-grid">
-                    <div class="challenge-card critical">
-                        <div class="challenge-header">
-                            <div class="challenge-icon">⚠️</div>
-                            <h4>Surgical Suite Bottleneck</h4>
-                        </div>
-                        <p><strong>Impact:</strong> Critical</p>
-                        <p>Capacity for 6,000 surgeries vs. 3,000 actual. Inefficient scheduling & excessive setup times.</p>
-                    </div>
-
-                     <div class="challenge-card critical">
-                        <div class="challenge-header">
-                            <div class="challenge-icon">📉</div>
-                            <h4>Pre-Auth Delays</h4>
-                        </div>
-                        <p><strong>Impact:</strong> Critical</p>
-                        <p>45% take >48hrs. 15% cancellations. Manual follow-ups delay scheduling by 5-7 days.</p>
-                    </div>
-
-                     <div class="challenge-card warning">
-                         <div class="challenge-header">
-                            <div class="challenge-icon">⏳</div>
-                            <h4>Procedure Duration</h4>
-                        </div>
-                        <p><strong>Impact:</strong> High</p>
-                        <p>45 min avg vs. 32 min best. 13 min gap = 41% productivity loss per surgery.</p>
-                    </div>
-
-                    <div class="challenge-card warning">
-                        <div class="challenge-header">
-                            <div class="challenge-icon">👥</div>
-                            <h4>Workforce Instability</h4>
-                        </div>
-                        <p><strong>Impact:</strong> High</p>
-                        <p>28% turnover (vs 16% avg). Burnout cycle affects quality & service.</p>
-                    </div>
-
-                    <div class="challenge-card warning">
-                        <div class="challenge-header">
-                            <div class="challenge-icon">💸</div>
-                            <h4>Billing & Revenue</h4>
-                        </div>
-                        <p><strong>Impact:</strong> High</p>
-                        <p>52 payment days (vs 35). 18% errors. 6.8% denied claims.</p>
-                    </div>
-
-                    <div class="challenge-card medium">
-                         <div class="challenge-header">
-                            <div class="challenge-icon">🔍</div>
-                            <h4>Quality Control</h4>
-                        </div>
-                        <p><strong>Impact:</strong> Medium</p>
-                        <p>6.2% complications (vs 3%). 2.1% infection rate.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="subsection">
-                <h4>Visual Map of Operational Challenges</h4>
-                <div style="text-align: center; margin: 2rem 0;">
-                    <svg width="100%" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Central Constraint -->
-                        <circle cx="400" cy="200" r="60" fill="#e63946" stroke="#fff" stroke-width="3"/>
-                        <text x="400" y="190" text-anchor="middle" fill="white" font-size="14" font-weight="bold">PRIMARY</text>
-                        <text x="400" y="210" text-anchor="middle" fill="white" font-size="14" font-weight="bold">CONSTRAINT</text>
-                        <text x="400" y="225" text-anchor="middle" fill="white" font-size="12">OR Throughput</text>
-                        
-                        <!-- Dependent Issues -->
-                        <rect x="200" y="50" width="120" height="40" fill="#f77f00" rx="8"/>
-                        <text x="260" y="70" text-anchor="middle" fill="white" font-size="10">Surgical Suite</text>
-                        <text x="260" y="82" text-anchor="middle" fill="white" font-size="10">Bottleneck</text>
-                        
-                        <rect x="480" y="50" width="120" height="40" fill="#f77f00" rx="8"/>
-                        <text x="540" y="70" text-anchor="middle" fill="white" font-size="10">Extended</text>
-                        <text x="540" y="82" text-anchor="middle" fill="white" font-size="10">Procedure Time</text>
-                        
-                        <rect x="150" y="330" width="120" height="40" fill="#f77f00" rx="8"/>
-                        <text x="210" y="350" text-anchor="middle" fill="white" font-size="10">Pre-Op Process</text>
-                        <text x="210" y="362" text-anchor="middle" fill="white" font-size="10">Inefficiency</text>
-                        
-                        <rect x="530" y="330" width="120" height="40" fill="#f77f00" rx="8"/>
-                        <text x="590" y="350" text-anchor="middle" fill="white" font-size="10">Workforce</text>
-                        <text x="590" y="362" text-anchor="middle" fill="white" font-size="10">Instability</text>
-                        
-                        <!-- Connecting Lines -->
-                        <line x1="340" y1="200" x2="260" y2="90" stroke="#f77f00" stroke-width="3"/>
-                        <polygon points="260,90 265,80 255,80" fill="#f77f00"/>
-                        
-                        <line x1="460" y1="200" x2="540" y2="90" stroke="#f77f00" stroke-width="3"/>
-                        <polygon points="540,90 545,80 535,80" fill="#f77f00"/>
-                        
-                        <line x1="340" y1="200" x2="210" y2="330" stroke="#f77f00" stroke-width="3"/>
-                        <polygon points="210,330 220,325 220,335" fill="#f77f00"/>
-                        
-                        <line x1="460" y1="200" x2="590" y2="330" stroke="#f77f00" stroke-width="3"/>
-                        <polygon points="590,330 580,325 580,335" fill="#f77f00"/>
-                        
-                        <!-- Secondary Issues -->
-                        <circle cx="100" cy="150" r="35" fill="#d62828" stroke="#fff" stroke-width="2"/>
-                        <text x="100" y="155" text-anchor="middle" fill="white" font-size="8">Material</text>
-                        <text x="100" y="165" text-anchor="middle" fill="white" font-size="8">Management</text>
-                        
-                        <circle cx="700" cy="150" r="35" fill="#d62828" stroke="#fff" stroke-width="2"/>
-                        <text x="700" y="155" text-anchor="middle" fill="white" font-size="8">Insurance</text>
-                        <text x="700" y="165" text-anchor="middle" fill="white" font-size="8">Delays</text>
-                        
-                        <circle cx="100" cy="250" r="35" fill="#d62828" stroke="#fff" stroke-width="2"/>
-                        <text x="100" y="255" text-anchor="middle" fill="white" font-size="8">Quality</text>
-                        <text x="100" y="265" text-anchor="middle" fill="white" font-size="8">Control</text>
-                        
-                        <circle cx="700" cy="250" r="35" fill="#d62828" stroke="#fff" stroke-width="2"/>
-                        <text x="700" y="255" text-anchor="middle" fill="white" font-size="8">Revenue</text>
-                        <text x="700" y="265" text-anchor="middle" fill="white" font-size="8">Cycle</text>
-                        
-                        <!-- Connecting to secondary -->
-                        <line x1="200" y1="70" x2="135" y2="150" stroke="#d62828" stroke-width="2" stroke-dasharray="5,5"/>
-                        <line x1="320" y1="70" x2="135" y2="150" stroke="#d62828" stroke-width="2" stroke-dasharray="5,5"/>
-                        
-                        <line x1="480" y1="70" x2="665" y2="150" stroke="#d62828" stroke-width="2" stroke-dasharray="5,5"/>
-                        <line x1="600" y1="70" x2="665" y2="150" stroke="#d62828" stroke-width="2" stroke-dasharray="5,5"/>
-                        
-                        <line x1="210" y1="370" x2="135" y2="285" stroke="#d62828" stroke-width="2" stroke-dasharray="5,5"/>
-                        <line x1="270" y1="370" x2="135" y2="285" stroke="#d62828" stroke-width="2" stroke-dasharray="5,5"/>
-                        
-                        <line x1="590" y1="370" x2="665" y2="285" stroke="#d62828" stroke-width="2" stroke-dasharray="5,5"/>
-                        <line x1="530" y1="370" x2="665" y2="285" stroke="#d62828" stroke-width="2" stroke-dasharray="5,5"/>
-                        
-                        <!-- Legend -->
-                        <rect x="20" y="20" width="150" height="60" fill="rgba(255,255,255,0.9)" stroke="#333" stroke-width="1" rx="5"/>
-                        <circle cx="40" cy="35" r="8" fill="#e63946"/>
-                        <text x="55" y="40" fill="#333" font-size="10">Primary Constraint</text>
-                        <rect x="30" y="45" width="16" height="8" fill="#f77f00" rx="2"/>
-                        <text x="55" y="52" fill="#333" font-size="10">Direct Causes</text>
-                        <circle cx="40" cy="60" r="6" fill="#d62828"/>
-                        <text x="55" y="65" fill="#333" font-size="10">Secondary Issues</text>
-                    </svg>
-                </div>
-                <p style="text-align: center; color: #666; font-style: italic; margin-top: 1rem;">
-                    Interconnected map of operational challenges showing the primary constraint and cascading effects
-                </p>
             </div>
         </section>
     </main>

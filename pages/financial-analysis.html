@@ -163,7 +163,7 @@
                 
                 <!-- Waterfall Chart for Impact Quantification -->
                 <div class="visual-container" style="background: white; padding: 2rem; border-radius: 12px; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                     <h5 style="text-align: center; margin-bottom: 1.5rem; color: #4b5563;">Potential Profit Improvement Waterfall ($ Millions)</h5>
+                     <h5 style="text-align: center; margin-bottom: 1.5rem; color: #4b5563;">Potential Year 1 Profit Improvement Waterfall</h5>
                      <svg width="100%" height="400" viewBox="0 0 800 400">
                         <defs>
                             <linearGradient id="gradGreen" x1="0" y1="0" x2="0" y2="1">
@@ -187,99 +187,61 @@
                         <text x="40" y="125" text-anchor="end" font-size="10">$3M</text>
                         
                         <!-- Bars -->
-                        <!-- 1. OR: +1.5M -->
-                        <rect x="80" y="235" width="60" height="115" fill="url(#gradGreen)" stroke="#166534"/>
-                        <text x="110" y="225" text-anchor="middle" font-size="10" font-weight="bold">+$1.5M</text>
-                        <text x="110" y="370" text-anchor="middle" font-size="10">OR Imp.</text>
-                        <line x1="80" y1="235" x2="140" y2="235" stroke="#9ca3af" stroke-dasharray="2"/>
+                        <!-- 1. OR Throughput (Volume): +$2.0M -->
+                        <rect x="80" y="200" width="60" height="150" fill="url(#gradGreen)" stroke="#166534"/>
+                        <text x="110" y="190" text-anchor="middle" font-size="10" font-weight="bold">+$2.0M</text>
+                        <text x="110" y="370" text-anchor="middle" font-size="10">OR Volume</text>
+                        <line x1="80" y1="200" x2="140" y2="200" stroke="#9ca3af" stroke-dasharray="2"/>
 
-                        <!-- 2. Pre-Auth: +1.0M (Starts at 1.5) -->
-                        <rect x="160" y="160" width="60" height="75" fill="url(#gradGreen)" stroke="#166534"/>
-                        <text x="190" y="150" text-anchor="middle" font-size="10" font-weight="bold">+$1.0M</text>
-                         <text x="190" y="370" text-anchor="middle" font-size="10">Pre-Auth</text>
+                        <!-- 2. Revenue Cycle (Billing): +$0.5M (Starts at $2.0M) -->
+                        <rect x="180" y="162" width="60" height="38" fill="url(#gradGreen)" stroke="#166534"/>
+                        <text x="210" y="152" text-anchor="middle" font-size="10" font-weight="bold">+$0.5M</text>
+                         <text x="210" y="370" text-anchor="middle" font-size="10">Billing/Codes</text>
                          
-                        <!-- 3. Billing: +0.5M (Starts at 2.5) -->
-                        <rect x="240" y="122" width="60" height="38" fill="url(#gradGreen)" stroke="#166534"/>
-                        <text x="270" y="112" text-anchor="middle" font-size="10" font-weight="bold">+$0.5M</text>
-                        <text x="270" y="370" text-anchor="middle" font-size="10">Billing</text>
-                        
-                        <!-- 4. Staffing: +0.8M (Starts at 3.0) -->
-                        <rect x="320" y="102" width="60" height="18" fill="url(#gradGreen)" stroke="#166534"/>
-                        <text x="350" y="92" text-anchor="middle" font-size="10" font-weight="bold">+$0.8M</text>
-                        <text x="350" y="370" text-anchor="middle" font-size="10">Staffing</text>
+                        <!-- 3. Efficiency/Cost (Staffing/Supplies): +$0.5M (Starts at $2.5M) -->
+                        <rect x="280" y="125" width="60" height="37" fill="url(#gradGreen)" stroke="#166534"/>
+                        <text x="310" y="115" text-anchor="middle" font-size="10" font-weight="bold">+$0.5M</text>
+                        <text x="310" y="370" text-anchor="middle" font-size="10">Efficiency</text>
 
-                         <!-- 5. Infection: +0.3M (Starts at 3.8) -->
-                        <rect x="400" y="90" width="60" height="8" fill="url(#gradGreen)" stroke="#166534"/>
-                        <text x="430" y="80" text-anchor="middle" font-size="10" font-weight="bold">+$0.3M</text>
-                        <text x="430" y="370" text-anchor="middle" font-size="10">Quality</text>
-                        
-                        <!-- 6. No-Show: +0.4M (Starts at 4.1) -->
-                        <rect x="480" y="85" width="60" height="15" fill="url(#gradGreen)" stroke="#166534"/>
-                        <text x="510" y="75" text-anchor="middle" font-size="10" font-weight="bold">+$0.4M</text>
-                        <text x="510" y="370" text-anchor="middle" font-size="10">No-Show</text>
-
-                         <!-- Total: +4.0M -->
-                         <rect x="580" y="85" width="80" height="265" fill="url(#gradBlueBar)" stroke="#1e40af"/>
-                         <text x="620" y="75" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e40af">+$4.0M</text>
-                         <text x="620" y="370" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e3a8a">TOTAL GAIN</text>
+                         <!-- Total: +$3.0M -->
+                         <rect x="400" y="125" width="80" height="225" fill="url(#gradBlueBar)" stroke="#1e40af"/>
+                         <text x="440" y="115" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e40af">+$3.0M</text>
+                         <text x="440" y="370" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e3a8a">NET GAIN</text>
 
                          <!-- Connecting Lines -->
-                         <path d="M140,235 L160,235 M220,160 L240,160 M300,122 L320,122 M380,102 L400,102 M460,90 L480,90 M540,85 L580,85" stroke="#6b7280" stroke-width="1" stroke-dasharray="2"/>
+                         <path d="M140,200 L180,200 M240,162 L280,162 M340,125 L400,125" stroke="#6b7280" stroke-width="1" stroke-dasharray="2"/>
                      </svg>
                 </div>
                 
                 <table style="width: 100%;">
                     <tr style="background: var(--primary); color: white;">
-                        <th style="padding: 0.8rem; text-align: left;">Constraint Area</th>
-                        <th style="padding: 0.8rem; text-align: right;">Current Loss ($)</th>
-                        <th style="padding: 0.8rem; text-align: right;">Optimized Gain ($)</th>
-                        <th style="padding: 0.8rem; text-align: right;">Net Impact ($)</th>
+                        <th style="padding: 0.8rem; text-align: left;">Improvement Lever</th>
+                        <th style="padding: 0.8rem; text-align: right;">Target Metric</th>
+                        <th style="padding: 0.8rem; text-align: right;">Profit Impact</th>
                     </tr>
                     <tr>
-                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark);">OR Inefficiency (longer surgery times)</td>
-                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right;">($1.5M)</td>
-                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right;">$1.5M</td>
-                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right; color: var(--success); font-weight: bold;">+$3.0M</td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark);"><strong>1. Utilization (Volume)</strong><br><span style="font-size:0.9em;color:#666">Fixing Sched/Pre-Auth/OR Turn</span></td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right;">+2,000 Surgeries</td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right; color: var(--success); font-weight: bold;">+$2,000,000</td>
                     </tr>
                     <tr>
-                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark);">Pre-Auth Delays (12% cancellations)</td>
-                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right;">($1.0M)</td>
-                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right;">$1.0M</td>
-                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right; color: var(--success); font-weight: bold;">+$2.0M</td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark);"><strong>2. Revenue Capture</strong><br><span style="font-size:0.9em;color:#666">Reducing Denials (18% -> 3%)</span></td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right;">+15% Net Rev</td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right; color: var(--success); font-weight: bold;">+$500,000</td>
                     </tr>
                     <tr>
-                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark);">Billing Errors & Denials</td>
-                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right;">($0.5M)</td>
-                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right;">$0.5M</td>
-                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right; color: var(--success); font-weight: bold;">+$1.0M</td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark);">Staff Turnover & Productivity Loss</td>
-                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right;">($0.8M)</td>
-                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right;">$0.8M</td>
-                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right; color: var(--success); font-weight: bold;">+$1.6M</td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark);">Infection Rate Impact</td>
-                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right;">($0.3M)</td>
-                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right;">$0.3M</td>
-                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right; color: var(--success); font-weight: bold;">+$0.6M</td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 0.8rem;">No-Show Rate Impact</td>
-                        <td style="padding: 0.8rem; text-align: right;">($0.4M)</td>
-                        <td style="padding: 0.8rem; text-align: right;">$0.4M</td>
-                        <td style="padding: 0.8rem; text-align: right; color: var(--success); font-weight: bold;">+$0.8M</td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark);"><strong>3. Cost Efficiency</strong><br><span style="font-size:0.9em;color:#666">Turnover, Supplies, Rework</span></td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right;">-10% Var Cost</td>
+                        <td style="padding: 0.8rem; border-bottom: 1px solid var(--gray-dark); text-align: right; color: var(--success); font-weight: bold;">+$500,000</td>
                     </tr>
                     <tr style="background: #efe;">
-                        <td style="padding: 1rem; font-weight: bold;">TOTAL CONSTRAINT IMPACT</td>
-                        <td style="padding: 1rem; text-align: right; font-weight: bold;">($4.0M)</td>
-                        <td style="padding: 1rem; text-align: right; font-weight: bold;">$4.0M</td>
-                        <td style="padding: 1rem; text-align: right; color: var(--success); font-weight: bold;">+$8.0M</td>
+                        <td style="padding: 1rem; font-weight: bold;">TOTAL PROFIT IMPROVEMENT</td>
+                        <td style="padding: 1rem; text-align: right; font-weight: bold;">Goal: $3.5M Net</td>
+                        <td style="padding: 1rem; text-align: right; color: var(--success); font-weight: bold;">+$3,000,000</td>
                     </tr>
                 </table>
                 <p style="margin-top: 1rem; font-style: italic; color: #666; font-size: 0.95rem;">
-                    This quantification shows that resolving system constraints could unlock $8.0M+ in annual profit improvement. This represents the "hidden factory" of organizational waste identified by Goldratt's Theory of Constraints.
+                    * The primary driver of profitability is Volume (Throughput), driven by unlocking the OR constraint. Efficiency and Billing improvements provide secondary margin expansion.
                 </p>
             </div>
 
