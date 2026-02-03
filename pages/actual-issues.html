@@ -3,583 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actual Issues - ClearSight Analysis</title>
+    <title>Root Cause Analysis - ClearSight</title>
     <link rel="stylesheet" href="../css/styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Included for robust charting if needed in future -->
 </head>
 <body>
-    <!-- Navigation Header -->
     <header class="navbar">
         <div class="navbar-container">
             <div class="logo">
-                <h1>🏥 ClearSight Analysis</h1>
-                <p class="subtitle">Theory of Constraints & Process Engineering</p>
+                <h1>🏥 ClearSight</h1>
+                <p class="subtitle">Theory of Constraints Analysis</p>
             </div>
             <nav class="nav-menu" aria-label="Main Navigation">
                 <ul>
                     <li><a href="../index.html">Home</a></li>
-                    <li><a href="context.html">Business Context</a></li>
-                    <li><a href="challenges.html">Challenge Map</a></li>
-                    <li><a href="actual-issues.html" class="active">Root Cause Analysis</a></li>
-                    <li><a href="financial-analysis.html">Financial Models</a></li>
-                    <li><a href="strategy.html">Strategic Plan</a></li>
+                    <li><a href="context.html">Context</a></li>
+                    <li><a href="challenges.html">Challenges</a></li>
+                    <li><a href="actual-issues.html" class="active">Root Cause</a></li>
+                    <li><a href="financial-analysis.html">Financials</a></li>
+                    <li><a href="strategy.html">Strategy</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="container">
+    <main class="container" style="margin-top: 90px;">
         <section class="content-section">
-            <h2>🔍 Root Cause Analysis: Actual Issues Using TOC Framework</h2>
-            <p style="font-size: 1.1rem; margin-bottom: 2rem; color: #666;">
-                Deep-dive analysis of the underlying causes using Goldratt's Theory of Constraints principles.
-            </p>
+            <h2>🔍 Root Cause Analysis</h2>
+            <p>Issues mapped to Theory of Constraints principles—identifying what truly limits system throughput.</p>
 
-            <div class="content-section" style="background: white;">
-                <h3>🔍 Root Cause Analysis: Problems vs. Constraints</h3>
-                <p>Aligning the visible symptoms with the underlying Theory of Constraints drivers.</p>
+            <!-- TOC-Grouped RCA Table -->
+            <div class="visual-container" style="overflow-x: auto;">
+                <table class="toc-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 25%;">Issue</th>
+                            <th style="width: 40%;">Root Cause</th>
+                            <th style="width: 15%;">Impact</th>
+                            <th style="width: 20%;">TOC Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Physical Constraints -->
+                        <tr class="group-header">
+                            <td colspan="4">⚙️ PHYSICAL CONSTRAINTS — Resources that limit throughput</td>
+                        </tr>
+                        <tr class="constraint-row">
+                            <td><strong>OR Underutilization</strong></td>
+                            <td>Surgery suite at 50% capacity; 22-min turnover gaps; surgeon time variance (28-62 min)</td>
+                            <td class="impact-high">$2.0M/yr lost</td>
+                            <td>EXPLOIT → ELEVATE</td>
+                        </tr>
+                        <tr class="constraint-row">
+                            <td><strong>Equipment Bottleneck</strong></td>
+                            <td>Sterilization delays; instrument stockouts; no parallel prep</td>
+                            <td class="impact-medium">8-12% delays</td>
+                            <td>EXPLOIT</td>
+                        </tr>
 
-                <div class="grid-2-col" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
-                    
-                    <!-- Left Side: Problem Areas (Symptoms) -->
-                    <div style="background: #f9fafb; padding: 1.5rem; border-radius: 8px; border: 1px solid #e5e7eb;">
-                        <h4 style="color: #4b5563; border-bottom: 2px solid #9ca3af; padding-bottom: 0.5rem; margin-bottom: 1rem;">
-                            📉 Visible Symptoms (Effect)
-                        </h4>
-                        
-                        <div class="symptom-card" style="margin-bottom: 1rem; padding: 0.8rem; background: white; border-radius: 6px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); border-left: 3px solid #ef4444;">
-                            <strong style="display: block; color: #1f2937;">Low Profitability</strong>
-                            <span style="font-size: 0.9rem; color: #6b7280;">$500k vs $3.5M Target</span>
-                        </div>
+                        <!-- Policy Constraints -->
+                        <tr class="group-header">
+                            <td colspan="4">📋 POLICY CONSTRAINTS — Rules and procedures that limit flow</td>
+                        </tr>
+                        <tr class="constraint-row">
+                            <td><strong>Pre-Authorization</strong></td>
+                            <td>Manual entry to insurance portals; 2-5 day response; 25% rejection from incomplete data</td>
+                            <td class="impact-high">5-7 day delays</td>
+                            <td>SUBORDINATE</td>
+                        </tr>
+                        <tr class="constraint-row">
+                            <td><strong>Batch Scheduling</strong></td>
+                            <td>Surgeries scheduled before auth confirmed; no visibility into auth status</td>
+                            <td class="impact-medium">8-12% cancellations</td>
+                            <td>SUBORDINATE</td>
+                        </tr>
+                        <tr class="constraint-row">
+                            <td><strong>Billing & Coding</strong></td>
+                            <td>Manual coding; 18% claim denial rate; 60+ day AR cycle</td>
+                            <td class="impact-medium">$450K leakage</td>
+                            <td>SUBORDINATE</td>
+                        </tr>
 
-                        <div class="symptom-card" style="margin-bottom: 1rem; padding: 0.8rem; background: white; border-radius: 6px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); border-left: 3px solid #f59e0b;">
-                             <strong style="display: block; color: #1f2937;">Long Wait Times</strong>
-                            <span style="font-size: 0.9rem; color: #6b7280;">42 Days for Surgery</span>
-                        </div>
+                        <!-- Market/Behavioral Constraints -->
+                        <tr class="group-header">
+                            <td colspan="4">👥 BEHAVIORAL CONSTRAINTS — Human and organizational factors</td>
+                        </tr>
+                        <tr class="constraint-row">
+                            <td><strong>Staff Turnover</strong></td>
+                            <td>28% annual turnover; 15% understaffing; burnout cycle</td>
+                            <td class="impact-high">$300K/yr cost</td>
+                            <td>ELEVATE</td>
+                        </tr>
+                        <tr class="constraint-row">
+                            <td><strong>Surgeon Variability</strong></td>
+                            <td>No standardized protocols; 2x procedure time variance; personal preferences</td>
+                            <td class="impact-medium">30% time waste</td>
+                            <td>EXPLOIT</td>
+                        </tr>
+                        <tr class="constraint-row">
+                            <td><strong>Communication Gaps</strong></td>
+                            <td>OR staff don't prep for next patient; last-minute requests; siloed IT</td>
+                            <td class="impact-low">10-15 min/case</td>
+                            <td>SUBORDINATE</td>
+                        </tr>
 
-                        <div class="symptom-card" style="margin-bottom: 1rem; padding: 0.8rem; background: white; border-radius: 6px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); border-left: 3px solid #f59e0b;">
-                             <strong style="display: block; color: #1f2937;">Staff Burnout</strong>
-                            <span style="font-size: 0.9rem; color: #6b7280;">28% Turnover Rate</span>
-                        </div>
-                         <div style="text-align: center; margin-top: 2rem;">
-                            <span style="font-size: 2rem;">➡️</span>
-                        </div>
-                    </div>
-
-                    <!-- Right Side: TOC Constraints (Root Causes) -->
-                     <div style="background: #fff7ed; padding: 1.5rem; border-radius: 8px; border: 1px solid #fed7aa;">
-                        <h4 style="color: #9a3412; border-bottom: 2px solid #f97316; padding-bottom: 0.5rem; margin-bottom: 1rem;">
-                            ⚙️ Theory of Constraints Driver (Root Cause)
-                        </h4>
-                        
-                        <div style="margin-bottom: 1rem; padding: 0.8rem; background: white; border-radius: 6px; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
-                                <span style="background: #ef4444; color: white; font-size: 0.7rem; padding: 2px 6px; border-radius: 4px;">PRIMARY</span>
-                                <strong style="color: #991b1b;">Physical Constraint</strong>
-                            </div>
-                            <p style="font-size: 0.9rem; color: #4b5563; margin: 0;"><strong>OR Throughput:</strong> The system can only produce as fast as the surgery suite allows. Low utilization (50%) here dictates the entire system's output.</p>
-                        </div>
-
-                        <div style="margin-bottom: 1rem; padding: 0.8rem; background: white; border-radius: 6px; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                             <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
-                                <span style="background: #f97316; color: white; font-size: 0.7rem; padding: 2px 6px; border-radius: 4px;">SECONDARY</span>
-                                <strong style="color: #9a3412;">Policy Constraint</strong>
-                            </div>
-                           <p style="font-size: 0.9rem; color: #4b5563; margin: 0;"><strong>Batching & Scheduling:</strong> Administrative policies (manual auth, batch processing) create "starvation" at the bottleneck.</p>
-                        </div>
-
-                         <div style="margin-bottom: 1rem; padding: 0.8rem; background: white; border-radius: 6px; box-shadow: 0 1px 2px rgba(0,0,0,0.05);">
-                             <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
-                                <span style="background: #f97316; color: white; font-size: 0.7rem; padding: 2px 6px; border-radius: 4px;">SECONDARY</span>
-                                <strong style="color: #9a3412;">Behavioral Constraint</strong>
-                            </div>
-                           <p style="font-size: 0.9rem; color: #4b5563; margin: 0;"><strong>Burnout Cycle:</strong> Management practice of understaffing created a constraint on human capacity.</p>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- End-to-End Image of Constraints -->
-                <div style="margin-top: 3rem;">
-                    <h4 style="text-align: center; margin-bottom: 1.5rem; color: #374151;">End-to-End Constraint Visualization</h4>
-                    <div class="visual-container" style="background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
-                        <svg width="100%" height="150" viewBox="0 0 800 150">
-                            <!-- Flow Arrows Background -->
-                            <defs>
-                                <marker id="arrow-gray" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-                                    <path d="M0,0 L0,6 L9,3 z" fill="#d1d5db" />
-                                </marker>
-                            </defs>
-                            
-                            <!-- Path -->
-                            <line x1="50" y1="75" x2="750" y2="75" stroke="#e5e7eb" stroke-width="8" marker-end="url(#arrow-gray)"/>
-
-                            <!-- Constraint 1: Policy (Pre-Auth) -->
-                            <g transform="translate(200, 75)">
-                                <circle r="25" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
-                                <text dy="5" text-anchor="middle" font-size="20">📋</text>
-                                <text y="-35" text-anchor="middle" font-size="10" font-weight="bold" fill="#92400e">POLICY</text>
-                                <text y="45" text-anchor="middle" font-size="10" fill="#6b7280">Scheduling</text>
-                            </g>
-
-                            <!-- Constraint 2: The Bottleneck (OR) -->
-                             <g transform="translate(400, 75)">
-                                <circle r="35" fill="#fee2e2" stroke="#dc2626" stroke-width="3"/>
-                                <text dy="5" text-anchor="middle" font-size="24">⚠️</text>
-                                <text y="-45" text-anchor="middle" font-size="12" font-weight="bold" fill="#b91c1c">CONSTRAINT</text>
-                                <text y="50" text-anchor="middle" font-size="11" fill="#be123c">The Surgery</text>
-                                <text y="62" text-anchor="middle" font-size="9" fill="#9f1239">(Throughput Limit)</text>
-                            </g>
-
-                             <!-- Constraint 3: Quality (Post-Op) -->
-                             <g transform="translate(600, 75)">
-                                <circle r="25" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
-                                <text dy="5" text-anchor="middle" font-size="20">📉</text>
-                                <text y="-35" text-anchor="middle" font-size="10" font-weight="bold" fill="#1e40af">QUALITY</text>
-                                <text y="45" text-anchor="middle" font-size="10" fill="#6b7280">Defects/Rework</text>
-                            </g>
-                        </svg>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="content-section" style="background: white;">
-                <h3>🔍 Root Cause Fishbone Diagram</h3>
-                <p>This Ishikawa (fishbone) diagram visualizes how various factors contribute to the primary problem: <strong>Low Patient Throughput</strong>.</p>
-                
-                <div class="visual-container" style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 2rem; margin-top: 1rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
-                    <svg width="100%" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Background Grid (Subtle) -->
-                        <pattern id="smallGrid" width="20" height="20" patternUnits="userSpaceOnUse">
-                            <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#f0f0f0" stroke-width="1"/>
-                        </pattern>
-                        <rect width="100%" height="100%" fill="url(#smallGrid)" />
-
-                        <!-- Main Spine -->
-                         <line x1="50" y1="250" x2="650" y2="250" class="fishbone-spine" stroke="#1f2937" stroke-width="4" marker-end="url(#arrowhead-fishbone)"/>
-                        
-                        <!-- Head (Problem) -->
-                        <path d="M660 200 L790 250 L660 300 Z" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
-                        <text x="690" y="245" font-weight="bold" font-size="13" fill="#991b1b">SLOW</text>
-                        <text x="690" y="265" font-weight="bold" font-size="13" fill="#991b1b">THROUGHPUT</text>
-
-                        <!-- Category Ribs (Top) -->
-                        <!-- Methods -->
-                        <line x1="150" y1="250" x2="200" y2="80" class="fishbone-line" stroke="#4b5563" stroke-width="2"/>
-                        <rect x="160" y="50" width="80" height="30" fill="#e0f2fe" stroke="#0284c7" rx="4"/>
-                        <text x="200" y="70" text-anchor="middle" class="fishbone-category" font-weight="bold" fill="#0369a1" font-size="12">METHODS</text>
-                        
-                        <line x1="190" y1="110" x2="240" y2="110" stroke="#9ca3af" stroke-width="1"/>
-                        <text x="245" y="115" class="fishbone-cause" font-size="11" fill="#4b5563">Inefficient Sched.</text>
-                         <line x1="180" y1="140" x2="230" y2="140" stroke="#9ca3af" stroke-width="1"/>
-                        <text x="235" y="145" class="fishbone-cause" font-size="11" fill="#4b5563">Manual Pre-Auth</text>
-
-                        <!-- Equipment -->
-                        <line x1="350" y1="250" x2="400" y2="80" class="fishbone-line" stroke="#4b5563" stroke-width="2"/>
-                        <rect x="360" y="50" width="80" height="30" fill="#e0f2fe" stroke="#0284c7" rx="4"/>
-                        <text x="400" y="70" text-anchor="middle" class="fishbone-category" font-weight="bold" fill="#0369a1" font-size="12">EQUIPMENT</text>
-                        
-                        <line x1="390" y1="110" x2="440" y2="110" stroke="#9ca3af" stroke-width="1"/>
-                        <text x="445" y="115" class="fishbone-cause" font-size="11" fill="#4b5563">Siloed IT Systems</text>
-                         <line x1="380" y1="140" x2="430" y2="140" stroke="#9ca3af" stroke-width="1"/>
-                        <text x="435" y="145" class="fishbone-cause" font-size="11" fill="#4b5563">Sterilization Delays</text>
-
-                         <!-- Materials -->
-                        <line x1="550" y1="250" x2="600" y2="80" class="fishbone-line" stroke="#4b5563" stroke-width="2"/>
-                        <rect x="560" y="50" width="80" height="30" fill="#e0f2fe" stroke="#0284c7" rx="4"/>
-                        <text x="600" y="70" text-anchor="middle" class="fishbone-category" font-weight="bold" fill="#0369a1" font-size="12">MATERIALS</text>
-                         <line x1="590" y1="110" x2="640" y2="110" stroke="#9ca3af" stroke-width="1"/>
-                        <text x="645" y="115" class="fishbone-cause" font-size="11" fill="#4b5563">Instrument Stockouts</text>
-
-                        <!-- Category Ribs (Bottom) -->
-                        <!-- Manpower -->
-                        <line x1="150" y1="250" x2="200" y2="420" class="fishbone-line" stroke="#4b5563" stroke-width="2"/>
-                         <rect x="160" y="420" width="80" height="30" fill="#e0f2fe" stroke="#0284c7" rx="4"/>
-                        <text x="200" y="440" text-anchor="middle" class="fishbone-category" font-weight="bold" fill="#0369a1" font-size="12">PEOPLE</text>
-                        
-                        <line x1="190" y1="390" x2="240" y2="390" stroke="#9ca3af" stroke-width="1"/>
-                        <text x="245" y="395" class="fishbone-cause" font-size="11" fill="#4b5563">High Turnover</text>
-                         <line x1="180" y1="360" x2="230" y2="360" stroke="#9ca3af" stroke-width="1"/>
-                        <text x="235" y="365" class="fishbone-cause" font-size="11" fill="#4b5563">Surgeon Variability</text>
-
-                        <!-- Measurement -->
-                        <line x1="350" y1="250" x2="400" y2="420" class="fishbone-line" stroke="#4b5563" stroke-width="2"/>
-                         <rect x="360" y="420" width="100" height="30" fill="#e0f2fe" stroke="#0284c7" rx="4"/>
-                        <text x="410" y="440" text-anchor="middle" class="fishbone-category" font-weight="bold" fill="#0369a1" font-size="12">MEASUREMENT</text>
-                        
-                         <line x1="390" y1="390" x2="440" y2="390" stroke="#9ca3af" stroke-width="1"/>
-                        <text x="445" y="395" class="fishbone-cause" font-size="11" fill="#4b5563">Lagging KPIs</text>
-
-                         <!-- Environment -->
-                        <line x1="550" y1="250" x2="600" y2="420" class="fishbone-line" stroke="#4b5563" stroke-width="2"/>
-                        <rect x="560" y="420" width="100" height="30" fill="#e0f2fe" stroke="#0284c7" rx="4"/>
-                        <text x="610" y="440" text-anchor="middle" class="fishbone-category" font-weight="bold" fill="#0369a1" font-size="12">ENVIRONMENT</text>
-                        
-                         <line x1="590" y1="390" x2="640" y2="390" stroke="#9ca3af" stroke-width="1"/>
-                        <text x="645" y="395" class="fishbone-cause" font-size="11" fill="#4b5563">OR Layout</text>
-
-                        <!-- Arrowhead Marker Def -->
-                        <defs>
-                            <marker id="arrowhead-fishbone" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-                                <polygon points="0 0, 10 3.5, 0 7" fill="#1f2937" />
-                            </marker>
-                        </defs>
-                    </svg>
-                </div>
-            </div>
-
-            <div class="subsection">
-                <h3 style="color: var(--secondary); margin-bottom: 1rem;">Issue #1: THE PRIMARY CONSTRAINT - Operating Room Throughput</h3>
-                
-                <div style="background: #fee; padding: 1rem; border-radius: 6px; margin-bottom: 1rem;">
-                    <h4 style="color: var(--secondary); margin-bottom: 0.5rem;">🎯 Root Causes:</h4>
-                    <ul class="feature-list">
-                        <li><strong>Surgeon Variability:</strong> Procedure time ranges from 28-62 minutes. No standardization of technique, tool selection, or sequencing. Senior surgeons perform 1.5x faster than junior surgeons.</li>
-                        <li><strong>OR Setup Delays:</strong> Average 22-minute gap between surgeries for cleaning, instrument sterilization, and setup. No assembly line mentality or parallel preparation.</li>
-                        <li><strong>Patient Positioning & Prep:</strong> Time spent on patient positioning, draping, and anesthesia administration averages 18 minutes. No pre-staging done in holding area.</li>
-                        <li><strong>Surgical Variability:</strong> No documented best practice protocols. Surgeons use different instrument sequences based on personal preference rather than optimized order.</li>
-                        <li><strong>Communication Gaps:</strong> OR staff doesn't proactively prepare for next patient based on surgeon's needs. Last-minute requests cause delays.</li>
-                    </ul>
-                </div>
-
-                <div style="background: #fef3c7; padding: 1rem; border-radius: 6px; border-left: 4px solid var(--warning);">
-                    <h4 style="color: #92400e; margin-bottom: 0.5rem;">📌 Theory of Constraints Connection:</h4>
-                    <p>The operating room is the <strong>CONSTRAINT</strong> in ClearSight's system. It has the least flexibility and longest lead time to expand. Every minute of unused OR time is irreplaceable revenue loss. <strong>The constraint must be optimized first and protected from depletion.</strong></p>
-                </div>
-            </div>
-
-            <div class="subsection">
-                <h3 style="color: var(--secondary); margin-bottom: 1rem;">Issue #2: Pre-Authorization & Insurance Processing Blockage</h3>
-                
-                <div style="background: #fee; padding: 1rem; border-radius: 6px; margin-bottom: 1rem;">
-                    <h4 style="color: var(--secondary); margin-bottom: 0.5rem;">🎯 Root Causes:</h4>
-                    <ul class="feature-list">
-                        <li><strong>Manual Authorization Process:</strong> Each authorization request is manually entered into insurance company portals. No integration or automation. Duplicate data entry across multiple systems.</li>
-                        <li><strong>Incomplete Patient Information:</strong> Many initial submissions lack required information, requiring follow-up calls. 25% of rejections are due to missing or incorrect data.</li>
-                        <li><strong>Insurance Company Response Time:</strong> Insurers take 2-5 business days to respond even for routine cases. No expedited pathways for urgent cases.</li>
-                        <li><strong>No Pre-Authorization Planning:</strong> Surgeries are scheduled before pre-authorization is confirmed, leading to cancellations. Poor visibility into authorization status creates bottleneck.</li>
-                        <li><strong>Limited Staff for Authorization:</strong> Only 1 FTE dedicated to authorization processing for 3,000 annual surgeries. Workload is high relative to manual process complexity.</li>
-                    </ul>
-                </div>
-
-                <div style="background: #fef3c7; padding: 1rem; border-radius: 6px; border-left: 4px solid var(--warning);">
-                    <h4 style="color: #92400e; margin-bottom: 0.5rem;">📌 Theory of Constraints Connection:</h4>
-                    <p>Insurance authorization is a <strong>DEPENDENT CONSTRAINT</strong> that prevents patients from reaching the OR. Fixing the OR constraint is ineffective if patients can't be scheduled. This is an example of how non-physical constraints (process, policy) can be just as limiting as equipment constraints.</p>
-                </div>
-            </div>
-
-            <div class="subsection">
-                <h3 style="color: var(--secondary); margin-bottom: 1rem;">Issue #3: Workforce Morale & Capability Gap</h3>
-                
-                <!-- New Visual: The Burnout Cycle -->
-                <div class="visual-container" style="background: white; padding: 2rem; border-radius: 12px; margin-bottom: 2rem; border: 1px solid #e5e7eb;">
-                    <h5 style="text-align: center; margin-bottom: 1.5rem; color: #e11d48;">The Vicious Cycle of Staff Burnout</h5>
-                    <svg width="100%" height="300" viewBox="0 0 800 300">
-                        <defs>
-                            <marker id="arrow-cycle" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-                                <path d="M0,0 L0,6 L9,3 z" fill="#e11d48" />
-                            </marker>
-                        </defs>
-                        
-                        <!-- Cycle Nodes -->
-                        <!-- Top -->
-                        <g transform="translate(400, 50)">
-                            <circle r="40" fill="#ffe4e6" stroke="#e11d48" stroke-width="2"/>
-                            <text dy="-5" text-anchor="middle" font-weight="bold" fill="#be123c" font-size="12">High</text>
-                            <text dy="10" text-anchor="middle" font-weight="bold" fill="#be123c" font-size="12">Turnover</text>
-                        </g>
-
-                        <!-- Right -->
-                        <g transform="translate(600, 150)">
-                            <circle r="40" fill="#ffe4e6" stroke="#e11d48" stroke-width="2"/>
-                            <text dy="-5" text-anchor="middle" font-weight="bold" fill="#be123c" font-size="12">Under-</text>
-                            <text dy="10" text-anchor="middle" font-weight="bold" fill="#be123c" font-size="12">staffing</text>
-                        </g>
-
-                        <!-- Bottom -->
-                        <g transform="translate(400, 250)">
-                            <circle r="40" fill="#ffe4e6" stroke="#e11d48" stroke-width="2"/>
-                            <text dy="-5" text-anchor="middle" font-weight="bold" fill="#be123c" font-size="12">Increased</text>
-                            <text dy="10" text-anchor="middle" font-weight="bold" fill="#be123c" font-size="12">Workload</text>
-                        </g>
-
-                         <!-- Left -->
-                        <g transform="translate(200, 150)">
-                            <circle r="40" fill="#ffe4e6" stroke="#e11d48" stroke-width="2"/>
-                            <text dy="-5" text-anchor="middle" font-weight="bold" fill="#be123c" font-size="12">Burnout &</text>
-                            <text dy="10" text-anchor="middle" font-weight="bold" fill="#be123c" font-size="12">Stress</text>
-                        </g>
-
-                        <!-- Curved Arrows -->
-                        <path d="M445,55 Q550,55 585,115" fill="none" stroke="#e11d48" stroke-width="2" marker-end="url(#arrow-cycle)"/>
-                        <path d="M610,190 Q600,250 445,255" fill="none" stroke="#e11d48" stroke-width="2" marker-end="url(#arrow-cycle)"/>
-                        <path d="M355,255 Q200,250 185,190" fill="none" stroke="#e11d48" stroke-width="2" marker-end="url(#arrow-cycle)"/>
-                        <path d="M190,110 Q200,55 355,50" fill="none" stroke="#e11d48" stroke-width="2" marker-end="url(#arrow-cycle)"/>
-
-                    </svg>
-                </div>
-
-                <div style="background: #fee; padding: 1rem; border-radius: 6px; margin-bottom: 1rem;">
-                    <h4 style="color: var(--secondary); margin-bottom: 0.5rem;">🎯 Root Causes:</h4>
-                    <ul class="feature-list">
-                        <li><strong>Understaffing & Burnout:</strong> Staff levels are 15% below recommendations. Staff works frequent overtime, leading to fatigue and errors. Turnover creates perpetual understaffing cycle.</li>
-                        <li><strong>Inadequate Training:</strong> New OR staff receive only 2 weeks of orientation. Senior staff training is inconsistent. No continuous skill development program for technique optimization.</li>
-                        <li><strong>Compensation Gap:</strong> ClearSight pays 12-15% below market rate for surgical nurses and technicians compared to hospital competitors.</li>
-                        <li><strong>Poor Scheduling Predictability:</strong> Shift schedules change frequently, making work-life balance difficult. Staff can't plan personal time reliably.</li>
-                        <li><strong>No Career Development:</strong> Limited advancement opportunities. No clear pathway for technicians to become senior technicians or specialty roles.</li>
-                        <li><strong>Lack of Feedback & Recognition:</strong> Performance reviews are annual and superficial. No recognition system for staff exceeding targets or suggesting improvements.</li>
-                    </ul>
-                </div>
-
-                <div style="background: #fef3c7; padding: 1rem; border-radius: 6px; border-left: 4px solid var(--warning);">
-                    <h4 style="color: #92400e; margin-bottom: 0.5rem;">📌 Theory of Constraints Connection:</h4>
-                    <p>Workforce constraints are <strong>POLICY CONSTRAINTS</strong> created by management decisions. Unlike equipment (which has physical limits), people constraints can be rapidly solved through proper incentives, training, and working conditions. This represents high-ROI improvement opportunities.</p>
-                </div>
-            </div>
-
-            <div class="subsection">
-                <h3 style="color: var(--secondary); margin-bottom: 1rem;">Issue #4: Infection & Quality Control Deficiencies</h3>
-                
-                <div style="background: #fee; padding: 1rem; border-radius: 6px; margin-bottom: 1rem;">
-                    <h4 style="color: var(--secondary); margin-bottom: 0.5rem;">🎯 Root Causes:</h4>
-                    <ul class="feature-list">
-                        <li><strong>Inadequate Sterilization Protocols:</strong> Sterilization verification uses outdated processes. No real-time monitoring. Instruments occasionally don't meet sterility standards but are used anyway due to time pressure.</li>
-                        <li><strong>Insufficient Post-Op Monitoring:</strong> Post-op calls only occur for 40% of patients. No systematic follow-up protocol. Complications detected late, increasing severity.</li>
-                        <li><strong>Environmental Control Issues:</strong> OR air quality management is inconsistent. Humidity and particle count not always within surgical standards.</li>
-                        <li><strong>Staff Training on Asepsis:</strong> Inconsistent adherence to aseptic protocols. New staff not adequately trained on proper technique.</li>
-                        <li><strong>Equipment Maintenance:</strong> Surgical equipment maintenance is reactive (repair after failure) rather than preventive. Instrument calibration not done on schedule.</li>
-                    </ul>
-                </div>
-
-                <div style="background: #fef3c7; padding: 1rem; border-radius: 6px; border-left: 4px solid var(--warning);">
-                    <h4 style="color: #92400e; margin-bottom: 0.5rem;">📌 Theory of Constraints Connection:</h4>
-                    <p>Quality issues are <strong>SUBORDINATE SYSTEM CONSTRAINTS</strong>. Quality control should be optimized to support, not hinder, the main constraint (OR throughput). Current infection rates require surgery cancellations/delays, further reducing OR throughput.</p>
-                </div>
-            </div>
-
-            <div class="subsection">
-                <h3 style="color: var(--secondary); margin-bottom: 1rem;">Issue #5: Billing & Revenue Cycle Leakage</h3>
-                
-                <!-- New Visual: The Leading Pipe -->
-                <div class="visual-container" style="background: white; padding: 2rem; border-radius: 12px; margin-bottom: 2rem; border: 1px solid #e5e7eb;">
-                    <h5 style="text-align: center; margin-bottom: 1.5rem; color: #1e3a8a;">Revenue Leakage Pipeline</h5>
-                    <svg width="100%" height="250" viewBox="0 0 800 250">
-                        <defs>
-                            <linearGradient id="pipeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" stop-color="#3b82f6" />
-                                <stop offset="100%" stop-color="#93c5fd" />
-                            </linearGradient>
-                            <filter id="dropShadow" height="130%">
-                                <feGaussianBlur in="SourceAlpha" stdDeviation="3"/> <!-- stdDeviation is how much to blur -->
-                                <feOffset dx="2" dy="2" result="offsetblur"/> <!-- how much to offset -->
-                                <feMerge> 
-                                    <feMergeNode/> <!-- this contains the offset blurred image -->
-                                    <feMergeNode in="SourceGraphic"/> <!-- this contains the element that the filter is applied to -->
-                                </feMerge>
-                            </filter>
-                        </defs>
-
-                        <!-- Main Pipe Body -->
-                        <rect x="50" y="100" width="700" height="60" fill="url(#pipeGrad)" rx="10"/>
-                        <text x="80" y="135" fill="white" font-weight="bold" font-size="14">GROSS REVENUE</text>
-                        <text x="700" y="135" fill="white" font-weight="bold" font-size="14">CASH</text>
-
-                        <!-- Leak 1: Coding Errors -->
-                        <path d="M200,160 L210,200 L190,200 Z" fill="#ef4444" transform="rotate(180, 200, 180)"/> <!-- Hole -->
-                        <path d="M200,160 Q200,200 220,220" fill="none" stroke="#ef4444" stroke-width="3" stroke-dasharray="4"/>
-                        <text x="230" y="220" fill="#ef4444" font-size="12" font-weight="bold">-$450K (Errors)</text>
-
-                        <!-- Leak 2: Denials -->
-                        <path d="M400,160 L410,200 L390,200 Z" fill="#ef4444" transform="rotate(180, 400, 180)"/>
-                        <path d="M400,160 Q400,200 420,220" fill="none" stroke="#ef4444" stroke-width="3" stroke-dasharray="4"/>
-                        <text x="430" y="220" fill="#ef4444" font-size="12" font-weight="bold">-$170K (Denials)</text>
-
-                        <!-- Leak 3: Time Value (Delays) -->
-                        <path d="M600,160 L610,200 L590,200 Z" fill="#ef4444" transform="rotate(180, 600, 180)"/>
-                        <path d="M600,160 Q600,200 620,220" fill="none" stroke="#ef4444" stroke-width="3" stroke-dasharray="4"/>
-                        <text x="630" y="220" fill="#ef4444" font-size="12" font-weight="bold">-$85K (Float)</text>
-                    </svg>
-                </div>
-
-                <div style="background: #fee; padding: 1rem; border-radius: 6px; margin-bottom: 1rem;">
-                    <h4 style="color: var(--secondary); margin-bottom: 0.5rem;">🎯 Root Causes:</h4>
-                    <ul class="feature-list">
-                        <li><strong>Billing Error Rate:</strong> 18% of claims have errors on first submission - coding errors, patient info mismatches, missing documentation. Requires rework and resubmission.</li>
-                        <li><strong>Denied Claim Rate:</strong> 6.8% denial rate is 2-3x higher than benchmarks. Many denials are recoverable with proper appeal process but require significant effort.</li>
-                        <li><strong>Collections Process Lag:</strong> 52-day average to collect payment. Outstanding receivables exceed $8.2M. Not converting completed work into cash quickly.</li>
-                        <li><strong>Manual Billing Process:</strong> Billing staff manually codes procedures, enters claims, and follows up on denials. 30% of time spent on low-value rework and re-entry.</li>
-                        <li><strong>Pre-Authorization Pricing Uncertainty:</strong> Patients often discover after surgery that services weren't fully pre-authorized or approved at quoted price. Leads to payment disputes and write-offs.</li>
-                    </ul>
-                </div>
-
-                <div style="background: #fef3c7; padding: 1rem; border-radius: 6px; border-left: 4px solid var(--warning);">
-                    <h4 style="color: #92400e; margin-bottom: 0.5rem;">📌 Theory of Constraints Connection:</h4>
-                    <p>In TOC, throughput is defined as <strong>sales minus truly variable costs</strong>. Revenue that isn't collected is equivalent to revenue not generated. Billing delays and denials directly reduce throughput and are a system constraint requiring attention.</p>
-                </div>
-            </div>
-
-            <div class="content-section" style="margin-top: 2rem; background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border-left: 4px solid var(--info);">
-                <h3 style="color: var(--info); margin-bottom: 1rem;">Summary: The Web of Interconnected Constraints</h3>
-                <p style="margin-bottom: 1rem;">ClearSight's constraints form an interconnected system that cannot be solved in isolation:</p>
-                
-                <table style="width: 100%; background: white; margin-top: 1rem;">
-                    <tr style="background: var(--info); color: white;">
-                        <th style="padding: 1rem; text-align: left;">Constraint Type</th>
-                        <th style="padding: 1rem; text-align: left;">Description</th>
-                        <th style="padding: 1rem; text-align: left;">Example</th>
-                    </tr>
-                    <tr>
-                        <td style="padding: 1rem; border-bottom: 1px solid var(--gray-dark);"><strong>Primary Constraint</strong></td>
-                        <td style="padding: 1rem; border-bottom: 1px solid var(--gray-dark);">Most limiting factor - determines system throughput</td>
-                        <td style="padding: 1rem; border-bottom: 1px solid var(--gray-dark);">Operating Room capacity & efficiency</td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 1rem; border-bottom: 1px solid var(--gray-dark);"><strong>Dependent Constraints</strong></td>
-                        <td style="padding: 1rem; border-bottom: 1px solid var(--gray-dark);">Feed work to the primary constraint</td>
-                        <td style="padding: 1rem; border-bottom: 1px solid var(--gray-dark);">Pre-auth, patient scheduling, workforce availability</td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 1rem; border-bottom: 1px solid var(--gray-dark);"><strong>Subordinate Constraints</strong></td>
-                        <td style="padding: 1rem; border-bottom: 1px solid var(--gray-dark);">Must support without hindering primary</td>
-                        <td style="padding: 1rem; border-bottom: 1px solid var(--gray-dark);">Quality control, infection prevention</td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 1rem;"><strong>Policy Constraints</strong></td>
-                        <td style="padding: 1rem;">Self-imposed limitations by management</td>
-                        <td style="padding: 1rem;">Compensation levels, training budget, scheduling rules</td>
-                    </tr>
+                        <!-- Quality Constraints -->
+                        <tr class="group-header">
+                            <td colspan="4">✅ QUALITY CONSTRAINTS — Defects that create rework</td>
+                        </tr>
+                        <tr class="constraint-row">
+                            <td><strong>Infection Control</strong></td>
+                            <td>Outdated sterilization verification; inconsistent aseptic adherence</td>
+                            <td class="impact-medium">Rework costs</td>
+                            <td>SUBORDINATE</td>
+                        </tr>
+                        <tr class="constraint-row">
+                            <td><strong>Post-Op Monitoring</strong></td>
+                            <td>Only 40% receive follow-up calls; late complication detection</td>
+                            <td class="impact-low">Patient churn</td>
+                            <td>SUBORDINATE</td>
+                        </tr>
+                    </tbody>
                 </table>
-
-                <div style="margin-top: 1.5rem; padding: 1rem; background: white; border-radius: 6px;">
-                    <p><strong>Key Insight:</strong> Addressing only one constraint without considering the system will be ineffective. Theory of Constraints provides a systematic framework to:</p>
-                    <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
-                        <li>Identify the primary constraint limiting throughput</li>
-                        <li>Exploit it (maximize its effectiveness)</li>
-                        <li>Subordinate all other resources to support it</li>
-                        <li>Elevate the constraint (remove it or expand capacity)</li>
-                        <li>Repeat the cycle for the next constraint</li>
-                    </ul>
-                </div>
             </div>
 
-            <div class="alert alert-success">
-                <strong>Path Forward:</strong> The detailed strategy in the "Strategy" section applies TOC's 5-step focusing process to systematically address ClearSight's constraints. By following this methodology, ClearSight can increase patient volume by 54%, improve profitability by 185%, and become the highest-performing cataract center in its market.
+            <!-- Constraint Flow Visualization -->
+            <div class="visual-container" style="margin-top: 2rem;">
+                <h3 style="text-align: center; margin-bottom: 1.5rem;">Constraint Flow: From Symptoms to Root Cause</h3>
+                <svg width="100%" height="200" viewBox="0 0 900 200">
+                    <defs>
+                        <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <path d="M0,0 L0,6 L9,3 z" fill="#00d4ff" />
+                        </marker>
+                        <linearGradient id="flowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#ef4444" />
+                            <stop offset="50%" stop-color="#f59e0b" />
+                            <stop offset="100%" stop-color="#10b981" />
+                        </linearGradient>
+                    </defs>
+                    
+                    <!-- Flow Line -->
+                    <line x1="80" y1="100" x2="820" y2="100" stroke="url(#flowGrad)" stroke-width="4" marker-end="url(#arrow-blue)"/>
+
+                    <!-- Symptoms -->
+                    <g transform="translate(120, 100)">
+                        <rect x="-50" y="-35" width="100" height="70" rx="8" fill="#1f2937" stroke="#ef4444" stroke-width="2"/>
+                        <text y="-10" text-anchor="middle" fill="#ef4444" font-size="11" font-weight="bold">SYMPTOMS</text>
+                        <text y="8" text-anchor="middle" fill="#fff" font-size="10">Low Profit</text>
+                        <text y="22" text-anchor="middle" fill="#fff" font-size="10">Long Waits</text>
+                    </g>
+
+                    <!-- Policy -->
+                    <g transform="translate(300, 100)">
+                        <rect x="-55" y="-35" width="110" height="70" rx="8" fill="#1f2937" stroke="#f59e0b" stroke-width="2"/>
+                        <text y="-10" text-anchor="middle" fill="#f59e0b" font-size="11" font-weight="bold">POLICY</text>
+                        <text y="8" text-anchor="middle" fill="#fff" font-size="10">Scheduling</text>
+                        <text y="22" text-anchor="middle" fill="#fff" font-size="10">Pre-Auth</text>
+                    </g>
+
+                    <!-- Physical -->
+                    <g transform="translate(500, 100)">
+                        <rect x="-60" y="-40" width="120" height="80" rx="8" fill="#1f2937" stroke="#00d4ff" stroke-width="3"/>
+                        <text y="-15" text-anchor="middle" fill="#00d4ff" font-size="12" font-weight="bold">CONSTRAINT</text>
+                        <text y="5" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">OR Throughput</text>
+                        <text y="22" text-anchor="middle" fill="#00d4ff" font-size="10">50% Utilization</text>
+                    </g>
+
+                    <!-- Behavioral -->
+                    <g transform="translate(700, 100)">
+                        <rect x="-55" y="-35" width="110" height="70" rx="8" fill="#1f2937" stroke="#10b981" stroke-width="2"/>
+                        <text y="-10" text-anchor="middle" fill="#10b981" font-size="11" font-weight="bold">BEHAVIORAL</text>
+                        <text y="8" text-anchor="middle" fill="#fff" font-size="10">Staff Turnover</text>
+                        <text y="22" text-anchor="middle" fill="#fff" font-size="10">Variability</text>
+                    </g>
+                </svg>
             </div>
 
-            <div class="subsection">
-                <h3 style="color: var(--secondary); margin-bottom: 1rem;">Visual Map: The Web of Interconnected Constraints</h3>
-                <div style="text-align: center; margin: 2rem 0; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                    <svg width="800" height="500" viewBox="0 0 800 500" style="max-width: 100%; height: auto;">
-                        <!-- Definitions for gradients and markers -->
-                        <defs>
-                            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-                                <polygon points="0 0, 10 3.5, 0 7" fill="#dc2626" />
-                            </marker>
-                            <linearGradient id="constraintGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#fee2e2;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#fecaca;stop-opacity:1" />
-                            </linearGradient>
-                            <linearGradient id="dependentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#fef3c7;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#fde68a;stop-opacity:1" />
-                            </linearGradient>
-                            <linearGradient id="subordinateGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#dbeafe;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#bfdbfe;stop-opacity:1" />
-                            </linearGradient>
-                        </defs>
-
-                        <!-- Primary Constraint - OR -->
-                        <g transform="translate(400, 100)">
-                            <rect x="-120" y="-40" width="240" height="80" rx="8" fill="url(#constraintGrad)" stroke="#dc2626" stroke-width="3"/>
-                            <text x="0" y="-15" text-anchor="middle" font-size="16" font-weight="bold" fill="#dc2626">PRIMARY CONSTRAINT</text>
-                            <text x="0" y="5" text-anchor="middle" font-size="14" fill="#7f1d1d">Operating Room Throughput</td>
-                            <text x="0" y="25" text-anchor="middle" font-size="12" fill="#991b1b">45 min avg surgery time</text>
-                        </g>
-
-                        <!-- Dependent Constraints -->
-                        <g transform="translate(150, 250)">
-                            <rect x="-100" y="-35" width="200" height="70" rx="6" fill="url(#dependentGrad)" stroke="#d97706" stroke-width="2"/>
-                            <text x="0" y="-15" text-anchor="middle" font-size="14" font-weight="bold" fill="#d97706">DEPENDENT CONSTRAINT</text>
-                            <text x="0" y="0" text-anchor="middle" font-size="13" fill="#92400e">Pre-Authorization</td>
-                            <text x="0" y="15" text-anchor="middle" font-size="11" fill="#78350f">Insurance Processing</text>
-                            <text x="0" y="30" text-anchor="middle" font-size="11" fill="#78350f">2-5 day delays</td>
-                        </g>
-
-                        <g transform="translate(650, 250)">
-                            <rect x="-90" y="-35" width="180" height="70" rx="6" fill="url(#dependentGrad)" stroke="#d97706" stroke-width="2"/>
-                            <text x="0" y="-15" text-anchor="middle" font-size="14" font-weight="bold" fill="#d97706">DEPENDENT CONSTRAINT</td>
-                            <text x="0" y="0" text-anchor="middle" font-size="13" fill="#92400e">Workforce Capability</text>
-                            <text x="0" y="15" text-anchor="middle" font-size="11" fill="#78350f">Staffing & Training Gaps</text>
-                            <text x="0" y="30" text-anchor="middle" font-size="11" fill="#78350f">15% below optimal levels</text>
-                        </g>
-
-                        <!-- Subordinate Constraints -->
-                        <g transform="translate(100, 400)">
-                            <rect x="-80" y="-30" width="160" height="60" rx="6" fill="url(#subordinateGrad)" stroke="#2563eb" stroke-width="2"/>
-                            <text x="0" y="-10" text-anchor="middle" font-size="12" font-weight="bold" fill="#2563eb">SUBORDINATE</text>
-                            <text x="0" y="5" text-anchor="middle" font-size="12" fill="#1e40af">Quality Control</text>
-                            <text x="0" y="20" text-anchor="middle" font-size="10" fill="#1e3a8a">Infection Prevention</text>
-                        </g>
-
-                        <g transform="translate(300, 400)">
-                            <rect x="-70" y="-30" width="140" height="60" rx="6" fill="url(#subordinateGrad)" stroke="#2563eb" stroke-width="2"/>
-                            <text x="0" y="-10" text-anchor="middle" font-size="12" font-weight="bold" fill="#2563eb">SUBORDINATE</text>
-                            <text x="0" y="5" text-anchor="middle" font-size="12" fill="#1e40af">Billing Cycle</td>
-                            <text x="0" y="20" text-anchor="middle" font-size="10" fill="#1e3a8a">Revenue Collection</td>
-                        </g>
-
-                        <g transform="translate(500, 400)">
-                            <rect x="-70" y="-30" width="140" height="60" rx="6" fill="url(#subordinateGrad)" stroke="#2563eb" stroke-width="2"/>
-                            <text x="0" y="-10" text-anchor="middle" font-size="12" font-weight="bold" fill="#2563eb">SUBORDINATE</text>
-                            <text x="0" y="5" text-anchor="middle" font-size="12" fill="#1e40af">Patient Scheduling</text>
-                            <text x="0" y="20" text-anchor="middle" font-size="10" fill="#1e3a8a">No-show Reduction</td>
-                        </g>
-
-                        <g transform="translate(700, 400)">
-                            <rect x="-60" y="-30" width="120" height="60" rx="6" fill="url(#subordinateGrad)" stroke="#2563eb" stroke-width="2"/>
-                            <text x="0" y="-10" text-anchor="middle" font-size="12" font-weight="bold" fill="#2563eb">SUBORDINATE</text>
-                            <text x="0" y="5" text-anchor="middle" font-size="12" fill="#1e40af">Supply Chain</text>
-                            <text x="0" y="20" text-anchor="middle" font-size="10" fill="#1e3a8a">Equipment Mgmt</td>
-                        </g>
-
-                        <!-- Connecting arrows -->
-                        <path d="M 280 140 Q 250 180 220 220" stroke="#dc2626" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
-                        <path d="M 520 140 Q 550 180 580 220" stroke="#dc2626" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
-                        <path d="M 250 285 Q 280 320 300 350" stroke="#d97706" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
-                        <path d="M 550 285 Q 520 320 500 350" stroke="#d97706" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
-                        <path d="M 150 320 Q 180 350 200 370" stroke="#2563eb" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
-                        <path d="M 250 320 Q 270 340 290 360" stroke="#2563eb" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
-                        <path d="M 350 320 Q 370 340 390 360" stroke="#2563eb" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
-                        <path d="M 450 320 Q 470 340 490 360" stroke="#2563eb" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
-                        <path d="M 550 320 Q 570 340 590 360" stroke="#2563eb" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
-                        <path d="M 650 320 Q 670 340 690 360" stroke="#2563eb" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
-
-                        <!-- Legend -->
-                        <g transform="translate(50, 50)">
-                            <text x="0" y="0" font-size="14" font-weight="bold" fill="#333">Constraint Types:</text>
-                            <circle cx="15" cy="20" r="8" fill="url(#constraintGrad)" stroke="#dc2626"/>
-                            <text x="30" y="25" font-size="12" fill="#333">Primary Constraint</text>
-                            <circle cx="15" cy="40" r="8" fill="url(#dependentGrad)" stroke="#d97706"/>
-                            <text x="30" y="45" font-size="12" fill="#333">Dependent Constraint</text>
-                            <circle cx="15" cy="60" r="8" fill="url(#subordinateGrad)" stroke="#2563eb"/>
-                            <text x="30" y="65" font-size="12" fill="#333">Subordinate Constraint</text>
-                        </g>
-                    </svg>
-                </div>
-                <p style="font-style: italic; color: #666; text-align: center; margin-top: 1rem;">
-                    This diagram illustrates how constraints form an interconnected system. The primary constraint (OR) cannot be optimized without addressing dependent constraints, while subordinate constraints must support rather than hinder the primary constraint.
-                </p>
+            <!-- Key Insight -->
+            <div class="alert alert-success" style="margin-top: 2rem;">
+                <strong>Key Finding:</strong> The OR is the primary physical constraint. All other issues either starve it (policy/scheduling) or deplete it (quality/turnover). Fix the constraint first, then subordinate everything else to maximize throughput.
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <p>&copy; 2026 ClearSight Analysis Portal. Theory of Constraints Applied to Healthcare Operations.</p>
-            <p>Based on Eliyahu M. Goldratt's "The Goal" and Theory of Constraints Principles</p>
+            <p>ClearSight Analysis Portal | Theory of Constraints Applied to Healthcare</p>
         </div>
     </footer>
 

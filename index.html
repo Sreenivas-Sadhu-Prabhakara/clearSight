@@ -7,25 +7,22 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Navigation Header -->
     <header class="navbar">
         <div class="navbar-container">
-            <div class="navbar-container">
-                <div class="logo">
-                    <h1>🏥 ClearSight Analysis</h1>
-                    <p class="subtitle">Theory of Constraints & Process Engineering</p>
-                </div>
-                <nav class="nav-menu" aria-label="Main Navigation">
-                    <ul>
-                        <li><a href="index.html" class="active">Home</a></li>
-                        <li><a href="pages/context.html">Context</a></li>
-                        <li><a href="pages/challenges.html">Challenges</a></li>
-                        <li><a href="pages/actual-issues.html">Actual Issues</a></li>
-                        <li><a href="pages/financial-analysis.html">Financial Analysis</a></li>
-                        <li><a href="pages/strategy.html">Strategy</a></li>
-                    </ul>
-                </nav>
+            <div class="logo">
+                <h1>🏥 ClearSight</h1>
+                <p class="subtitle">Theory of Constraints Analysis</p>
             </div>
+            <nav class="nav-menu" aria-label="Main Navigation">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="pages/context.html">Context</a></li>
+                    <li><a href="pages/challenges.html">Challenges</a></li>
+                    <li><a href="pages/actual-issues.html">Root Cause</a></li>
+                    <li><a href="pages/financial-analysis.html">Financials</a></li>
+                    <li><a href="pages/strategy.html">Strategy</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
@@ -33,345 +30,190 @@
     <section class="hero">
         <div class="hero-content">
             <h2>ClearSight Eye Care Center</h2>
-            <p>Strategic Process Engineering & Theory of Constraints Analysis</p>
+            <p>Strategic Analysis Using Goldratt's Theory of Constraints</p>
             <div class="hero-stats">
                 <div class="stat">
                     <span class="stat-number">42</span>
-                    <span class="stat-label">Days Average Waiting</span>
+                    <span class="stat-label">Days Wait Time</span>
                 </div>
                 <div class="stat">
                     <span class="stat-number">50%</span>
-                    <span class="stat-label">Capacity Utilization</span>
+                    <span class="stat-label">OR Utilization</span>
                 </div>
                 <div class="stat">
-                    <span class="stat-number">$250K</span>
-                    <span class="stat-label">Monthly Opportunity Cost</span>
+                    <span class="stat-number">$3M</span>
+                    <span class="stat-label">Profit Opportunity</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Main Content -->
     <main class="container">
         <!-- Executive Summary Roadmap -->
-        <section class="roadmap-summary" style="margin-bottom: 3rem; background: #fff; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 6px solid #0f4c75;">
-            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 2rem;">
-                 <div>
-                    <h3 style="color: #0f4c75; font-size: 1.5rem; margin-bottom: 0.5rem;">📊 Executive Summary: Analysis Roadmap</h3>
-                    <p style="color: #666; max-width: 800px;">This analysis follows a structured path from understanding the context to defining the strategic solution.</p>
-                 </div>
+        <section class="roadmap-summary">
+            <h3>📊 Analysis Roadmap</h3>
+            <p>Follow the structured path from understanding context to strategic solution.</p>
+            
+            <div class="roadmap-steps">
+                <a href="pages/context.html" class="roadmap-step">
+                    <div class="step-number" style="background: #3b82f6; color: white;">1</div>
+                    <h4>Context</h4>
+                    <p>Business Overview</p>
+                </a>
+                <a href="pages/challenges.html" class="roadmap-step">
+                    <div class="step-number" style="background: #ef4444; color: white;">2</div>
+                    <h4>Challenges</h4>
+                    <p>Problem Definition</p>
+                </a>
+                <a href="pages/actual-issues.html" class="roadmap-step">
+                    <div class="step-number" style="background: #f59e0b; color: white;">3</div>
+                    <h4>Root Cause</h4>
+                    <p>TOC Analysis</p>
+                </a>
+                <a href="pages/financial-analysis.html" class="roadmap-step">
+                    <div class="step-number" style="background: #10b981; color: white;">4</div>
+                    <h4>Financials</h4>
+                    <p>Impact Model</p>
+                </a>
+                <a href="pages/strategy.html" class="roadmap-step">
+                    <div class="step-number" style="background: #8b5cf6; color: white;">5</div>
+                    <h4>Strategy</h4>
+                    <p>Action Plan</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Key Constraint Visual -->
+        <section class="content-section">
+            <h2>🎯 The Constraint: OR Throughput</h2>
+            <p>ClearSight's patient flow bottlenecks at the Operating Room—limiting the entire system to 50% capacity.</p>
+            
+            <div class="visual-container" style="margin-top: 1.5rem;">
+                <svg width="100%" height="180" viewBox="0 0 900 180">
+                    <defs>
+                        <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <path d="M0,0 L0,6 L9,3 z" fill="#00d4ff"/>
+                        </marker>
+                    </defs>
+                    
+                    <!-- Flow Line -->
+                    <line x1="50" y1="90" x2="850" y2="90" stroke="#1f2937" stroke-width="4"/>
+                    
+                    <!-- Stages -->
+                    <g transform="translate(120, 90)">
+                        <rect x="-50" y="-30" width="100" height="60" rx="8" fill="#1f2937" stroke="#10b981" stroke-width="2"/>
+                        <text y="-8" text-anchor="middle" fill="#10b981" font-size="10" font-weight="bold">INTAKE</text>
+                        <text y="8" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">400/mo</text>
+                        <text y="22" text-anchor="middle" fill="#6b7280" font-size="9">95% flow</text>
+                    </g>
+                    
+                    <text x="200" y="95" fill="#00d4ff" font-size="20">→</text>
+                    
+                    <g transform="translate(300, 90)">
+                        <rect x="-55" y="-30" width="110" height="60" rx="8" fill="#1f2937" stroke="#f59e0b" stroke-width="2"/>
+                        <text y="-8" text-anchor="middle" fill="#f59e0b" font-size="10" font-weight="bold">PRE-OP</text>
+                        <text y="8" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">350/mo</text>
+                        <text y="22" text-anchor="middle" fill="#6b7280" font-size="9">Auth delays</text>
+                    </g>
+                    
+                    <text x="390" y="95" fill="#ef4444" font-size="20">⚠</text>
+                    
+                    <g transform="translate(500, 90)">
+                        <rect x="-65" y="-35" width="130" height="70" rx="8" fill="rgba(239,68,68,0.15)" stroke="#ef4444" stroke-width="3"/>
+                        <text y="-12" text-anchor="middle" fill="#ef4444" font-size="11" font-weight="bold">⚠ CONSTRAINT</text>
+                        <text y="8" text-anchor="middle" fill="#fff" font-size="16" font-weight="bold">250/mo</text>
+                        <text y="24" text-anchor="middle" fill="#ef4444" font-size="10">50% capacity</text>
+                    </g>
+                    
+                    <text x="600" y="95" fill="#00d4ff" font-size="20">→</text>
+                    
+                    <g transform="translate(700, 90)">
+                        <rect x="-50" y="-30" width="100" height="60" rx="8" fill="#1f2937" stroke="#10b981" stroke-width="2"/>
+                        <text y="-8" text-anchor="middle" fill="#10b981" font-size="10" font-weight="bold">RECOVERY</text>
+                        <text y="8" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">250/mo</text>
+                        <text y="22" text-anchor="middle" fill="#6b7280" font-size="9">Waiting</text>
+                    </g>
+                    
+                    <text x="800" y="95" fill="#00d4ff" font-size="20">→</text>
+                </svg>
             </div>
             
-            <div class="roadmap-steps" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; text-align: center;">
-                
-                <!-- 1. Context -->
-                <a href="pages/context.html" class="roadmap-step" style="display: block; text-decoration: none; position: relative; padding: 1rem; border-radius: 8px; transition: background 0.3s;">
-                    <div style="background: #e0f2fe; color: #0369a1; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-weight: bold;">1</div>
-                    <h4 style="font-size: 1rem; margin-bottom: 0.5rem; color: #0f4c75;">Context</h4>
-                    <p style="font-size: 0.85rem; color: #64748b; line-height: 1.4;">Business & Ops Overview</p>
-                </a>
-
-                <!-- 2. Problem Definition -->
-                 <a href="pages/challenges.html" class="roadmap-step" style="display: block; text-decoration: none; position: relative; padding: 1rem; border-radius: 8px; transition: background 0.3s;">
-                    <div style="background: #fee2e2; color: #dc2626; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-weight: bold;">2</div>
-                    <h4 style="font-size: 1rem; margin-bottom: 0.5rem; color: #0f4c75;">Problem Definition</h4>
-                    <p style="font-size: 0.85rem; color: #64748b; line-height: 1.4;">Symptomatic Challenges</p>
-                </a>
-
-                <!-- 3. Problem IQ -->
-                 <a href="pages/actual-issues.html" class="roadmap-step" style="display: block; text-decoration: none; position: relative; padding: 1rem; border-radius: 8px; transition: background 0.3s;">
-                    <div style="background: #fef3c7; color: #b45309; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-weight: bold;">3</div>
-                    <h4 style="font-size: 1rem; margin-bottom: 0.5rem; color: #0f4c75;">Identification</h4>
-                    <p style="font-size: 0.85rem; color: #64748b; line-height: 1.4;">Root Cause & Constraints</p>
-                </a>
-
-                <!-- 4. Proposal -->
-                 <a href="pages/financial-analysis.html" class="roadmap-step" style="display: block; text-decoration: none; position: relative; padding: 1rem; border-radius: 8px; transition: background 0.3s;">
-                    <div style="background: #dcfce7; color: #15803d; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-weight: bold;">4</div>
-                    <h4 style="font-size: 1rem; margin-bottom: 0.5rem; color: #0f4c75;">Proposal</h4>
-                    <p style="font-size: 0.85rem; color: #64748b; line-height: 1.4;">Financial Value & Case</p>
-                </a>
-
-                <!-- 5. Vision -->
-                 <a href="pages/strategy.html" class="roadmap-step" style="display: block; text-decoration: none; position: relative; padding: 1rem; border-radius: 8px; transition: background 0.3s;">
-                     <div style="background: #f3e8ff; color: #7e22ce; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-weight: bold;">5</div>
-                    <h4 style="font-size: 1rem; margin-bottom: 0.5rem; color: #0f4c75;">Vision</h4>
-                    <p style="font-size: 0.85rem; color: #64748b; line-height: 1.4;">Long-term Strategy</p>
-                </a>
-            </div>
-        </section>
-
-        <section class="overview-section">
-            <h2>Welcome to ClearSight Intelligence Portal</h2>
-            <p>
-                This comprehensive analysis portal examines ClearSight Eye Care Center through the lens of Eliyahu Goldratt's
-                <strong>Theory of Constraints (TOC)</strong>. We identify systemic bottlenecks limiting throughput and profitability,
-                providing data-driven strategic recommendations for operational excellence and sustainable competitive advantage.
-            </p>
-
-            <div class="overview-grid">
-                <div class="overview-card">
-                    <div class="card-icon">📋</div>
-                    <h3><a href="pages/context.html">Business Context</a></h3>
-                    <p>Explore the business model, organizational structure, clinical operations, and competitive landscape that define ClearSight's market position.</p>
+            <div class="metrics-grid" style="margin-top: 2rem;">
+                <div class="metric-card">
+                    <h4>Monthly Loss</h4>
+                    <p class="metric-value" style="color: #ef4444;">$250K</p>
+                    <p class="metric-label">Unserved patients</p>
                 </div>
-
-                <div class="overview-card">
-                    <div class="card-icon">⚠️</div>
-                    <h3><a href="pages/challenges.html">Key Challenges</a></h3>
-                    <p>Understand the operational, clinical, and technological challenges Dr. Connors faces in delivering superior patient care at scale.</p>
+                <div class="metric-card">
+                    <h4>Wait Queue</h4>
+                    <p class="metric-value">42 days</p>
+                    <p class="metric-label">Patient backlog</p>
                 </div>
-
-                <div class="overview-card">
-                    <div class="card-icon">🔍</div>
-                    <h3><a href="pages/actual-issues.html">Root Cause Analysis</a></h3>
-                    <p>Deep dive into hidden constraints using TOC principles. Discover what's truly limiting patient throughput and profitability.</p>
+                <div class="metric-card">
+                    <h4>Current Profit</h4>
+                    <p class="metric-value" style="color: #ef4444;">$0.5M</p>
+                    <p class="metric-label">8.3% margin</p>
                 </div>
-
-                <div class="overview-card">
-                    <div class="card-icon">💰</div>
-                    <h3><a href="pages/financial-analysis.html">Financial Impact</a></h3>
-                    <p>Comprehensive P&L analysis, revenue tracking, cost structure breakdown, and quantified impact of operational constraints.</p>
-                </div>
-
-                <div class="overview-card">
-                    <div class="card-icon">🚀</div>
-                    <h3><a href="pages/strategy.html">Strategic Solutions</a></h3>
-                    <p>Actionable recommendations leveraging TOC to enhance throughput, eliminate constraints, and maximize cash generation.</p>
-                </div>
-
-                <div class="overview-card">
-                    <div class="card-icon">📊</div>
-                    <h3>Interactive Analytics</h3>
-                    <p>Visual dashboards, detailed case studies, and data-driven insights into the impact of process improvements on profitability.</p>
+                <div class="metric-card">
+                    <h4>Potential Profit</h4>
+                    <p class="metric-value" style="color: #10b981;">$3.5M</p>
+                    <p class="metric-label">29% margin</p>
                 </div>
             </div>
         </section>
 
-        <!-- Theory of Constraints Primer -->
-        <section class="toc-primer">
-            <h2>Goldratt's Theory of Constraints Framework</h2>
-            <div class="toc-content">
-                <div class="toc-principle">
-                    <h3>🎯 Core Principle</h3>
-                    <p>
-                        Every system has at least one constraint that limits its throughput. Management's role is to
-                        identify this constraint and subordinate all other decisions to it, maximizing system throughput.
-                    </p>
-                </div>
-
-                <div class="toc-principle">
-                    <h3>5️⃣ The Five Focusing Steps</h3>
-                    <ol>
-                        <li><strong>IDENTIFY</strong> the constraint(s) limiting system performance</li>
-                        <li><strong>EXPLOIT</strong> the constraint to maximize its capacity</li>
-                        <li><strong>SUBORDINATE</strong> all other resources to the constraint</li>
-                        <li><strong>ELEVATE</strong> the constraint through investment or process redesign</li>
-                        <li><strong>REPEAT</strong> the process for the next emerging constraint</li>
-                    </ol>
-                </div>
-
-                <div class="toc-principle">
-                    <h3>📈 Expected Outcomes</h3>
-                    <p>By systematically applying TOC principles:</p>
-                    <ul>
-                        <li>Increase patient volume and surgical throughput</li>
-                        <li>Reduce operational costs and resource waste</li>
-                        <li>Maximize cash generation and profitability</li>
-                        <li>Improve operational efficiency and resource utilization</li>
-                        <li>Create sustainable competitive advantage</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- ClearSight Metrics Dashboard -->
-        <section class="metrics-section">
-            <h2>📊 Current State Metrics</h2>
-            <div class="metrics-grid">
-                <div class="metric-card">
-                    <h4>Patient Volume</h4>
-                    <p class="metric-value">250</p>
-                    <p class="metric-label">surgeries/month</p>
-                </div>
-                <div class="metric-card">
-                    <h4>Average Waiting Time</h4>
-                    <p class="metric-value">42</p>
-                    <p class="metric-label">days</p>
-                </div>
-                <div class="metric-card">
-                    <h4>Operating Rooms Utilization</h4>
-                    <p class="metric-value">50%</p>
-                    <p class="metric-label">average capacity</p>
-                </div>
-                <div class="metric-card">
-                    <h4>Revenue per Patient</h4>
-                    <p class="metric-value">$2,000</p>
-                    <p class="metric-label">average</p>
-                </div>
-                <div class="metric-card">
-                    <h4>Monthly Revenue</h4>
-                    <p class="metric-value">$500K</p>
-                    <p class="metric-label">current</p>
-                </div>
-                <div class="metric-card">
-                    <h4>Operating Profit Margin</h4>
-                    <p class="metric-value">8.3%</p>
-                    <p class="metric-label">current ($500k/yr)</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Conveyor Belt Process Visualization -->
-        <section class="conveyor-section">
-            <div class="conveyor-container">
-                <h2>🏭 The Cataract Surgery Conveyor Belt</h2>
-                <p class="conveyor-description">
-                    Visualize ClearSight's patient journey as a production line. Each stage represents a process step,
-                    with bottlenecks creating backups that reduce throughput and increase costs.
-                </p>
-
-                <div class="conveyor-belt" role="region" aria-label="Patient Journey Process Flow">
-                    <!-- Patient Intake -->
-                    <button class="process-stage" data-stage="intake" data-tooltip="Patient consultation and initial assessment" aria-label="Patient Intake Stage: 400 per month, 95% efficiency, Flowing">
-                        <div class="stage-icon" aria-hidden="true">👁️</div>
-                        <h4>Patient Intake</h4>
-                        <div class="stage-metrics">
-                            <span class="metric">400/month</span>
-                            <span class="efficiency">95% efficiency</span>
-                        </div>
-                        <div class="stage-status">✅ Flowing</div>
-                    </button>
-
-                    <div class="conveyor-arrow" aria-hidden="true">→</div>
-
-                    <!-- Pre-Op Assessment -->
-                    <button class="process-stage" data-stage="assessment" data-tooltip="Comprehensive eye examination and surgical planning" aria-label="Pre-Op Assessment Stage: 350 per month, 84% efficiency, Bottleneck">
-                        <div class="stage-icon" aria-hidden="true">🔍</div>
-                        <h4>Pre-Op Assessment</h4>
-                        <div class="stage-metrics">
-                            <span class="metric">350/month</span>
-                            <span class="efficiency">84% efficiency</span>
-                        </div>
-                        <div class="stage-status">⚠️ Bottleneck</div>
-                    </button>
-
-                    <div class="conveyor-arrow" aria-hidden="true">→</div>
-
-                    <!-- Scheduling -->
-                    <button class="process-stage bottleneck critical-bottleneck" data-stage="scheduling" data-tooltip="OR scheduling and resource allocation - MAJOR BOTTLENECK" aria-label="OR Scheduling Stage: Critical Bottleneck, 250 per month, 50% efficiency, 42-day queue">
-                        <div class="stage-icon" aria-hidden="true">📅</div>
-                        <h4>OR Scheduling</h4>
-                        <div class="stage-metrics">
-                            <span class="metric">250/month</span>
-                            <span class="efficiency">50% efficiency</span>
-                        </div>
-                        <div class="stage-status">🔴 CRITICAL BOTTLENECK</div>
-                        <div class="bottleneck-indicator">
-                            <div class="backup-queue">42-day queue</div>
-                        </div>
-                    </button>
-
-                    <div class="conveyor-arrow blocked" aria-hidden="true">→</div>
-
-                    <!-- Surgery -->
-                    <button class="process-stage" data-stage="surgery" data-tooltip="Cataract surgery procedure" aria-label="Surgery Stage: 250 per month, 100% efficiency, Waiting for patients">
-                        <div class="stage-icon" aria-hidden="true">⚕️</div>
-                        <h4>Surgery</h4>
-                        <div class="stage-metrics">
-                            <span class="metric">250/month</span>
-                            <span class="efficiency">100% efficiency</span>
-                        </div>
-                        <div class="stage-status">⏳ Waiting</div>
-                    </button>
-
-                    <div class="conveyor-arrow" aria-hidden="true">→</div>
-
-                    <!-- Post-Op Care -->
-                    <button class="process-stage" data-stage="recovery" data-tooltip="Post-operative care and follow-up" aria-label="Recovery Stage: 250 per month, 92% efficiency, Flowing">
-                        <div class="stage-icon" aria-hidden="true">🏥</div>
-                        <h4>Recovery & Follow-up</h4>
-                        <div class="stage-metrics">
-                            <span class="metric">250/month</span>
-                            <span class="efficiency">92% efficiency</span>
-                        </div>
-                        <div class="stage-status">✅ Flowing</div>
-                    </button>
-                </div>
-
-                <div class="conveyor-insights">
-                    <div class="insight-card">
-                        <h4>🎯 Key Constraint Identified</h4>
-                        <p><strong>OR Scheduling & Resource Allocation</strong> is the primary constraint limiting throughput to just 50% of capacity.</p>
-                    </div>
-                    <div class="insight-card">
-                        <h4>💰 Financial Impact</h4>
-                        <p>The bottleneck creates a 42-day waiting list, resulting in <strong>$250K monthly opportunity loss</strong> from unserved patients.</p>
-                    </div>
-                    <div class="insight-card">
-                        <h4>🔄 Process Flow</h4>
-                        <p>400 patients enter the system monthly, but only 250 complete surgery due to scheduling constraints.</p>
+        <!-- TOC Framework -->
+        <section class="content-section">
+            <h2>🔄 Theory of Constraints: 5 Focusing Steps</h2>
+            <p>Goldratt's systematic approach to identify and remove bottlenecks.</p>
+            
+            <div class="toc-steps-visual" style="margin-top: 1.5rem;">
+                <div class="toc-step-visual">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h5>IDENTIFY</h5>
+                        <p>OR is the constraint</p>
                     </div>
                 </div>
-
-                <div class="toc-application">
-                    <h3>📋 Theory of Constraints Application</h3>
-                    <div class="toc-steps-visual">
-                        <div class="toc-step-visual">
-                            <div class="step-number">1</div>
-                            <div class="step-content">
-                                <h5>IDENTIFY</h5>
-                                <p>OR Scheduling is the constraint</p>
-                            </div>
-                        </div>
-                        <div class="toc-step-visual">
-                            <div class="step-number">2</div>
-                            <div class="step-content">
-                                <h5>EXPLOIT</h5>
-                                <p>Optimize current scheduling processes</p>
-                            </div>
-                        </div>
-                        <div class="toc-step-visual">
-                            <div class="step-number">3</div>
-                            <div class="step-content">
-                                <h5>SUBORDINATE</h5>
-                                <p>Align all resources to support OR utilization</p>
-                            </div>
-                        </div>
-                        <div class="toc-step-visual">
-                            <div class="step-number">4</div>
-                            <div class="step-content">
-                                <h5>ELEVATE</h5>
-                                <p>Invest in additional OR capacity or process improvements</p>
-                            </div>
-                        </div>
-                        <div class="toc-step-visual">
-                            <div class="step-number">5</div>
-                            <div class="step-content">
-                                <h5>REPEAT</h5>
-                                <p>Find and address the next constraint</p>
-                            </div>
-                        </div>
+                <div class="toc-step-visual">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h5>EXPLOIT</h5>
+                        <p>Optimize OR turnover</p>
+                    </div>
+                </div>
+                <div class="toc-step-visual">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h5>SUBORDINATE</h5>
+                        <p>Align scheduling</p>
+                    </div>
+                </div>
+                <div class="toc-step-visual">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h5>ELEVATE</h5>
+                        <p>Invest in capacity</p>
+                    </div>
+                </div>
+                <div class="toc-step-visual">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h5>REPEAT</h5>
+                        <p>Find next constraint</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <p style="font-size: 1.1rem; margin-bottom: 1rem;">
-                <strong>ClearSight Analysis Portal</strong> | Theory of Constraints Applied to Healthcare
-            </p>
-            <p>Strategic Process Engineering & Operations Excellence Analysis</p>
-            <p style="font-size: 0.9rem; margin-top: 1.5rem; opacity: 0.8;">
-                Based on Eliyahu M. Goldratt's "The Goal" and Theory of Constraints (TOC) Principles
-            </p>
+            <p><strong>ClearSight Analysis Portal</strong></p>
+            <p style="font-size: 0.9rem; opacity: 0.7;">Based on Eliyahu M. Goldratt's Theory of Constraints</p>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
-    <script src="js/script.js"></script>
 </body>
 </html>
