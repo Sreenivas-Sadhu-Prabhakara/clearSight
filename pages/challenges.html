@@ -22,6 +22,7 @@
                     <li><a href="actual-issues.html">Root Cause Analysis</a></li>
                     <li><a href="financial-analysis.html">Financial Models</a></li>
                     <li><a href="strategy.html">Strategic Plan</a></li>
+                    <li><a href="solutions.html">Solutions</a></li>
                 </ul>
             </nav>
         </div>
@@ -42,93 +43,97 @@
             <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto;">
                 Visual flow of the ten operational challenges mapped across the patient journey, highlighting critical bottlenecks.
             </p>
-            <div class="visual-container" style="background: var(--bg-card); padding: 2rem 1rem; border-radius: 12px; border: 1px solid var(--border-color);">
+            <div class="visual-container" style="background: linear-gradient(135deg, #0d1321 0%, #0a0f1a 100%); padding: 2rem 1rem; border-radius: 12px; border: 2px solid rgba(0, 212, 255, 0.3);">
                 <svg width="100%" height="220" viewBox="0 0 1000 220" style="overflow: visible;">
                     <defs>
                         <marker id="arrow-flow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-                            <path d="M0,0 L0,6 L9,3 z" fill="var(--accent)" />
+                            <path d="M0,0 L0,6 L9,3 z" fill="#00d4ff" />
                         </marker>
+                        <filter id="flowGlow" x="-50%" y="-50%" width="200%" height="200%">
+                            <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                            <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                        </filter>
+                        <filter id="nodeGlow" x="-50%" y="-50%" width="200%" height="200%">
+                            <feGaussianBlur stdDeviation="3" result="glow"/>
+                            <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+                        </filter>
                     </defs>
-                    <!-- Process Line -->
-                    <line x1="50" y1="110" x2="950" y2="110" stroke="var(--border-color)" stroke-width="4" stroke-linecap="round"/>
+                    <!-- Process Line - Enhanced Glow -->
+                    <line x1="50" y1="110" x2="950" y2="110" stroke="#00d4ff" stroke-width="6" stroke-linecap="round" opacity="0.3"/>
+                    <line x1="50" y1="110" x2="950" y2="110" stroke="#00d4ff" stroke-width="3" stroke-linecap="round" filter="url(#flowGlow)"/>
 
                     <!-- Step 1: Intake -->
-                    <circle cx="100" cy="110" r="8" fill="var(--accent)" stroke="var(--bg-card)" stroke-width="2"/>
-                    <rect x="50" y="50" width="100" height="40" rx="6" fill="var(--bg-card)" stroke="var(--accent)" stroke-width="1"/>
-                    <text x="100" y="65" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--accent)">1. Intake</text>
-                    <text x="100" y="80" text-anchor="middle" font-size="9" fill="var(--text-muted)">Paperwork Issues</text>
-                    <path d="M100 90 L100 110" stroke="var(--accent)" stroke-width="1" stroke-dasharray="2,2"/>
+                    <circle cx="100" cy="110" r="10" fill="#00d4ff" stroke="#0a0f1a" stroke-width="3" filter="url(#nodeGlow)"/>
+                    <rect x="50" y="45" width="100" height="45" rx="8" fill="#1a2332" stroke="#00d4ff" stroke-width="2"/>
+                    <text x="100" y="65" text-anchor="middle" font-size="11" font-weight="bold" fill="#00d4ff">1. Intake</text>
+                    <text x="100" y="82" text-anchor="middle" font-size="10" fill="#9ca3af">Paperwork Issues</text>
+                    <path d="M100 90 L100 105" stroke="#00d4ff" stroke-width="2" stroke-dasharray="3,3" opacity="0.7"/>
                     <!-- Challenge 9 -->
-                    <g transform="translate(100, 150)">
-                        <rect x="-40" y="0" width="80" height="20" rx="4" fill="var(--danger)" stroke="var(--danger)"/>
-                        <text x="0" y="14" text-anchor="middle" font-size="9" fill="#fff">#9 Comm. Gaps</text>
-                        <path d="M0 -30 L0 0" stroke="var(--danger)" stroke-width="1"/>
+                    <g transform="translate(100, 155)">
+                        <rect x="-45" y="0" width="90" height="24" rx="6" fill="#ef4444" stroke="#ff6b6b" stroke-width="2"/>
+                        <text x="0" y="16" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">#9 Comm. Gaps</text>
                     </g>
 
                     <!-- Step 2: Pre-Op -->
-                    <circle cx="300" cy="110" r="8" fill="var(--accent)" stroke="var(--bg-card)" stroke-width="2"/>
-                    <rect x="250" y="50" width="100" height="40" rx="6" fill="var(--bg-card)" stroke="var(--accent)" stroke-width="1"/>
-                    <text x="300" y="65" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--accent)">2. Pre-Op</text>
-                    <text x="300" y="80" text-anchor="middle" font-size="9" fill="var(--text-muted)">Assessments</text>
-                    <path d="M300 90 L300 110" stroke="var(--accent)" stroke-width="1" stroke-dasharray="2,2"/>
+                    <circle cx="300" cy="110" r="10" fill="#00d4ff" stroke="#0a0f1a" stroke-width="3" filter="url(#nodeGlow)"/>
+                    <rect x="250" y="45" width="100" height="45" rx="8" fill="#1a2332" stroke="#00d4ff" stroke-width="2"/>
+                    <text x="300" y="65" text-anchor="middle" font-size="11" font-weight="bold" fill="#00d4ff">2. Pre-Op</text>
+                    <text x="300" y="82" text-anchor="middle" font-size="10" fill="#9ca3af">Assessments</text>
+                    <path d="M300 90 L300 105" stroke="#00d4ff" stroke-width="2" stroke-dasharray="3,3" opacity="0.7"/>
                     <!-- Challenge 3 -->
-                    <g transform="translate(260, 130)">
-                        <rect x="-40" y="0" width="80" height="20" rx="4" fill="var(--warning)" stroke="var(--warning)"/>
-                        <text x="0" y="14" text-anchor="middle" font-size="9" fill="#181c24">#3 Process Time</text>
-                        <path d="M0 -10 L0 0" stroke="var(--warning)" stroke-width="1"/>
+                    <g transform="translate(260, 135)">
+                        <rect x="-45" y="0" width="90" height="24" rx="6" fill="#f59e0b" stroke="#fbbf24" stroke-width="2"/>
+                        <text x="0" y="16" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a1a1a">#3 Process Time</text>
                     </g>
                     <!-- Challenge 6 -->
-                    <g transform="translate(340, 160)">
-                        <rect x="-40" y="0" width="80" height="20" rx="4" fill="var(--warning)" stroke="var(--warning)"/>
-                        <text x="0" y="14" text-anchor="middle" font-size="9" fill="#181c24">#6 Auth Delays</text>
-                        <path d="M-40 -40 L0 0" stroke="var(--warning)" stroke-width="1" fill="none"/>
+                    <g transform="translate(340, 165)">
+                        <rect x="-45" y="0" width="90" height="24" rx="6" fill="#f59e0b" stroke="#fbbf24" stroke-width="2"/>
+                        <text x="0" y="16" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a1a1a">#6 Auth Delays</text>
                     </g>
 
-                    <!-- Step 3: Surgery (Bottleneck) -->
-                    <g>
-                        <rect x="450" y="90" width="100" height="40" rx="20" fill="var(--danger)" stroke="#ff5a5f" stroke-width="2"/>
-                        <text x="500" y="115" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">SURGERY</text>
+                    <!-- Step 3: Surgery (Bottleneck) - HIGHLY VISIBLE -->
+                    <g filter="url(#flowGlow)">
+                        <rect x="445" y="85" width="110" height="50" rx="25" fill="#ef4444" stroke="#ff6b6b" stroke-width="3"/>
+                        <text x="500" y="116" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">⚡ SURGERY</text>
                     </g>
-                    <!-- Bottleneck Challenges -->
-                    <line x1="500" y1="90" x2="500" y2="40" stroke="var(--danger)" stroke-width="2"/>
-                    <g transform="translate(500, 10)">
-                        <rect x="-70" y="0" width="140" height="60" rx="6" fill="var(--bg-card)" stroke="var(--danger)"/>
-                        <text x="0" y="15" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--danger)">⚠️ BOTTLENECK</text>
-                        <text x="0" y="30" text-anchor="middle" font-size="9" fill="var(--text-muted)">#1 Suite Utilization</text>
-                        <text x="0" y="42" text-anchor="middle" font-size="9" fill="var(--text-muted)">#2 Duration Variance</text>
-                        <text x="0" y="54" text-anchor="middle" font-size="9" fill="var(--text-muted)">#5 Material Stockouts</text>
+                    <!-- Bottleneck Challenges - Enhanced -->
+                    <line x1="500" y1="85" x2="500" y2="35" stroke="#ff6b6b" stroke-width="3"/>
+                    <g transform="translate(500, 5)">
+                        <rect x="-80" y="0" width="160" height="65" rx="8" fill="#1a2332" stroke="#ef4444" stroke-width="3"/>
+                        <text x="0" y="18" text-anchor="middle" font-size="12" font-weight="bold" fill="#ff6b6b">⚠️ BOTTLENECK</text>
+                        <text x="0" y="35" text-anchor="middle" font-size="10" fill="#fff">#1 Suite Utilization</text>
+                        <text x="0" y="48" text-anchor="middle" font-size="10" fill="#fff">#2 Duration Variance</text>
+                        <text x="0" y="61" text-anchor="middle" font-size="10" fill="#fff">#5 Material Stockouts</text>
                     </g>
 
                     <!-- Step 4: Post-Op -->
-                    <circle cx="700" cy="110" r="8" fill="var(--accent)" stroke="var(--bg-card)" stroke-width="2"/>
-                    <rect x="650" y="50" width="100" height="40" rx="6" fill="var(--bg-card)" stroke="var(--accent)" stroke-width="1"/>
-                    <text x="700" y="65" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--accent)">4. Post-Op</text>
-                    <text x="700" y="80" text-anchor="middle" font-size="9" fill="var(--text-muted)">Recovery</text>
-                    <path d="M700 90 L700 110" stroke="var(--accent)" stroke-width="1" stroke-dasharray="2,2"/>
+                    <circle cx="700" cy="110" r="10" fill="#00d4ff" stroke="#0a0f1a" stroke-width="3" filter="url(#nodeGlow)"/>
+                    <rect x="650" y="45" width="100" height="45" rx="8" fill="#1a2332" stroke="#00d4ff" stroke-width="2"/>
+                    <text x="700" y="65" text-anchor="middle" font-size="11" font-weight="bold" fill="#00d4ff">4. Post-Op</text>
+                    <text x="700" y="82" text-anchor="middle" font-size="10" fill="#9ca3af">Recovery</text>
+                    <path d="M700 90 L700 105" stroke="#00d4ff" stroke-width="2" stroke-dasharray="3,3" opacity="0.7"/>
                     <!-- Challenge 7 -->
-                    <g transform="translate(700, 130)">
-                        <rect x="-45" y="0" width="90" height="20" rx="4" fill="var(--danger)" stroke="var(--danger)"/>
-                        <text x="0" y="14" text-anchor="middle" font-size="9" fill="#fff">#7 Quality/Infection</text>
-                        <path d="M0 -10 L0 0" stroke="var(--danger)" stroke-width="1"/>
+                    <g transform="translate(700, 135)">
+                        <rect x="-50" y="0" width="100" height="24" rx="6" fill="#ef4444" stroke="#ff6b6b" stroke-width="2"/>
+                        <text x="0" y="16" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">#7 Quality/Infection</text>
                     </g>
 
                     <!-- Step 5: Admin -->
-                    <circle cx="900" cy="110" r="8" fill="var(--accent)" stroke="var(--bg-card)" stroke-width="2"/>
-                    <rect x="850" y="50" width="100" height="40" rx="6" fill="var(--bg-card)" stroke="var(--accent)" stroke-width="1"/>
-                    <text x="900" y="65" text-anchor="middle" font-size="10" font-weight="bold" fill="var(--accent)">5. Admin</text>
-                    <text x="900" y="80" text-anchor="middle" font-size="9" fill="var(--text-muted)">Revenue Cycle</text>
-                    <path d="M900 90 L900 110" stroke="var(--accent)" stroke-width="1" stroke-dasharray="2,2"/>
+                    <circle cx="900" cy="110" r="10" fill="#00d4ff" stroke="#0a0f1a" stroke-width="3" filter="url(#nodeGlow)"/>
+                    <rect x="850" y="45" width="100" height="45" rx="8" fill="#1a2332" stroke="#00d4ff" stroke-width="2"/>
+                    <text x="900" y="65" text-anchor="middle" font-size="11" font-weight="bold" fill="#00d4ff">5. Admin</text>
+                    <text x="900" y="82" text-anchor="middle" font-size="10" fill="#9ca3af">Revenue Cycle</text>
+                    <path d="M900 90 L900 105" stroke="#00d4ff" stroke-width="2" stroke-dasharray="3,3" opacity="0.7"/>
                     <!-- Challenge 8, 10 -->
-                    <g transform="translate(900, 130)">
-                        <rect x="-50" y="0" width="100" height="32" rx="4" fill="var(--warning)" stroke="var(--warning)"/>
-                        <text x="0" y="12" text-anchor="middle" font-size="9" fill="#181c24">#8 Billing Lag</text>
-                        <text x="0" y="24" text-anchor="middle" font-size="9" fill="#181c24">#10 Tech Silos</text>
-                        <path d="M0 -10 L0 0" stroke="var(--warning)" stroke-width="1"/>
+                    <g transform="translate(900, 135)">
+                        <rect x="-55" y="0" width="110" height="38" rx="6" fill="#f59e0b" stroke="#fbbf24" stroke-width="2"/>
+                        <text x="0" y="14" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a1a1a">#8 Billing Lag</text>
+                        <text x="0" y="28" text-anchor="middle" font-size="10" font-weight="bold" fill="#1a1a1a">#10 Tech Silos</text>
                     </g>
 
-                    <!-- Challenge 4: Workforce (Underlying) -->
-                    <rect x="200" y="190" width="600" height="25" rx="12" fill="var(--bg-card)" stroke="var(--accent)"/>
-                    <text x="500" y="207" text-anchor="middle" font-size="11" font-weight="bold" fill="var(--accent)">#4 Workforce Instability affects ALL stages</text>
+                    <!-- Challenge 4: Workforce (Underlying) - Enhanced -->
+                    <rect x="200" y="192" width="600" height="28" rx="14" fill="#1a2332" stroke="#00d4ff" stroke-width="2"/>
+                    <text x="500" y="211" text-anchor="middle" font-size="12" font-weight="bold" fill="#00d4ff">🔄 #4 Workforce Instability affects ALL stages</text>
                 </svg>
             </div>
         </section>
@@ -217,52 +222,60 @@
             <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
                 The interdependency of challenges creates a negative feedback loop. Understanding these connections is key to unlocking growth.
             </p>
-            <div class="visual-container" style="background: var(--bg-card); padding: 2rem; border-radius: 12px; border: 1px solid var(--border-color); min-height: 400px;">
+            <div class="visual-container" style="background: linear-gradient(135deg, #0d1321 0%, #0a0f1a 100%); padding: 2rem; border-radius: 12px; border: 2px solid rgba(0, 212, 255, 0.3); min-height: 400px;">
                 <svg width="100%" height="400" viewBox="0 0 800 400" style="overflow: visible;">
                     <defs>
                         <marker id="arrow-red" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-                            <polygon points="0 0, 10 3.5, 0 7" fill="var(--danger)" />
+                            <polygon points="0 0, 10 3.5, 0 7" fill="#ff6b6b" />
                         </marker>
+                        <filter id="centerGlow" x="-100%" y="-100%" width="300%" height="300%">
+                            <feGaussianBlur stdDeviation="8" result="glow"/>
+                            <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+                        </filter>
+                        <filter id="nodeGlow2" x="-50%" y="-50%" width="200%" height="200%">
+                            <feGaussianBlur stdDeviation="3" result="glow"/>
+                            <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+                        </filter>
                     </defs>
-                    <!-- Center Node -->
-                    <circle cx="400" cy="200" r="55" fill="var(--danger)" stroke="#ff5a5f" stroke-width="3"/>
-                    <text x="400" y="195" text-anchor="middle" font-weight="bold" fill="#fff" font-size="13">STAGNANT</text>
-                    <text x="400" y="215" text-anchor="middle" font-weight="bold" fill="#fff" font-size="13">GROWTH</text>
-                    <!-- Connections -->
-                    <line x1="400" y1="145" x2="400" y2="70" stroke="var(--danger)" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrow-red)"/>
-                    <line x1="445" y1="165" x2="580" y2="110" stroke="var(--danger)" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrow-red)"/>
-                    <line x1="445" y1="235" x2="580" y2="290" stroke="var(--danger)" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrow-red)"/>
-                    <line x1="355" y1="235" x2="220" y2="290" stroke="var(--danger)" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrow-red)"/>
-                    <line x1="355" y1="165" x2="220" y2="110" stroke="var(--danger)" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrow-red)"/>
+                    <!-- Center Node - Enhanced with pulsing glow -->
+                    <circle cx="400" cy="200" r="60" fill="#ef4444" stroke="#ff6b6b" stroke-width="4" filter="url(#centerGlow)"/>
+                    <text x="400" y="193" text-anchor="middle" font-weight="bold" fill="#fff" font-size="14">STAGNANT</text>
+                    <text x="400" y="215" text-anchor="middle" font-weight="bold" fill="#fff" font-size="14">GROWTH</text>
+                    <!-- Enhanced Connections with glow -->
+                    <line x1="400" y1="140" x2="400" y2="75" stroke="#ff6b6b" stroke-width="3" stroke-dasharray="8,4" marker-end="url(#arrow-red)"/>
+                    <line x1="450" y1="160" x2="560" y2="115" stroke="#ff6b6b" stroke-width="3" stroke-dasharray="8,4" marker-end="url(#arrow-red)"/>
+                    <line x1="450" y1="240" x2="560" y2="285" stroke="#ff6b6b" stroke-width="3" stroke-dasharray="8,4" marker-end="url(#arrow-red)"/>
+                    <line x1="350" y1="240" x2="240" y2="285" stroke="#ff6b6b" stroke-width="3" stroke-dasharray="8,4" marker-end="url(#arrow-red)"/>
+                    <line x1="350" y1="160" x2="240" y2="115" stroke="#ff6b6b" stroke-width="3" stroke-dasharray="8,4" marker-end="url(#arrow-red)"/>
                     <!-- Node 1: OR Bottleneck -->
-                    <g transform="translate(400, 50)">
-                        <circle r="32" fill="var(--bg-card)" stroke="var(--danger)" stroke-width="3"/>
-                        <text y="-4" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">OR</text>
-                        <text y="10" text-anchor="middle" fill="var(--danger)" font-size="10">Bottleneck</text>
+                    <g transform="translate(400, 50)" filter="url(#nodeGlow2)">
+                        <circle r="38" fill="#1a2332" stroke="#ef4444" stroke-width="3"/>
+                        <text y="-6" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">OR</text>
+                        <text y="12" text-anchor="middle" fill="#ff6b6b" font-size="11">Bottleneck</text>
                     </g>
                     <!-- Node 2: Pre-Auth -->
-                    <g transform="translate(600, 100)">
-                        <circle r="32" fill="var(--bg-card)" stroke="var(--warning)" stroke-width="3"/>
-                        <text y="-4" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">Pre-Auth</text>
-                        <text y="10" text-anchor="middle" fill="var(--warning)" font-size="10">Delays</text>
+                    <g transform="translate(600, 100)" filter="url(#nodeGlow2)">
+                        <circle r="38" fill="#1a2332" stroke="#f59e0b" stroke-width="3"/>
+                        <text y="-6" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">Pre-Auth</text>
+                        <text y="12" text-anchor="middle" fill="#fbbf24" font-size="11">Delays</text>
                     </g>
                     <!-- Node 3: Billing -->
-                    <g transform="translate(600, 300)">
-                        <circle r="32" fill="var(--bg-card)" stroke="var(--warning)" stroke-width="3"/>
-                        <text y="-4" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">Billing</text>
-                        <text y="10" text-anchor="middle" fill="var(--warning)" font-size="10">Leakage</text>
+                    <g transform="translate(600, 300)" filter="url(#nodeGlow2)">
+                        <circle r="38" fill="#1a2332" stroke="#f59e0b" stroke-width="3"/>
+                        <text y="-6" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">Billing</text>
+                        <text y="12" text-anchor="middle" fill="#fbbf24" font-size="11">Leakage</text>
                     </g>
                     <!-- Node 4: Staffing -->
-                    <g transform="translate(200, 300)">
-                        <circle r="32" fill="var(--bg-card)" stroke="var(--warning)" stroke-width="3"/>
-                        <text y="-4" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">Staff</text>
-                        <text y="10" text-anchor="middle" fill="var(--warning)" font-size="10">Turnover</text>
+                    <g transform="translate(200, 300)" filter="url(#nodeGlow2)">
+                        <circle r="38" fill="#1a2332" stroke="#f59e0b" stroke-width="3"/>
+                        <text y="-6" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">Staff</text>
+                        <text y="12" text-anchor="middle" fill="#fbbf24" font-size="11">Turnover</text>
                     </g>
                     <!-- Node 5: Quality -->
-                    <g transform="translate(200, 100)">
-                        <circle r="32" fill="var(--bg-card)" stroke="var(--accent)" stroke-width="3"/>
-                        <text y="-4" text-anchor="middle" fill="#fff" font-size="10" font-weight="bold">Quality</text>
-                        <text y="10" text-anchor="middle" fill="var(--accent)" font-size="10">Issues</text>
+                    <g transform="translate(200, 100)" filter="url(#nodeGlow2)">
+                        <circle r="38" fill="#1a2332" stroke="#00d4ff" stroke-width="3"/>
+                        <text y="-6" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">Quality</text>
+                        <text y="12" text-anchor="middle" fill="#00d4ff" font-size="11">Issues</text>
                     </g>
                 </svg>
             </div>

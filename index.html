@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClearSight - Theory of Constraints Analysis</title>
+    <title>ClearEyes - Theory of Constraints Analysis</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header class="navbar">
         <div class="navbar-container">
             <div class="logo">
-                <h1>🏥 ClearSight</h1>
+                <h1>🏥 ClearEyes</h1>
                 <p class="subtitle">Theory of Constraints Analysis</p>
             </div>
             <nav class="nav-menu" aria-label="Main Navigation">
@@ -21,6 +21,7 @@
                     <li><a href="pages/actual-issues.html">Root Cause</a></li>
                     <li><a href="pages/financial-analysis.html">Financials</a></li>
                     <li><a href="pages/strategy.html">Strategy</a></li>
+                    <li><a href="pages/solutions.html">Solutions</a></li>
                 </ul>
             </nav>
         </div>
@@ -29,7 +30,7 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h2>ClearSight Eye Care Center</h2>
+            <h2>ClearEyes Eye Care Center</h2>
             <p>Strategic Analysis Using Goldratt's Theory of Constraints</p>
             <div class="hero-stats">
                 <div class="stat">
@@ -80,6 +81,11 @@
                     <h4>Strategy</h4>
                     <p>Action Plan</p>
                 </a>
+                <a href="pages/solutions.html" class="roadmap-step">
+                    <div class="step-number" style="background: #00d4ff; color: #0a0f1a;">6</div>
+                    <h4>Solutions</h4>
+                    <p>Track & Implement</p>
+                </a>
             </div>
         </section>
 
@@ -88,53 +94,70 @@
             <h2>🎯 The Constraint: OR Throughput</h2>
             <p>ClearSight's patient flow bottlenecks at the Operating Room—limiting the entire system to 50% capacity.</p>
             
-            <div class="visual-container" style="margin-top: 1.5rem;">
+            <div class="visual-container" style="margin-top: 1.5rem; background: linear-gradient(135deg, #0d1321 0%, #0a0f1a 100%); border: 2px solid rgba(0, 212, 255, 0.3);">
                 <svg width="100%" height="180" viewBox="0 0 900 180">
                     <defs>
                         <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
                             <path d="M0,0 L0,6 L9,3 z" fill="#00d4ff"/>
                         </marker>
+                        <filter id="homeFlowGlow" x="-20%" y="-50%" width="140%" height="200%">
+                            <feGaussianBlur stdDeviation="4" result="glow"/>
+                            <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+                        </filter>
+                        <filter id="homeNodeGlow" x="-30%" y="-30%" width="160%" height="160%">
+                            <feGaussianBlur stdDeviation="3" result="glow"/>
+                            <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+                        </filter>
+                        <linearGradient id="homeFlowLine" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#00d4ff"/>
+                            <stop offset="45%" stop-color="#00d4ff"/>
+                            <stop offset="50%" stop-color="#ef4444"/>
+                            <stop offset="55%" stop-color="#00d4ff"/>
+                            <stop offset="100%" stop-color="#00d4ff"/>
+                        </linearGradient>
                     </defs>
                     
-                    <!-- Flow Line -->
-                    <line x1="50" y1="90" x2="850" y2="90" stroke="#1f2937" stroke-width="4"/>
+                    <!-- Flow Line Background -->
+                    <line x1="50" y1="90" x2="850" y2="90" stroke="url(#homeFlowLine)" stroke-width="8" opacity="0.2" stroke-linecap="round"/>
+                    <line x1="50" y1="90" x2="850" y2="90" stroke="url(#homeFlowLine)" stroke-width="4" stroke-linecap="round" filter="url(#homeFlowGlow)"/>
                     
                     <!-- Stages -->
-                    <g transform="translate(120, 90)">
-                        <rect x="-50" y="-30" width="100" height="60" rx="8" fill="#1f2937" stroke="#10b981" stroke-width="2"/>
-                        <text y="-8" text-anchor="middle" fill="#10b981" font-size="10" font-weight="bold">INTAKE</text>
+                    <g transform="translate(120, 90)" filter="url(#homeNodeGlow)">
+                        <rect x="-50" y="-30" width="100" height="60" rx="10" fill="#1a2332" stroke="#10b981" stroke-width="2"/>
+                        <text y="-8" text-anchor="middle" fill="#34d399" font-size="10" font-weight="bold">INTAKE</text>
                         <text y="8" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">400/mo</text>
-                        <text y="22" text-anchor="middle" fill="#6b7280" font-size="9">95% flow</text>
+                        <text y="22" text-anchor="middle" fill="#9ca3af" font-size="9">95% flow</text>
                     </g>
                     
-                    <text x="200" y="95" fill="#00d4ff" font-size="20">→</text>
+                    <text x="200" y="95" fill="#00d4ff" font-size="22" font-weight="bold">→</text>
                     
-                    <g transform="translate(300, 90)">
-                        <rect x="-55" y="-30" width="110" height="60" rx="8" fill="#1f2937" stroke="#f59e0b" stroke-width="2"/>
-                        <text y="-8" text-anchor="middle" fill="#f59e0b" font-size="10" font-weight="bold">PRE-OP</text>
+                    <g transform="translate(300, 90)" filter="url(#homeNodeGlow)">
+                        <rect x="-55" y="-30" width="110" height="60" rx="10" fill="#1a2332" stroke="#f59e0b" stroke-width="2"/>
+                        <text y="-8" text-anchor="middle" fill="#fbbf24" font-size="10" font-weight="bold">PRE-OP</text>
                         <text y="8" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">350/mo</text>
-                        <text y="22" text-anchor="middle" fill="#6b7280" font-size="9">Auth delays</text>
+                        <text y="22" text-anchor="middle" fill="#9ca3af" font-size="9">Auth delays</text>
                     </g>
                     
-                    <text x="390" y="95" fill="#ef4444" font-size="20">⚠</text>
+                    <text x="390" y="95" fill="#ef4444" font-size="22" font-weight="bold">⚠</text>
                     
-                    <g transform="translate(500, 90)">
-                        <rect x="-65" y="-35" width="130" height="70" rx="8" fill="rgba(239,68,68,0.15)" stroke="#ef4444" stroke-width="3"/>
-                        <text y="-12" text-anchor="middle" fill="#ef4444" font-size="11" font-weight="bold">⚠ CONSTRAINT</text>
-                        <text y="8" text-anchor="middle" fill="#fff" font-size="16" font-weight="bold">250/mo</text>
-                        <text y="24" text-anchor="middle" fill="#ef4444" font-size="10">50% capacity</text>
+                    <g transform="translate(500, 90)" filter="url(#homeFlowGlow)">
+                        <rect x="-70" y="-40" width="140" height="80" rx="12" fill="#0d1321" stroke="#ef4444" stroke-width="4"/>
+                        <rect x="-65" y="-35" width="130" height="70" rx="10" fill="none" stroke="#ef4444" stroke-width="1" stroke-dasharray="4,2" opacity="0.5"/>
+                        <text y="-15" text-anchor="middle" fill="#ff6b6b" font-size="11" font-weight="bold">⚡ CONSTRAINT</text>
+                        <text y="8" text-anchor="middle" fill="#fff" font-size="18" font-weight="bold">250/mo</text>
+                        <text y="28" text-anchor="middle" fill="#ef4444" font-size="11">50% capacity</text>
                     </g>
                     
-                    <text x="600" y="95" fill="#00d4ff" font-size="20">→</text>
+                    <text x="610" y="95" fill="#00d4ff" font-size="22" font-weight="bold">→</text>
                     
-                    <g transform="translate(700, 90)">
-                        <rect x="-50" y="-30" width="100" height="60" rx="8" fill="#1f2937" stroke="#10b981" stroke-width="2"/>
-                        <text y="-8" text-anchor="middle" fill="#10b981" font-size="10" font-weight="bold">RECOVERY</text>
+                    <g transform="translate(720, 90)" filter="url(#homeNodeGlow)">
+                        <rect x="-50" y="-30" width="100" height="60" rx="10" fill="#1a2332" stroke="#10b981" stroke-width="2"/>
+                        <text y="-8" text-anchor="middle" fill="#34d399" font-size="10" font-weight="bold">RECOVERY</text>
                         <text y="8" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">250/mo</text>
-                        <text y="22" text-anchor="middle" fill="#6b7280" font-size="9">Waiting</text>
+                        <text y="22" text-anchor="middle" fill="#9ca3af" font-size="9">Waiting</text>
                     </g>
                     
-                    <text x="800" y="95" fill="#00d4ff" font-size="20">→</text>
+                    <text x="810" y="95" fill="#00d4ff" font-size="22" font-weight="bold">→</text>
                 </svg>
             </div>
             

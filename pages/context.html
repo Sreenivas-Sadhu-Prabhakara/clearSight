@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Context - ClearSight Analysis</title>
+    <title>Business Context - ClearEyes Analysis</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
     <header class="navbar">
         <div class="navbar-container">
             <div class="logo">
-                <h1>🏥 ClearSight Analysis</h1>
+                <h1>🏥 ClearEyes Analysis</h1>
                 <p class="subtitle">Theory of Constraints & Process Engineering</p>
             </div>
             <nav class="nav-menu" aria-label="Main Navigation">
@@ -22,6 +22,7 @@
                     <li><a href="actual-issues.html">Root Cause Analysis</a></li>
                     <li><a href="financial-analysis.html">Financial Models</a></li>
                     <li><a href="strategy.html">Strategic Plan</a></li>
+                    <li><a href="solutions.html">Solutions</a></li>
                 </ul>
             </nav>
         </div>
@@ -32,7 +33,7 @@
         <section class="hero" style="padding: 3rem 0 2rem 0; text-align: center;">
             <h1 style="font-size: 2.5rem; color: var(--accent); margin-bottom: 0.5rem;">📋 Business Context</h1>
             <p style="color: var(--text-muted); font-size: 1.15rem; max-width: 700px; margin: 0 auto;">
-                An overview of ClearSight Cataracts' operations, revenue model, and performance metrics.
+                An overview of ClearEyes Cataracts' operations, revenue model, and performance metrics.
             </p>
         </section>
 
@@ -66,7 +67,7 @@
         <section class="content-section" style="margin-bottom: 2rem;">
             <h2 style="color: var(--accent); margin-bottom: 1rem;">Business Overview</h2>
             <p style="color: var(--text-muted); margin-bottom: 1rem;">
-                <strong style="color: var(--text-primary);">ClearSight Cataracts</strong> is a specialized ophthalmology center focused on cataract surgery. The organization operates a single high-volume surgical center facing meaningful operational challenges.
+                <strong style="color: var(--text-primary);">ClearEyes Cataracts</strong> is a specialized ophthalmology center focused on cataract surgery. The organization operates a single high-volume surgical center facing meaningful operational challenges.
             </p>
             <ul style="color: var(--text-muted); padding-left: 1.2rem; margin-bottom: 0;">
                 <li><strong style="color: var(--text-primary);">Mission:</strong> Provide high-quality, efficient cataract surgery services to the local community.</li>
@@ -78,45 +79,65 @@
         <!-- End-to-End Flow -->
         <section class="content-section" style="margin-bottom: 2rem;">
             <h2 style="color: var(--accent); margin-bottom: 1rem;">End-to-End Operational Flow</h2>
-            <div class="visual-container" style="background: var(--bg-card); padding: 2rem 1rem; border-radius: 12px; border: 1px solid var(--border-color);">
-                <svg width="100%" height="150" viewBox="0 0 900 150" xmlns="http://www.w3.org/2000/svg">
+            <div class="visual-container" style="background: linear-gradient(135deg, #0d1321 0%, #0a0f1a 100%); padding: 2rem 1rem; border-radius: 12px; border: 2px solid rgba(0, 212, 255, 0.3);">
+                <svg width="100%" height="160" viewBox="0 0 900 160" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <filter id="flowGlowCtx" x="-20%" y="-50%" width="140%" height="200%">
+                            <feGaussianBlur stdDeviation="4" result="glow"/>
+                            <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+                        </filter>
+                        <filter id="nodeGlowCtx" x="-40%" y="-40%" width="180%" height="180%">
+                            <feGaussianBlur stdDeviation="3" result="glow"/>
+                            <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+                        </filter>
+                        <linearGradient id="flowLineCtx" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#00d4ff"/>
+                            <stop offset="50%" stop-color="#ef4444"/>
+                            <stop offset="100%" stop-color="#00d4ff"/>
+                        </linearGradient>
+                    </defs>
+                    
+                    <!-- Flow Line Background -->
+                    <line x1="90" y1="80" x2="810" y2="80" stroke="url(#flowLineCtx)" stroke-width="8" opacity="0.2" stroke-linecap="round"/>
+                    <line x1="90" y1="80" x2="810" y2="80" stroke="url(#flowLineCtx)" stroke-width="4" stroke-linecap="round" filter="url(#flowGlowCtx)"/>
+                    
                     <!-- Patient Intake -->
-                    <rect x="30" y="55" width="120" height="50" fill="var(--bg-card)" stroke="var(--accent)" stroke-width="2" rx="8"/>
-                    <text x="90" y="85" text-anchor="middle" fill="var(--accent)" font-size="13" font-weight="bold">Patient Intake</text>
+                    <rect x="30" y="50" width="120" height="60" fill="#1a2332" stroke="#00d4ff" stroke-width="2" rx="10" filter="url(#nodeGlowCtx)"/>
+                    <text x="90" y="85" text-anchor="middle" fill="#00d4ff" font-size="13" font-weight="bold">Patient Intake</text>
                     <!-- Arrow 1 -->
-                    <polygon points="160,80 180,75 180,85" fill="var(--accent)"/>
-                    <line x1="150" y1="80" x2="180" y2="80" stroke="var(--accent)" stroke-width="3"/>
+                    <polygon points="165,80 185,74 185,86" fill="#00d4ff"/>
+                    
                     <!-- Pre-Op -->
-                    <rect x="200" y="55" width="120" height="50" fill="var(--bg-card)" stroke="var(--accent)" stroke-width="2" rx="8"/>
-                    <text x="260" y="80" text-anchor="middle" fill="var(--accent)" font-size="12">Pre-Op</text>
-                    <text x="260" y="95" text-anchor="middle" fill="var(--text-muted)" font-size="11">Assessment</text>
+                    <rect x="200" y="50" width="120" height="60" fill="#1a2332" stroke="#00d4ff" stroke-width="2" rx="10" filter="url(#nodeGlowCtx)"/>
+                    <text x="260" y="76" text-anchor="middle" fill="#00d4ff" font-size="12" font-weight="bold">Pre-Op</text>
+                    <text x="260" y="92" text-anchor="middle" fill="#9ca3af" font-size="11">Assessment</text>
                     <!-- Arrow 2 -->
-                    <polygon points="330,80 350,75 350,85" fill="var(--accent)"/>
-                    <line x1="320" y1="80" x2="350" y2="80" stroke="var(--accent)" stroke-width="3"/>
+                    <polygon points="335,80 355,74 355,86" fill="#00d4ff"/>
+                    
                     <!-- Scheduling -->
-                    <rect x="370" y="55" width="120" height="50" fill="var(--bg-card)" stroke="var(--accent)" stroke-width="2" rx="8"/>
-                    <text x="430" y="80" text-anchor="middle" fill="var(--accent)" font-size="12">Scheduling</text>
-                    <text x="430" y="95" text-anchor="middle" fill="var(--text-muted)" font-size="11">& Admin</text>
+                    <rect x="370" y="50" width="120" height="60" fill="#1a2332" stroke="#00d4ff" stroke-width="2" rx="10" filter="url(#nodeGlowCtx)"/>
+                    <text x="430" y="76" text-anchor="middle" fill="#00d4ff" font-size="12" font-weight="bold">Scheduling</text>
+                    <text x="430" y="92" text-anchor="middle" fill="#9ca3af" font-size="11">& Admin</text>
                     <!-- Arrow 3 -->
-                    <polygon points="500,80 520,75 520,85" fill="var(--accent)"/>
-                    <line x1="490" y1="80" x2="520" y2="80" stroke="var(--accent)" stroke-width="3"/>
-                    <!-- Surgery -->
-                    <rect x="540" y="50" width="140" height="60" fill="var(--danger)" stroke="#ff5a5f" stroke-width="3" rx="10"/>
-                    <text x="610" y="85" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">Surgery (OR)</text>
+                    <polygon points="505,80 525,74 525,86" fill="#00d4ff"/>
+                    
+                    <!-- Surgery - CONSTRAINT HIGHLIGHTED -->
+                    <rect x="540" y="40" width="140" height="80" fill="#ef4444" stroke="#ff6b6b" stroke-width="4" rx="12" filter="url(#flowGlowCtx)"/>
+                    <text x="610" y="85" text-anchor="middle" fill="#fff" font-size="15" font-weight="bold">⚡ Surgery (OR)</text>
                     <!-- Constraint Indicator -->
-                    <circle cx="610" cy="35" r="14" fill="var(--danger)" stroke="#fff" stroke-width="2"/>
-                    <text x="610" y="40" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">!</text>
-                    <text x="610" y="20" text-anchor="middle" fill="var(--danger)" font-size="9" font-weight="bold">Constraint</text>
+                    <circle cx="610" cy="22" r="16" fill="#ef4444" stroke="#fff" stroke-width="3"/>
+                    <text x="610" y="28" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">!</text>
+                    <text x="610" y="8" text-anchor="middle" fill="#ff6b6b" font-size="10" font-weight="bold">CONSTRAINT</text>
                     <!-- Arrow 4 -->
-                    <polygon points="690,80 710,75 710,85" fill="var(--accent)"/>
-                    <line x1="680" y1="80" x2="710" y2="80" stroke="var(--accent)" stroke-width="3"/>
+                    <polygon points="695,80 715,74 715,86" fill="#00d4ff"/>
+                    
                     <!-- Post-Op -->
-                    <rect x="730" y="55" width="120" height="50" fill="var(--bg-card)" stroke="var(--accent)" stroke-width="2" rx="8"/>
-                    <text x="790" y="85" text-anchor="middle" fill="var(--accent)" font-size="13">Post-Op Care</text>
+                    <rect x="730" y="50" width="120" height="60" fill="#1a2332" stroke="#00d4ff" stroke-width="2" rx="10" filter="url(#nodeGlowCtx)"/>
+                    <text x="790" y="85" text-anchor="middle" fill="#00d4ff" font-size="13" font-weight="bold">Post-Op Care</text>
                 </svg>
             </div>
             <p style="text-align: center; color: var(--text-muted); font-style: italic; margin-top: 1rem;">
-                The patient journey from intake to post-op. The OR is the primary constraint.
+                The patient journey from intake to post-op. The OR is the primary constraint limiting throughput.
             </p>
         </section>
 

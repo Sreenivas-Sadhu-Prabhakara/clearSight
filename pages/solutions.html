@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solutions Tracker - ClearSight Analysis</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        /* Solutions Page Specific Styles */
+        .solution-form {
+            background: linear-gradient(135deg, #1a2332 0%, #111827 100%);
+            border: 2px solid rgba(0, 212, 255, 0.3);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            color: #00d4ff;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.85rem 1rem;
+            background: #0a0f1a;
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #00d4ff;
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+        }
+        
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .btn-submit {
+            background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+            color: #0a0f1a;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 212, 255, 0.4);
+        }
+        
+        .solutions-list {
+            margin-top: 2rem;
+        }
+        
+        .solution-card {
+            background: linear-gradient(135deg, #1a2332 0%, #111827 100%);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .solution-card:hover {
+            border-color: rgba(0, 212, 255, 0.5);
+            box-shadow: 0 4px 20px rgba(0, 212, 255, 0.1);
+        }
+        
+        .solution-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+        
+        .solution-title {
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 0;
+        }
+        
+        .solution-meta {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+        
+        .solution-badge {
+            padding: 0.35rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .badge-constraint {
+            background: rgba(239, 68, 68, 0.2);
+            color: #ff6b6b;
+            border: 1px solid #ef4444;
+        }
+        
+        .badge-policy {
+            background: rgba(245, 158, 11, 0.2);
+            color: #fbbf24;
+            border: 1px solid #f59e0b;
+        }
+        
+        .badge-behavioral {
+            background: rgba(16, 185, 129, 0.2);
+            color: #34d399;
+            border: 1px solid #10b981;
+        }
+        
+        .badge-quality {
+            background: rgba(0, 212, 255, 0.2);
+            color: #00d4ff;
+            border: 1px solid #00d4ff;
+        }
+        
+        .badge-status {
+            background: rgba(255, 255, 255, 0.1);
+            color: #9ca3af;
+            border: 1px solid #4b5563;
+        }
+        
+        .badge-status.in-progress {
+            background: rgba(0, 212, 255, 0.15);
+            color: #00d4ff;
+            border-color: #00d4ff;
+        }
+        
+        .badge-status.completed {
+            background: rgba(16, 185, 129, 0.15);
+            color: #34d399;
+            border-color: #10b981;
+        }
+        
+        .solution-description {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        .solution-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .solution-impact {
+            color: #00d4ff;
+            font-weight: 600;
+        }
+        
+        .solution-date {
+            color: #9ca3af;
+            font-size: 0.85rem;
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 3rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .empty-state svg {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 1rem;
+            opacity: 0.3;
+        }
+        
+        .filter-bar {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            background: transparent;
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            color: rgba(255, 255, 255, 0.7);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.85rem;
+        }
+        
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: rgba(0, 212, 255, 0.15);
+            border-color: #00d4ff;
+            color: #00d4ff;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <h1>🏥 ClearSight</h1>
+                <p class="subtitle">Theory of Constraints Analysis</p>
+            </div>
+            <nav class="nav-menu" aria-label="Main Navigation">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="context.html">Context</a></li>
+                    <li><a href="challenges.html">Challenges</a></li>
+                    <li><a href="actual-issues.html">Root Cause</a></li>
+                    <li><a href="financial-analysis.html">Financials</a></li>
+                    <li><a href="strategy.html">Strategy</a></li>
+                    <li><a href="solutions.html" class="active">Solutions</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" style="margin-top: 90px;">
+        <!-- Hero Section -->
+        <section class="content-section" style="text-align: center; margin-bottom: 2rem;">
+            <h2 style="color: #00d4ff; margin-bottom: 0.5rem;">💡 Solutions Tracker</h2>
+            <p style="color: rgba(255, 255, 255, 0.7); max-width: 600px; margin: 0 auto;">
+                Document, track, and measure the impact of solutions addressing ClearSight's constraints.
+            </p>
+        </section>
+
+        <!-- Add New Solution Form -->
+        <section class="solution-form">
+            <h3 style="color: #fff; margin-bottom: 1.5rem;">➕ Add New Solution</h3>
+            <form id="solutionForm">
+                <div class="form-group">
+                    <label for="solutionTitle">Solution Title</label>
+                    <input type="text" id="solutionTitle" placeholder="e.g., Implement Parallel OR Prep Process" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="constraintType">Constraint Category</label>
+                        <select id="constraintType" required>
+                            <option value="">Select category...</option>
+                            <option value="physical">⚙️ Physical Constraint (OR/Equipment)</option>
+                            <option value="policy">📋 Policy Constraint (Scheduling/Auth)</option>
+                            <option value="behavioral">👥 Behavioral Constraint (Staff/Process)</option>
+                            <option value="quality">✅ Quality Constraint (Defects/Rework)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="tocAction">TOC Action</label>
+                        <select id="tocAction" required>
+                            <option value="">Select TOC action...</option>
+                            <option value="identify">1. IDENTIFY the constraint</option>
+                            <option value="exploit">2. EXPLOIT the constraint</option>
+                            <option value="subordinate">3. SUBORDINATE everything else</option>
+                            <option value="elevate">4. ELEVATE the constraint</option>
+                            <option value="repeat">5. REPEAT (new constraint)</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="description">Solution Description</label>
+                    <textarea id="description" placeholder="Describe the solution approach, expected outcomes, and implementation steps..." required></textarea>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="impact">Expected Impact</label>
+                        <input type="text" id="impact" placeholder="e.g., +$500K annually, -15 min turnaround">
+                    </div>
+                    <div class="form-group">
+                        <label for="timeline">Implementation Timeline</label>
+                        <input type="text" id="timeline" placeholder="e.g., 4-6 weeks">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="owner">Owner/Responsible</label>
+                        <input type="text" id="owner" placeholder="e.g., Dr. Connors, Operations Team">
+                    </div>
+                    <div class="form-group">
+                        <label for="status">Status</label>
+                        <select id="status">
+                            <option value="proposed">📝 Proposed</option>
+                            <option value="in-progress">🔄 In Progress</option>
+                            <option value="completed">✅ Completed</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn-submit">
+                    <span>💾</span> Save Solution
+                </button>
+            </form>
+        </section>
+
+        <!-- Solutions List -->
+        <section class="content-section">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                <h3 style="color: #fff; margin: 0;">📋 Tracked Solutions</h3>
+                <span id="solutionCount" style="color: #9ca3af; font-size: 0.9rem;">0 solutions</span>
+            </div>
+            
+            <!-- Filters -->
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="physical">⚙️ Physical</button>
+                <button class="filter-btn" data-filter="policy">📋 Policy</button>
+                <button class="filter-btn" data-filter="behavioral">👥 Behavioral</button>
+                <button class="filter-btn" data-filter="quality">✅ Quality</button>
+            </div>
+            
+            <div id="solutionsList" class="solutions-list">
+                <!-- Sample Solutions -->
+                <div class="solution-card" data-category="physical">
+                    <div class="solution-header">
+                        <h4 class="solution-title">SMED-Based OR Turnaround Optimization</h4>
+                        <div class="solution-meta">
+                            <span class="solution-badge badge-constraint">Physical</span>
+                            <span class="solution-badge badge-status in-progress">In Progress</span>
+                        </div>
+                    </div>
+                    <p class="solution-description">
+                        Apply Single-Minute Exchange of Die (SMED) principles to reduce OR turnover from 22 minutes to 8 minutes through parallel processing, pre-staged equipment, and standardized checklists.
+                    </p>
+                    <div class="solution-footer">
+                        <span class="solution-impact">💰 +$800K/year | ⏱️ -14 min/case</span>
+                        <span class="solution-date">TOC: EXPLOIT | Owner: OR Team</span>
+                    </div>
+                </div>
+                
+                <div class="solution-card" data-category="policy">
+                    <div class="solution-header">
+                        <h4 class="solution-title">Automated Pre-Authorization Workflow</h4>
+                        <div class="solution-meta">
+                            <span class="solution-badge badge-policy">Policy</span>
+                            <span class="solution-badge badge-status">Proposed</span>
+                        </div>
+                    </div>
+                    <p class="solution-description">
+                        Implement RPA bots to auto-submit pre-auth requests to insurance portals, reducing manual entry errors and delays. Integrates with scheduling to prevent booking before auth confirmation.
+                    </p>
+                    <div class="solution-footer">
+                        <span class="solution-impact">💰 +$500K/year | ⏱️ -5 day delay</span>
+                        <span class="solution-date">TOC: SUBORDINATE | Owner: Admin Team</span>
+                    </div>
+                </div>
+                
+                <div class="solution-card" data-category="behavioral">
+                    <div class="solution-header">
+                        <h4 class="solution-title">Surgeon Protocol Standardization</h4>
+                        <div class="solution-meta">
+                            <span class="solution-badge badge-behavioral">Behavioral</span>
+                            <span class="solution-badge badge-status">Proposed</span>
+                        </div>
+                    </div>
+                    <p class="solution-description">
+                        Develop standardized surgical protocols based on best-performer data (32 min procedures). Create pre-configured instrument kits and preference cards to reduce variance from 28-62 minutes to 30-38 minutes.
+                    </p>
+                    <div class="solution-footer">
+                        <span class="solution-impact">💰 +$300K/year | ⏱️ -24 min variance</span>
+                        <span class="solution-date">TOC: EXPLOIT | Owner: Dr. Connors</span>
+                    </div>
+                </div>
+                
+                <div class="solution-card" data-category="quality">
+                    <div class="solution-header">
+                        <h4 class="solution-title">Post-Op Follow-Up Automation</h4>
+                        <div class="solution-meta">
+                            <span class="solution-badge badge-quality">Quality</span>
+                            <span class="solution-badge badge-status completed">Completed</span>
+                        </div>
+                    </div>
+                    <p class="solution-description">
+                        Implemented automated SMS/email follow-up system for all post-op patients at 24h, 48h, and 7-day intervals. Includes symptom checklist and direct escalation path for concerns.
+                    </p>
+                    <div class="solution-footer">
+                        <span class="solution-impact">💰 +$100K/year | 📈 95% follow-up rate</span>
+                        <span class="solution-date">TOC: SUBORDINATE | Owner: Nursing Team</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Summary Stats -->
+        <section class="content-section" style="margin-top: 2rem;">
+            <h3 style="color: #00d4ff; text-align: center; margin-bottom: 1.5rem;">📊 Solution Impact Summary</h3>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <h4>Total Solutions</h4>
+                    <p class="metric-value" style="color: #00d4ff;">4</p>
+                    <p class="metric-label">Tracked</p>
+                </div>
+                <div class="metric-card">
+                    <h4>In Progress</h4>
+                    <p class="metric-value" style="color: #f59e0b;">1</p>
+                    <p class="metric-label">Active</p>
+                </div>
+                <div class="metric-card">
+                    <h4>Completed</h4>
+                    <p class="metric-value" style="color: #10b981;">1</p>
+                    <p class="metric-label">Done</p>
+                </div>
+                <div class="metric-card">
+                    <h4>Est. Total Impact</h4>
+                    <p class="metric-value" style="color: #10b981;">+$1.7M</p>
+                    <p class="metric-label">Per Year</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>ClearSight Analysis Portal | Theory of Constraints Applied to Healthcare</p>
+        </div>
+    </footer>
+
+    <script>
+        // Filter functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const solutionCards = document.querySelectorAll('.solution-card');
+        
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const filter = btn.dataset.filter;
+                solutionCards.forEach(card => {
+                    if (filter === 'all' || card.dataset.category === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Form submission (demo - would connect to backend in production)
+        document.getElementById('solutionForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Solution saved! (Demo mode - in production this would persist to a database)');
+            this.reset();
+        });
+        
+        // Update solution count
+        document.getElementById('solutionCount').textContent = solutionCards.length + ' solutions';
+    </script>
+</body>
+</html>

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Analysis - ClearSight</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <h1>🏥 ClearSight</h1>
+                <p class="subtitle">Theory of Constraints Analysis</p>
+            </div>
+            <nav class="nav-menu" aria-label="Main Navigation">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="context.html">Context</a></li>
+                    <li><a href="challenges.html">Challenges</a></li>
+                    <li><a href="actual-issues.html">Root Cause</a></li>
+                    <li><a href="financial-analysis.html" class="active">Financials</a></li>
+                    <li><a href="strategy.html">Strategy</a></li>
+                    <li><a href="solutions.html">Solutions</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" style="margin-top: 90px;">
+        <section class="content-section">
+            <h2>💰 Financial Story: Cost Structure & Profit Analysis</h2>
+            <p>Understanding ClearSight's cost structure to identify opportunities for profit improvement through constraint removal.</p>
+
+            <!-- Current State Summary -->
+            <div class="metrics-grid" style="margin: 2rem 0;">
+                <div class="metric-card">
+                    <h4>Current Procedures</h4>
+                    <p class="metric-value">5,283</p>
+                    <p class="metric-label">Annual surgeries</p>
+                </div>
+                <div class="metric-card">
+                    <h4>Fixed Costs</h4>
+                    <p class="metric-value">$1.54M</p>
+                    <p class="metric-label">Annual overhead</p>
+                </div>
+                <div class="metric-card">
+                    <h4>Variable Cost/Procedure</h4>
+                    <p class="metric-value">$531</p>
+                    <p class="metric-label">$480 supplies + $40 surgeon</p>
+                </div>
+                <div class="metric-card">
+                    <h4>Total Variable Costs</h4>
+                    <p class="metric-value">$2.77M</p>
+                    <p class="metric-label">5,283 × avg $525</p>
+                </div>
+            </div>
+
+            <!-- Fixed Costs Breakdown -->
+            <div class="visual-container" style="margin-top: 2rem;">
+                <h3 style="margin-bottom: 1rem;">📊 Fixed Costs Breakdown</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cost Category</th>
+                            <th style="text-align: right;">Annual Amount</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Surgeon Base Salary</td>
+                            <td style="text-align: right;">$200,000</td>
+                            <td>Annual base pay</td>
+                        </tr>
+                        <tr>
+                            <td>Staff Salaries</td>
+                            <td style="text-align: right;">$365,000</td>
+                            <td>1 Receptionist, 4 PSRs, 3 Techs, 1 Cleaner</td>
+                        </tr>
+                        <tr>
+                            <td>Employee Benefits</td>
+                            <td style="text-align: right;">$158,200</td>
+                            <td>28% of base salaries</td>
+                        </tr>
+                        <tr>
+                            <td>Accounting & Payroll</td>
+                            <td style="text-align: right;">$90,000</td>
+                            <td>Annual business/tax services</td>
+                        </tr>
+                        <tr>
+                            <td>Legal Retainer</td>
+                            <td style="text-align: right;">$280,969</td>
+                            <td>Lawyer retainer and settlements</td>
+                        </tr>
+                        <tr>
+                            <td>Depreciation</td>
+                            <td style="text-align: right;">$160,000</td>
+                            <td>Non-cash accounting expense</td>
+                        </tr>
+                        <tr>
+                            <td>Facility (Insurance/IT)</td>
+                            <td style="text-align: right;">$90,238</td>
+                            <td>General administrative facility costs</td>
+                        </tr>
+                        <tr>
+                            <td>Advertising</td>
+                            <td style="text-align: right;">$48,000</td>
+                            <td>Local radio and paper ads</td>
+                        </tr>
+                        <tr>
+                            <td>Net Building Cost</td>
+                            <td style="text-align: right;">$36,000</td>
+                            <td>Mortgage/taxes minus rental income</td>
+                        </tr>
+                        <tr>
+                            <td>Cleaning & Maintenance</td>
+                            <td style="text-align: right;">$36,000</td>
+                            <td>Contracted building services</td>
+                        </tr>
+                        <tr>
+                            <td>Miscellaneous</td>
+                            <td style="text-align: right;">$80,420</td>
+                            <td>Other operational expenses</td>
+                        </tr>
+                        <tr style="background: rgba(239, 68, 68, 0.1); font-weight: bold;">
+                            <td><strong>Total Fixed Costs</strong></td>
+                            <td style="text-align: right; color: #ef4444;"><strong>$1,544,827</strong></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Variable Costs Breakdown -->
+            <div class="visual-container" style="margin-top: 2rem;">
+                <h3 style="margin-bottom: 1rem;">📈 Variable Costs Breakdown</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cost Category</th>
+                            <th style="text-align: right;">Per Procedure</th>
+                            <th style="text-align: right;">Annual Total (5,283 procedures)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Medical Supplies</td>
+                            <td style="text-align: right;">$480</td>
+                            <td style="text-align: right;">$2,535,840</td>
+                        </tr>
+                        <tr>
+                            <td>Surgeon Pay + Benefits (28%)</td>
+                            <td style="text-align: right;">$51.20</td>
+                            <td style="text-align: right;">$236,083</td>
+                        </tr>
+                        <tr style="background: rgba(245, 158, 11, 0.1); font-weight: bold;">
+                            <td><strong>Total Variable Costs</strong></td>
+                            <td style="text-align: right; color: #f59e0b;"><strong>$531</strong></td>
+                            <td style="text-align: right; color: #f59e0b;"><strong>$2,771,923</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Profit Calculator Section -->
+            <div class="visual-container" style="margin-top: 2rem; background: linear-gradient(135deg, #0d1321 0%, #0a0f1a 100%); border: 2px solid rgba(0, 212, 255, 0.3);">
+                <h3 style="text-align: center; margin-bottom: 1.5rem; color: #00d4ff;">🧮 Profit/Loss Calculator</h3>
+                <p style="text-align: center; color: var(--white-muted); margin-bottom: 2rem;">See how volume changes impact profitability with fixed costs remaining constant</p>
+                
+                <div class="metrics-grid" style="margin-bottom: 2rem;">
+                    <div class="metric-card" style="background: rgba(16, 185, 129, 0.1); border: 1px solid #10b981;">
+                        <h4>Revenue per Procedure</h4>
+                        <p class="metric-value" style="color: #10b981;">$1,338</p>
+                        <p class="metric-label">Average reimbursement</p>
+                    </div>
+                    <div class="metric-card" style="background: rgba(245, 158, 11, 0.1); border: 1px solid #f59e0b;">
+                        <h4>Variable Cost per Procedure</h4>
+                        <p class="metric-value" style="color: #f59e0b;">$531</p>
+                        <p class="metric-label">Supplies + Surgeon bonus</p>
+                    </div>
+                    <div class="metric-card" style="background: rgba(0, 212, 255, 0.1); border: 1px solid #00d4ff;">
+                        <h4>Gross Margin per Procedure</h4>
+                        <p class="metric-value" style="color: #00d4ff;">$807</p>
+                        <p class="metric-label">Revenue − Variable Cost (60%)</p>
+                    </div>
+                    <div class="metric-card" style="background: rgba(239, 68, 68, 0.1); border: 1px solid #ef4444;">
+                        <h4>Break-Even Point</h4>
+                        <p class="metric-value" style="color: #ef4444;">1,914</p>
+                        <p class="metric-label">Procedures to cover fixed costs</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- P&L Table - Current vs Optimized -->
+            <div class="visual-container" style="margin-top: 2rem;">
+                <h3 style="margin-bottom: 1rem;">📋 Annual P&L: Current vs. Optimized</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Line Item</th>
+                            <th style="text-align: right;">Current (5,283)</th>
+                            <th style="text-align: right;">Optimized (10,566)</th>
+                            <th style="text-align: right;">Change</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Procedures/Year</td>
+                            <td style="text-align: right;">5,283</td>
+                            <td style="text-align: right;">10,566</td>
+                            <td style="text-align: right; color: #10b981;">+5,283 (2x)</td>
+                        </tr>
+                        <tr style="background: rgba(16, 185, 129, 0.1);">
+                            <td><strong>Revenue</strong> ($1338/procedure)</td>
+                            <td style="text-align: right;"><strong>$7,068,654</strong></td>
+                            <td style="text-align: right;"><strong>$14,137,308</strong></td>
+                            <td style="text-align: right; color: #10b981;"><strong>+$7.07M</strong></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" style="background: rgba(245, 158, 11, 0.1); font-weight: bold; color: #f59e0b;">VARIABLE COSTS</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-left: 1.5rem;">Medical Supplies ($480/procedure)</td>
+                            <td style="text-align: right;">$2,535,840</td>
+                            <td style="text-align: right;">$5,071,680</td>
+                            <td style="text-align: right;">+$2.54M</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-left: 1.5rem;">Surgeon Pay + Benefits (28%) ($40/procedure)</td>
+                            <td style="text-align: right;">$236,083</td>
+                            <td style="text-align: right;">$422,640</td>
+                            <td style="text-align: right;">+$211K</td>
+                        </tr>
+                        <tr style="background: rgba(245, 158, 11, 0.05);">
+                            <td><strong>Total Variable Costs ($531.20/procedure)</strong></td>
+                            <td style="text-align: right; color: #f59e0b;"><strong>$2,771,923</strong></td>
+                            <td style="text-align: right; color: #f59e0b;"><strong>$5,578,253</strong></td>
+                            <td style="text-align: right;">+$2.75M</td>
+                        </tr>
+                        <tr style="background: rgba(0, 212, 255, 0.05);">
+                            <td><strong>Gross Margin</strong> <span style="font-weight: normal; font-size: 0.85rem; color: #9ca3af;">(Revenue − Variable Costs)</span></td>
+                            <td style="text-align: right; color: #00d4ff;"><strong>$4,296,731</strong></td>
+                            <td style="text-align: right; color: #00d4ff;"><strong>$8,559,055</strong></td>
+                            <td style="text-align: right; color: #10b981;"><strong>+$4.26M</strong></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" style="background: rgba(239, 68, 68, 0.1); font-weight: bold; color: #ef4444;">FIXED COSTS (Annual Overhead)</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-left: 1.5rem;">Surgeon Base Salary</td>
+                            <td style="text-align: right;">$200,000</td>
+                            <td style="text-align: right;">$200,000</td>
+                            <td style="text-align: right;">$0</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-left: 1.5rem;">Staff Salaries</td>
+                            <td style="text-align: right;">$365,000</td>
+                            <td style="text-align: right;">$365,000</td>
+                            <td style="text-align: right;">$0</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-left: 1.5rem;">Employee Benefits (28%)</td>
+                            <td style="text-align: right;">$158,200</td>
+                            <td style="text-align: right;">$158,200</td>
+                            <td style="text-align: right;">$0</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-left: 1.5rem;">Accounting & Payroll</td>
+                            <td style="text-align: right;">$90,000</td>
+                            <td style="text-align: right;">$90,000</td>
+                            <td style="text-align: right;">$0</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-left: 1.5rem;">Legal Retainer & Settlements</td>
+                            <td style="text-align: right;">$280,969</td>
+                            <td style="text-align: right;">$280,969</td>
+                            <td style="text-align: right;">$0</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-left: 1.5rem;">Depreciation</td>
+                            <td style="text-align: right;">$160,000</td>
+                            <td style="text-align: right;">$160,000</td>
+                            <td style="text-align: right;">$0</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-left: 1.5rem;">Facility (Insurance/IT)</td>
+                            <td style="text-align: right;">$90,238</td>
+                            <td style="text-align: right;">$90,238</td>
+                            <td style="text-align: right;">$0</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-left: 1.5rem;">Advertising</td>
+                            <td style="text-align: right;">$48,000</td>
+                            <td style="text-align: right;">$48,000</td>
+                            <td style="text-align: right;">$0</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-left: 1.5rem;">Net Building Cost</td>
+                            <td style="text-align: right;">$36,000</td>
+                            <td style="text-align: right;">$36,000</td>
+                            <td style="text-align: right;">$0</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-left: 1.5rem;">Cleaning & Maintenance</td>
+                            <td style="text-align: right;">$36,000</td>
+                            <td style="text-align: right;">$36,000</td>
+                            <td style="text-align: right;">$0</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-left: 1.5rem;">Miscellaneous</td>
+                            <td style="text-align: right;">$80,420</td>
+                            <td style="text-align: right;">$80,420</td>
+                            <td style="text-align: right;">$0</td>
+                        </tr>
+                        <tr style="background: rgba(239, 68, 68, 0.05);">
+                            <td><strong>Total Fixed Costs</strong></td>
+                            <td style="text-align: right; color: #ef4444;"><strong>$1,544,827</strong></td>
+                            <td style="text-align: right; color: #ef4444;"><strong>$1,544,827</strong></td>
+                            <td style="text-align: right;"><strong>$0</strong></td>
+                        </tr>
+                        <tr style="background: rgba(0, 212, 255, 0.15); border-top: 2px solid #00d4ff;">
+                            <td><strong style="font-size: 1.1rem;">Operating Profit</strong></td>
+                            <td style="text-align: right; color: #10b981;"><strong style="font-size: 1.1rem;">$2,751,904</strong></td>
+                            <td style="text-align: right; color: #10b981;"><strong style="font-size: 1.1rem;">$7,014,228</strong></td>
+                            <td style="text-align: right; color: #00d4ff;"><strong style="font-size: 1.1rem;">+$4.26M (2.5x)</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Profit Margin</td>
+                            <td style="text-align: right;">38.9%</td>
+                            <td style="text-align: right; color: #10b981;">49.6%</td>
+                            <td style="text-align: right; color: #10b981;">+7.5 pts</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Cumulative Impact Chart - Timeline Story -->
+            <div class="visual-container" style="background: linear-gradient(135deg, #0d1321 0%, #0a0f1a 100%); border: 2px solid rgba(0, 212, 255, 0.3); margin-top: 2rem;">
+                <h3 style="text-align: center; margin-bottom: 0.5rem; color: #00d4ff;">📈 Cumulative Profit Impact Over Time</h3>
+                <p style="text-align: center; color: var(--white-muted); margin-bottom: 2rem; font-size: 0.9rem;">Each intervention builds on the previous—the constraint removal creates compounding returns</p>
+                
+                <svg width="100%" height="420" viewBox="0 0 900 420">
+                    <defs>
+                        <linearGradient id="areaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.4"/>
+                            <stop offset="50%" stop-color="#00d4ff" stop-opacity="0.15"/>
+                            <stop offset="100%" stop-color="#00d4ff" stop-opacity="0"/>
+                        </linearGradient>
+                        <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#ef4444"/>
+                            <stop offset="30%" stop-color="#f59e0b"/>
+                            <stop offset="60%" stop-color="#00d4ff"/>
+                            <stop offset="100%" stop-color="#10b981"/>
+                        </linearGradient>
+                        <filter id="glowStrong" x="-30%" y="-30%" width="160%" height="160%">
+                            <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+                            <feMerge>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                        <filter id="glowPoint" x="-100%" y="-100%" width="300%" height="300%">
+                            <feGaussianBlur stdDeviation="4" result="glow"/>
+                            <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+                        </filter>
+                    </defs>
+                    
+                    <!-- Enhanced Grid -->
+                    <g stroke="#1f2937" stroke-width="1">
+                        <line x1="100" y1="50" x2="100" y2="320" stroke="#00d4ff" stroke-width="2"/>
+                        <line x1="100" y1="320" x2="850" y2="320" stroke="#00d4ff" stroke-width="2"/>
+                        <!-- Horizontal grid lines -->
+                        <line x1="100" y1="230" x2="850" y2="230" stroke="#1f2937" stroke-dasharray="6" opacity="0.5"/>
+                        <line x1="100" y1="140" x2="850" y2="140" stroke="#1f2937" stroke-dasharray="6" opacity="0.5"/>
+                        <line x1="100" y1="50" x2="850" y2="50" stroke="#1f2937" stroke-dasharray="6" opacity="0.3"/>
+                    </g>
+                    
+                    <!-- Y-Axis Labels -->
+                    <text x="90" y="325" fill="#fff" font-size="12" text-anchor="end">$0</text>
+                    <text x="90" y="235" fill="#fff" font-size="12" text-anchor="end">$6.0M</text>
+                    <text x="90" y="145" fill="#fff" font-size="12" text-anchor="end">$6.0M</text>
+                    <text x="90" y="55" fill="#fff" font-size="12" text-anchor="end">$7.5M</text>
+                    <text x="40" y="190" fill="#00d4ff" font-size="13" font-weight="bold" text-anchor="middle" transform="rotate(-90, 40, 190)">Cumulative Profit Impact</text>
+                    
+                    <!-- X-Axis Labels (Timeline) -->
+                    <text x="150" y="350" fill="#fff" font-size="11" text-anchor="middle">Today</text>
+                    <text x="300" y="350" fill="#fff" font-size="11" text-anchor="middle">Month 3</text>
+                    <text x="450" y="350" fill="#fff" font-size="11" text-anchor="middle">Month 6</text>
+                    <text x="600" y="350" fill="#fff" font-size="11" text-anchor="middle">Month 9</text>
+                    <text x="750" y="350" fill="#fff" font-size="11" text-anchor="middle">Month 12</text>
+                    <text x="475" y="385" fill="#00d4ff" font-size="13" font-weight="bold" text-anchor="middle">Implementation Timeline →</text>
+
+                    <!-- Area Fill - Enhanced -->
+                    <path d="M150,320 L150,305 L300,255 L450,175 L600,95 L750,60 L750,320 Z" fill="url(#areaGrad)"/>
+                    
+                    <!-- Main Line Background Glow -->
+                    <path d="M150,305 L300,255 L450,175 L600,95 L750,60" 
+                          fill="none" stroke="url(#lineGrad)" stroke-width="12" stroke-linecap="round" opacity="0.3"/>
+                    <!-- Main Line - Enhanced -->
+                    <path d="M150,305 L300,255 L450,175 L600,95 L750,60" 
+                          fill="none" stroke="url(#lineGrad)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" filter="url(#glowStrong)"/>
+                    
+                    <!-- Data Points with Enhanced Labels -->
+                    <!-- Start -->
+                    <circle cx="150" cy="305" r="10" fill="#ef4444" stroke="#fff" stroke-width="3" filter="url(#glowPoint)"/>
+                    <text x="150" y="285" fill="#ff6b6b" font-size="13" text-anchor="middle" font-weight="bold">$2.75M</text>
+                    <text x="150" y="365" fill="#9ca3af" font-size="10" text-anchor="middle">Baseline</text>
+                    
+                    <!-- After OR Optimization -->
+                    <circle cx="300" cy="255" r="10" fill="#f59e0b" stroke="#fff" stroke-width="3" filter="url(#glowPoint)"/>
+                    <text x="300" y="235" fill="#fbbf24" font-size="13" text-anchor="middle" font-weight="bold">+$1.0M</text>
+                    <text x="300" y="365" fill="#9ca3af" font-size="10" text-anchor="middle">OR Exploit</text>
+                    
+                    <!-- After Scheduling Fix -->
+                    <circle cx="450" cy="175" r="10" fill="#00d4ff" stroke="#fff" stroke-width="3" filter="url(#glowPoint)"/>
+                    <text x="450" y="155" fill="#00d4ff" font-size="13" text-anchor="middle" font-weight="bold">+$3.8M</text>
+                    <text x="450" y="365" fill="#9ca3af" font-size="10" text-anchor="middle">Scheduling</text>
+                    
+                    <!-- After Billing/Revenue Cycle -->
+                    <circle cx="600" cy="95" r="10" fill="#10b981" stroke="#fff" stroke-width="3" filter="url(#glowPoint)"/>
+                    <text x="600" y="75" fill="#34d399" font-size="13" text-anchor="middle" font-weight="bold">+$3.8M</text>
+                    <text x="600" y="365" fill="#9ca3af" font-size="10" text-anchor="middle">Billing</text>
+                    
+                    <!-- Full Optimization - HIGHLIGHTED -->
+                    <circle cx="750" cy="60" r="14" fill="#10b981" stroke="#00d4ff" stroke-width="4" filter="url(#glowPoint)"/>
+                    <text x="750" y="40" fill="#10b981" font-size="16" text-anchor="middle" font-weight="bold">$7.5M</text>
+                    <text x="750" y="365" fill="#00d4ff" font-size="11" text-anchor="middle" font-weight="bold">Full TOC</text>
+
+                    <!-- Intervention Labels - Enhanced -->
+                    <g font-size="10" fill="#fff">
+                        <rect x="195" y="268" width="90" height="24" rx="6" fill="#1a2332" stroke="#f59e0b" stroke-width="2"/>
+                        <text x="240" y="285" text-anchor="middle" font-weight="bold">OR Turnaround</text>
+                        
+                        <rect x="345" y="198" width="90" height="24" rx="6" fill="#1a2332" stroke="#00d4ff" stroke-width="2"/>
+                        <text x="390" y="215" text-anchor="middle" font-weight="bold">Pre-Auth Auto</text>
+                        
+                        <rect x="500" y="118" width="80" height="24" rx="6" fill="#1a2332" stroke="#10b981" stroke-width="2"/>
+                        <text x="540" y="135" text-anchor="middle" font-weight="bold">Coding Fix</text>
+                    </g>
+                </svg>
+            </div>
+
+            <!-- Profit Impact by Volume Scenarios -->
+            <div class="visual-container" style="margin-top: 2rem;">
+                <h3 style="margin-bottom: 1rem;">📊 Profit Impact by Volume Scenarios</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Scenario</th>
+                            <th style="text-align: right;">Procedures</th>
+                            <th style="text-align: right;">Revenue</th>
+                            <th style="text-align: right;">Variable Costs</th>
+                            <th style="text-align: right;">Fixed Costs</th>
+                            <th style="text-align: right;">Profit/(Loss)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: rgba(239, 68, 68, 0.1);">
+                            <td>Break-Even</td>
+                            <td style="text-align: right;">1,914</td>
+                            <td style="text-align: right;">$2,158,000</td>
+                            <td style="text-align: right;">$561,080</td>
+                            <td style="text-align: right;">$1,544,827</td>
+                            <td style="text-align: right; color: #ef4444;"><strong>$450</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Current State</td>
+                            <td style="text-align: right;">5,283</td>
+                            <td style="text-align: right;">$7,068,654</td>
+                            <td style="text-align: right;">$2,771,923</td>
+                            <td style="text-align: right;">$1,544,827</td>
+                            <td style="text-align: right; color: #10b981;"><strong>$2,751,904</strong></td>
+                        </tr>
+                        <tr>
+                            <td>+25% Growth</td>
+                            <td style="text-align: right;">6,604</td>
+                            <td style="text-align: right;">$13,208,000</td>
+                            <td style="text-align: right;">$3,434,080</td>
+                            <td style="text-align: right;">$1,544,827</td>
+                            <td style="text-align: right; color: #10b981;"><strong>$8,177,450</strong></td>
+                        </tr>
+                        <tr>
+                            <td>+50% Growth</td>
+                            <td style="text-align: right;">7,925</td>
+                            <td style="text-align: right;">$15,850,000</td>
+                            <td style="text-align: right;">$4,121,000</td>
+                            <td style="text-align: right;">$1,544,827</td>
+                            <td style="text-align: right; color: #10b981;"><strong>$10,132,530</strong></td>
+                        </tr>
+                        <tr style="background: rgba(0, 212, 255, 0.1);">
+                            <td><strong>2x Optimized</strong></td>
+                            <td style="text-align: right;"><strong>10,566</strong></td>
+                            <td style="text-align: right;"><strong>$14,137,308</strong></td>
+                            <td style="text-align: right;"><strong>$5,578,253</strong></td>
+                            <td style="text-align: right;"><strong>$1,544,827</strong></td>
+                            <td style="text-align: right; color: #00d4ff;"><strong>$7,014,228</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Key Insight -->
+            <div class="alert alert-success" style="margin-top: 2rem;">
+                <strong>🔑 Key Insight:</strong> With a gross margin of <strong>$1,480 per procedure</strong> (60%), every additional surgery beyond break-even drops almost entirely to the bottom line since fixed costs ($1,544,827) are already covered. ClearSight is currently operating at <strong>5,283 procedures</strong>—well above break-even (1,914). By doubling volume to 10,566 procedures through constraint removal, profit increases from <strong>$2.8M to $7.0M</strong>—a 125% improvement with the same fixed cost base!
+            </div>
+
+            <!-- Cost Structure Summary -->
+            <div class="alert" style="margin-top: 1rem; background: rgba(0, 212, 255, 0.1); border-left: 4px solid #00d4ff;">
+                <strong>📋 Cost Structure Summary:</strong><br>
+                • <strong>Fixed Costs:</strong> $1,544,827/year (salaries, benefits, facility, legal, depreciation, etc.)<br>
+                • <strong>Variable Costs:</strong> $531.20/procedure ($480 supplies + $40 surgeon volume pay)<br>
+                • <strong>Revenue:</strong> $1338/procedure average reimbursement<br>
+                • <strong>Gross Margin:</strong> $807/procedure (Revenue − Variable = 74% margin)<br>
+                • <strong>Net Profit:</strong> Gross Margin × Procedures − Fixed Costs
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>ClearSight Analysis Portal | Theory of Constraints Applied to Healthcare</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

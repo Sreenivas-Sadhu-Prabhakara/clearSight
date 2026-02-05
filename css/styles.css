@@ -17,6 +17,59 @@
     --accent-red: #ef4444;
     --accent-amber: #f59e0b;
     --border-color: rgba(0, 212, 255, 0.2);
+    
+    /* Legacy compatibility */
+    --accent: var(--electric-blue);
+    --text-muted: var(--white-muted);
+    --text-primary: var(--white);
+    --danger: #ef4444;
+    --warning: #f59e0b;
+    --success: #10b981;
+}
+
+/* ========================================
+   ENHANCED SVG FLOW STYLES 
+   High visibility on dark backgrounds
+   ======================================== */
+
+/* SVG Container with subtle background */
+.visual-container {
+    background: linear-gradient(135deg, rgba(17, 24, 39, 0.95), rgba(10, 15, 26, 0.98));
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2rem;
+    position: relative;
+    overflow: visible;
+}
+
+.visual-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at center, rgba(0, 212, 255, 0.03) 0%, transparent 70%);
+    pointer-events: none;
+    border-radius: 12px;
+}
+
+/* SVG Elements Enhanced Visibility */
+.visual-container svg {
+    filter: drop-shadow(0 0 2px rgba(0, 212, 255, 0.3));
+}
+
+/* Flow line glow classes */
+.flow-line-glow {
+    filter: drop-shadow(0 0 6px rgba(0, 212, 255, 0.6)) drop-shadow(0 0 12px rgba(0, 212, 255, 0.3));
+}
+
+.flow-node-glow {
+    filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.5));
+}
+
+.constraint-glow {
+    filter: drop-shadow(0 0 10px rgba(239, 68, 68, 0.7)) drop-shadow(0 0 20px rgba(239, 68, 68, 0.4));
 }
 
 /* Reset and Base Styles */

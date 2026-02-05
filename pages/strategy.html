@@ -19,9 +19,10 @@
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="context.html">Context</a></li>
                     <li><a href="challenges.html">Challenges</a></li>
-                    <li><a href="actual-issues.html">Actual Issues</a></li>
-                    <li><a href="financial-analysis.html">Financial Analysis</a></li>
+                    <li><a href="actual-issues.html">Root Cause</a></li>
+                    <li><a href="financial-analysis.html">Financials</a></li>
                     <li><a href="strategy.html" class="active">Strategy</a></li>
+                    <li><a href="solutions.html">Solutions</a></li>
                 </ul>
             </nav>
         </div>
@@ -31,90 +32,97 @@
         <section class="content-section">
             <div class="strategy-header" style="text-align: center; margin-bottom: 3rem;">
                 <h2>🏔️ The Three-Horizon Strategy</h2>
-                <p class="lead" style="font-size: 1.2rem; color: #666; max-width: 800px; margin: 0 auto;">
+                <p class="lead" style="font-size: 1.2rem; color: rgba(255,255,255,0.7); max-width: 800px; margin: 0 auto;">
                     A phased transformative approach to evolve ClearSight from a struggling clinic into a market leader. 
                     We leverage distinct strategic frameworks tailored to each horizon of growth.
                 </p>
             </div>
 
-            <!-- Three Horizons Visualization -->
-            <div class="visual-container" style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 3rem;">
-                <h3 style="color: var(--primary); margin-bottom: 1.5rem; text-align: center;">Strategic Growth Roadmap</h3>
-                <svg width="100%" height="400" viewBox="0 0 1000 400" style="overflow: visible;">
+            <!-- Three Horizons Visualization - ENHANCED DARK THEME -->
+            <div class="visual-container" style="background: linear-gradient(135deg, #0d1321 0%, #0a0f1a 100%); padding: 2rem; border-radius: 12px; border: 2px solid rgba(0, 212, 255, 0.3); margin-bottom: 3rem;">
+                <h3 style="color: #00d4ff; margin-bottom: 1.5rem; text-align: center;">Strategic Growth Roadmap</h3>
+                <svg width="100%" height="420" viewBox="0 0 1000 420" style="overflow: visible;">
                     <defs>
                         <linearGradient id="h1Grad" x1="0%" y1="0%" x2="0%" y2="100%">
-                            <stop offset="0%" style="stop-color:#22c55e;stop-opacity:0.2" />
+                            <stop offset="0%" style="stop-color:#22c55e;stop-opacity:0.35" />
                             <stop offset="100%" style="stop-color:#22c55e;stop-opacity:0" />
                         </linearGradient>
                         <linearGradient id="h2Grad" x1="0%" y1="0%" x2="0%" y2="100%">
-                            <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.2" />
-                            <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:0" />
+                            <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:0.35" />
+                            <stop offset="100%" style="stop-color:#00d4ff;stop-opacity:0" />
                         </linearGradient>
                         <linearGradient id="h3Grad" x1="0%" y1="0%" x2="0%" y2="100%">
-                            <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.2" />
+                            <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.35" />
                             <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0" />
                         </linearGradient>
-                        <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-                            <feGaussianBlur stdDeviation="3" result="blur" />
-                            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                        <filter id="horizonGlow" x="-30%" y="-30%" width="160%" height="160%">
+                            <feGaussianBlur stdDeviation="5" result="glow" />
+                            <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
+                        </filter>
+                        <filter id="pointGlow" x="-100%" y="-100%" width="300%" height="300%">
+                            <feGaussianBlur stdDeviation="4" result="glow"/>
+                            <feMerge><feMergeNode in="glow"/><feMergeNode in="SourceGraphic"/></feMerge>
                         </filter>
                     </defs>
 
-                    <!-- Axes -->
-                    <line x1="50" y1="350" x2="950" y2="350" stroke="#ccc" stroke-width="2" marker-end="url(#arrow)" />
-                    <line x1="50" y1="350" x2="50" y2="50" stroke="#ccc" stroke-width="2" marker-end="url(#arrow)" />
-                    <text x="960" y="355" font-size="14" fill="#666" font-style="italic">Time</text>
-                    <text x="40" y="40" font-size="14" fill="#666" font-style="italic" writing-mode="db">Value / Impact</text>
+                    <!-- Axes - Enhanced -->
+                    <line x1="50" y1="350" x2="950" y2="350" stroke="#00d4ff" stroke-width="2" />
+                    <line x1="50" y1="350" x2="50" y2="50" stroke="#00d4ff" stroke-width="2" />
+                    <text x="960" y="355" font-size="13" fill="#00d4ff" font-weight="bold">Time →</text>
+                    <text x="30" y="45" font-size="13" fill="#00d4ff" font-weight="bold" transform="rotate(-90, 30, 190)">Value / Impact →</text>
 
-                    <!-- Horizon 1 Curve -->
-                    <path d="M50 350 Q 200 350, 300 200 T 500 180" fill="none" stroke="#22c55e" stroke-width="4" filter="url(#glow)"/>
+                    <!-- Horizon 1 Curve - Enhanced Glow -->
+                    <path d="M50 350 Q 200 350, 300 200 T 500 180" fill="none" stroke="#22c55e" stroke-width="6" opacity="0.3"/>
+                    <path d="M50 350 Q 200 350, 300 200 T 500 180" fill="none" stroke="#22c55e" stroke-width="4" filter="url(#horizonGlow)"/>
                     <path d="M50 350 Q 200 350, 300 200 T 500 180 V 350 H 50" fill="url(#h1Grad)" stroke="none"/>
-                    <circle cx="300" cy="200" r="6" fill="#22c55e" />
-                    <text x="300" y="170" text-anchor="middle" font-weight="bold" fill="#15803d" font-size="16">HORIZON 1</text>
-                    <text x="300" y="190" text-anchor="middle" font-size="12" fill="#15803d">Operational Excellence</text>
-                    <text x="300" y="370" text-anchor="middle" font-size="12" fill="#666">Months 0-6</text>
+                    <circle cx="300" cy="200" r="10" fill="#22c55e" stroke="#fff" stroke-width="3" filter="url(#pointGlow)" />
+                    <text x="300" y="165" text-anchor="middle" font-weight="bold" fill="#34d399" font-size="16">HORIZON 1</text>
+                    <text x="300" y="185" text-anchor="middle" font-size="12" fill="#22c55e">Operational Excellence</text>
+                    <text x="300" y="385" text-anchor="middle" font-size="12" fill="#9ca3af">Months 0-6</text>
 
-                    <!-- Horizon 2 Curve -->
-                    <path d="M50 350 Q 300 350, 500 150 T 750 100" fill="none" stroke="#3b82f6" stroke-width="4" filter="url(#glow)"/>
-                    <path d="M50 350 Q 300 350, 500 150 T 750 100 V 350 H 50" fill="url(#h2Grad)" stroke="none" style="mix-blend-mode: multiply;"/>
-                    <circle cx="500" cy="150" r="6" fill="#3b82f6" />
-                    <text x="500" y="120" text-anchor="middle" font-weight="bold" fill="#1d4ed8" font-size="16">HORIZON 2</text>
-                    <text x="500" y="140" text-anchor="middle" font-size="12" fill="#1d4ed8">Strategic Scaling</text>
-                    <text x="500" y="370" text-anchor="middle" font-size="12" fill="#666">Months 6-18</text>
+                    <!-- Horizon 2 Curve - Enhanced Glow -->
+                    <path d="M50 350 Q 300 350, 500 150 T 750 100" fill="none" stroke="#00d4ff" stroke-width="6" opacity="0.3"/>
+                    <path d="M50 350 Q 300 350, 500 150 T 750 100" fill="none" stroke="#00d4ff" stroke-width="4" filter="url(#horizonGlow)"/>
+                    <path d="M50 350 Q 300 350, 500 150 T 750 100 V 350 H 50" fill="url(#h2Grad)" stroke="none"/>
+                    <circle cx="500" cy="150" r="10" fill="#00d4ff" stroke="#fff" stroke-width="3" filter="url(#pointGlow)" />
+                    <text x="500" y="115" text-anchor="middle" font-weight="bold" fill="#00d4ff" font-size="16">HORIZON 2</text>
+                    <text x="500" y="135" text-anchor="middle" font-size="12" fill="#00d4ff">Strategic Scaling</text>
+                    <text x="500" y="385" text-anchor="middle" font-size="12" fill="#9ca3af">Months 6-18</text>
 
-                    <!-- Horizon 3 Curve -->
-                    <path d="M50 350 Q 500 350, 700 100 T 950 50" fill="none" stroke="#8b5cf6" stroke-width="4" filter="url(#glow)"/>
-                    <path d="M50 350 Q 500 350, 700 100 T 950 50 V 350 H 50" fill="url(#h3Grad)" stroke="none" style="mix-blend-mode: multiply;"/>
-                    <circle cx="700" cy="100" r="6" fill="#8b5cf6" />
-                    <text x="700" y="70" text-anchor="middle" font-weight="bold" fill="#6d28d9" font-size="16">HORIZON 3</text>
-                    <text x="700" y="90" text-anchor="middle" font-size="12" fill="#6d28d9">Market Leadership</text>
-                    <text x="700" y="370" text-anchor="middle" font-size="12" fill="#666">Months 18+</text>
+                    <!-- Horizon 3 Curve - Enhanced Glow -->
+                    <path d="M50 350 Q 500 350, 700 100 T 950 50" fill="none" stroke="#8b5cf6" stroke-width="6" opacity="0.3"/>
+                    <path d="M50 350 Q 500 350, 700 100 T 950 50" fill="none" stroke="#8b5cf6" stroke-width="4" filter="url(#horizonGlow)"/>
+                    <path d="M50 350 Q 500 350, 700 100 T 950 50 V 350 H 50" fill="url(#h3Grad)" stroke="none"/>
+                    <circle cx="700" cy="100" r="10" fill="#8b5cf6" stroke="#fff" stroke-width="3" filter="url(#pointGlow)" />
+                    <text x="700" y="65" text-anchor="middle" font-weight="bold" fill="#a78bfa" font-size="16">HORIZON 3</text>
+                    <text x="700" y="85" text-anchor="middle" font-size="12" fill="#8b5cf6">Market Leadership</text>
+                    <text x="700" y="385" text-anchor="middle" font-size="12" fill="#9ca3af">Months 18+</text>
 
-                    <!-- Framework Labels -->
-                    <rect x="180" y="280" width="120" height="30" rx="4" fill="white" stroke="#22c55e" />
-                    <text x="240" y="300" text-anchor="middle" font-size="11" fill="#22c55e" font-weight="bold">🔧 TOC & Lean</text>
+                    <!-- Framework Labels - Dark Theme -->
+                    <rect x="175" y="275" width="130" height="32" rx="6" fill="#1a2332" stroke="#22c55e" stroke-width="2" />
+                    <text x="240" y="296" text-anchor="middle" font-size="11" fill="#34d399" font-weight="bold">🔧 TOC & Lean</text>
 
-                    <rect x="440" y="240" width="120" height="30" rx="4" fill="white" stroke="#3b82f6" />
-                    <text x="500" y="260" text-anchor="middle" font-size="11" fill="#3b82f6" font-weight="bold">📊 Six Sigma</text>
+                    <rect x="435" y="235" width="130" height="32" rx="6" fill="#1a2332" stroke="#00d4ff" stroke-width="2" />
+                    <text x="500" y="256" text-anchor="middle" font-size="11" fill="#00d4ff" font-weight="bold">📊 Six Sigma</text>
 
-                    <rect x="750" y="180" width="120" height="30" rx="4" fill="white" stroke="#8b5cf6" />
-                    <text x="810" y="200" text-anchor="middle" font-size="11" fill="#8b5cf6" font-weight="bold">🚀 Innovation</text>
+                    <rect x="745" y="175" width="130" height="32" rx="6" fill="#1a2332" stroke="#8b5cf6" stroke-width="2" />
+                    <text x="810" y="196" text-anchor="middle" font-size="11" fill="#a78bfa" font-weight="bold">🚀 Innovation</text>
                 </svg>
             </div>
 
-            <!-- Framework to Process Map -->
+            <!-- Framework to Process Map - DARK THEME -->
             <div class="subsection">
-                <h3>🔗 Connecting Frameworks to Process Flows</h3>
-                <p>We do not use a "one size fits all" approach. Different parts of the cataract surgery production line require different process engineering tools.</p>
+                <h3 style="color: #00d4ff;">🔗 Connecting Frameworks to Process Flows</h3>
+                <p style="color: rgba(255,255,255,0.7);">We do not use a "one size fits all" approach. Different parts of the cataract surgery production line require different process engineering tools.</p>
                 
                 <div class="process-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
                     
                     <!-- Card 1 -->
-                    <div style="background: white; padding: 1.5rem; border-radius: 8px; border-top: 4px solid #f59e0b; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                        <h4 style="color: #d97706; margin-bottom: 0.5rem;">Process: Input (Intake)</h4>
-                        <div style="font-size: 0.9rem; margin-bottom: 1rem; color: #666;">Referrals, Scheduling, Authorization</div>
-                        <div style="background: #fef3c7; padding: 0.5rem; border-radius: 4px; font-weight: bold; font-size: 0.9rem; color: #92400e;">🛠️ Agile & Demand Mgmt</div>
-                        <ul style="font-size: 0.85rem; margin-top: 0.5rem; padding-left: 1.2rem;">
+                    <div style="background: linear-gradient(135deg, #1a2332 0%, #111827 100%); padding: 1.5rem; border-radius: 8px; border-top: 4px solid #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3);">
+                        <h4 style="color: #fbbf24; margin-bottom: 0.5rem;">Process: Input (Intake)</h4>
+                        <div style="font-size: 0.9rem; margin-bottom: 1rem; color: #9ca3af;">Referrals, Scheduling, Authorization</div>
+                        <div style="background: rgba(245, 158, 11, 0.15); padding: 0.5rem; border-radius: 4px; font-weight: bold; font-size: 0.9rem; color: #fbbf24;">🛠️ Agile & Demand Mgmt</div>
+                        <ul style="font-size: 0.85rem; margin-top: 0.5rem; padding-left: 1.2rem; color: rgba(255,255,255,0.7);">
                             <li>Sprints for Backlog clearance</li>
                             <li>Automated auth workflows</li>
                             <li>Pull-system scheduling</li>
@@ -122,11 +130,11 @@
                     </div>
 
                     <!-- Card 2 -->
-                    <div style="background: white; padding: 1.5rem; border-radius: 8px; border-top: 4px solid #ef4444; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                        <h4 style="color: #dc2626; margin-bottom: 0.5rem;">Process: Throughput (Surgery)</h4>
-                        <div style="font-size: 0.9rem; margin-bottom: 1rem; color: #666;">Prep, Operation, Turnover</div>
-                        <div style="background: #fee2e2; padding: 0.5rem; border-radius: 4px; font-weight: bold; font-size: 0.9rem; color: #b91c1c;">🛠️ TOC & Lean</div>
-                        <ul style="font-size: 0.85rem; margin-top: 0.5rem; padding-left: 1.2rem;">
+                    <div style="background: linear-gradient(135deg, #1a2332 0%, #111827 100%); padding: 1.5rem; border-radius: 8px; border-top: 4px solid #ef4444; border: 1px solid rgba(239, 68, 68, 0.3);">
+                        <h4 style="color: #ff6b6b; margin-bottom: 0.5rem;">Process: Throughput (Surgery)</h4>
+                        <div style="font-size: 0.9rem; margin-bottom: 1rem; color: #9ca3af;">Prep, Operation, Turnover</div>
+                        <div style="background: rgba(239, 68, 68, 0.15); padding: 0.5rem; border-radius: 4px; font-weight: bold; font-size: 0.9rem; color: #ff6b6b;">🛠️ TOC & Lean</div>
+                        <ul style="font-size: 0.85rem; margin-top: 0.5rem; padding-left: 1.2rem; color: rgba(255,255,255,0.7);">
                             <li>Identify Bottleneck (OR)</li>
                             <li>5-Steps of Focusing</li>
                             <li>SMED (Single Minute Exchange of Die) for turnover</li>
@@ -134,11 +142,11 @@
                     </div>
 
                     <!-- Card 3 -->
-                    <div style="background: white; padding: 1.5rem; border-radius: 8px; border-top: 4px solid #22c55e; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                        <h4 style="color: #16a34a; margin-bottom: 0.5rem;">Process: Output (Quality)</h4>
-                        <div style="font-size: 0.9rem; margin-bottom: 1rem; color: #666;">Recovery, Outcomes, Discharge</div>
-                        <div style="background: #dcfce7; padding: 0.5rem; border-radius: 4px; font-weight: bold; font-size: 0.9rem; color: #15803d;">🛠️ Six Sigma</div>
-                        <ul style="font-size: 0.85rem; margin-top: 0.5rem; padding-left: 1.2rem;">
+                    <div style="background: linear-gradient(135deg, #1a2332 0%, #111827 100%); padding: 1.5rem; border-radius: 8px; border-top: 4px solid #22c55e; border: 1px solid rgba(34, 197, 94, 0.3);">
+                        <h4 style="color: #34d399; margin-bottom: 0.5rem;">Process: Output (Quality)</h4>
+                        <div style="font-size: 0.9rem; margin-bottom: 1rem; color: #9ca3af;">Recovery, Outcomes, Discharge</div>
+                        <div style="background: rgba(34, 197, 94, 0.15); padding: 0.5rem; border-radius: 4px; font-weight: bold; font-size: 0.9rem; color: #34d399;">🛠️ Six Sigma</div>
+                        <ul style="font-size: 0.85rem; margin-top: 0.5rem; padding-left: 1.2rem; color: rgba(255,255,255,0.7);">
                             <li>DMAIC for infection control</li>
                             <li>Variance reduction</li>
                             <li>Defect elimination (errors)</li>
@@ -146,11 +154,11 @@
                     </div>
 
                     <!-- Card 4 -->
-                    <div style="background: white; padding: 1.5rem; border-radius: 8px; border-top: 4px solid #3b82f6; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                        <h4 style="color: #1d4ed8; margin-bottom: 0.5rem;">Process: Value (Finance)</h4>
-                        <div style="font-size: 0.9rem; margin-bottom: 1rem; color: #666;">Billing, Collections, Strategy</div>
-                        <div style="background: #dbeafe; padding: 0.5rem; border-radius: 4px; font-weight: bold; font-size: 0.9rem; color: #1e40af;">🛠️ Throughput Accounting</div>
-                        <ul style="font-size: 0.85rem; margin-top: 0.5rem; padding-left: 1.2rem;">
+                    <div style="background: linear-gradient(135deg, #1a2332 0%, #111827 100%); padding: 1.5rem; border-radius: 8px; border-top: 4px solid #00d4ff; border: 1px solid rgba(0, 212, 255, 0.3);">
+                        <h4 style="color: #00d4ff; margin-bottom: 0.5rem;">Process: Value (Finance)</h4>
+                        <div style="font-size: 0.9rem; margin-bottom: 1rem; color: #9ca3af;">Billing, Collections, Strategy</div>
+                        <div style="background: rgba(0, 212, 255, 0.15); padding: 0.5rem; border-radius: 4px; font-weight: bold; font-size: 0.9rem; color: #00d4ff;">🛠️ Throughput Accounting</div>
+                        <ul style="font-size: 0.85rem; margin-top: 0.5rem; padding-left: 1.2rem; color: rgba(255,255,255,0.7);">
                             <li>Throughput ($) per constraint unit</li>
                             <li>Eliminate local efficiencies</li>
                             <li>Global system optimization</li>
@@ -160,16 +168,16 @@
                 </div>
             </div>
 
-            <hr style="border: 0; border-top: 1px solid #eee; margin: 3rem 0;">
+            <hr style="border: 0; border-top: 1px solid rgba(0, 212, 255, 0.2); margin: 3rem 0;">
 
             <!-- HORIZON 1 DETAILS -->
             <div class="horizon-section">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
-                    <h2 style="color: var(--success); display: flex; align-items: center; gap: 1rem;">
+                    <h2 style="color: #34d399; display: flex; align-items: center; gap: 1rem;">
                         <span style="font-size: 2.5rem;">1️⃣</span> 
                         <div>
                             Horizon 1: Operational Excellence
-                            <span style="display: block; font-size: 1rem; color: #666; font-weight: normal;">Months 0-6 • Focus: Maximize Existing Assets</span>
+                            <span style="display: block; font-size: 1rem; color: #9ca3af; font-weight: normal;">Months 0-6 • Focus: Maximize Existing Assets</span>
                         </div>
                     </h2>
                     <div style="text-align: right;">
@@ -179,10 +187,10 @@
 
                 <div class="grid-2-col" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
                     <div>
-                        <h4 style="color: #333; border-bottom: 2px solid var(--success); padding-bottom: 0.5rem; margin-bottom: 1rem;">Core Framework: Theory of Constraints</h4>
-                        <p><strong>The Constraint:</strong> Surgeon/OR Availability.</p>
-                        <p><strong>The Strategy:</strong> We cannot buy more time, so we must stop wasting it. Every minute the OR is idle is lost throughput that can never be recovered.</p>
-                        <ul class="feature-list" style="margin-top: 1rem;">
+                        <h4 style="color: #34d399; border-bottom: 2px solid var(--success); padding-bottom: 0.5rem; margin-bottom: 1rem;">Core Framework: Theory of Constraints</h4>
+                        <p style="color: rgba(255,255,255,0.85);"><strong>The Constraint:</strong> Surgeon/OR Availability.</p>
+                        <p style="color: rgba(255,255,255,0.85);"><strong>The Strategy:</strong> We cannot buy more time, so we must stop wasting it. Every minute the OR is idle is lost throughput that can never be recovered.</p>
+                        <ul class="feature-list" style="margin-top: 1rem; color: rgba(255,255,255,0.8);">
                             <li><strong>Step 1 (Identify):</strong> Diagnostic audit reveals 45 min avg time vs 32 min best practice.</li>
                             <li><strong>Step 2 (Exploit):</strong> Standardize "Best Performer" techniques (32 min).</li>
                             <li><strong>Step 3 (Subordinate):</strong> Pre-staging of patients so OR never waits.</li>
@@ -190,29 +198,29 @@
                         </ul>
                     </div>
                     <div>
-                        <h4 style="color: #333; border-bottom: 2px solid var(--success); padding-bottom: 0.5rem; margin-bottom: 1rem;">Key Initiatives</h4>
-                        <div class="action-card" style="background: #f0fdf4; padding: 1rem; margin-bottom: 1rem; border-radius: 6px;">
-                            <strong>⚡ Rapid Changeover (SMED)</strong>
-                            <p style="font-size: 0.9rem; margin-bottom: 0;">Reduce turnover 22m → 8m parallel processing. treating the OR turn like a Formula 1 pit stop.</p>
+                        <h4 style="color: #34d399; border-bottom: 2px solid var(--success); padding-bottom: 0.5rem; margin-bottom: 1rem;">Key Initiatives</h4>
+                        <div class="action-card" style="background: rgba(34, 197, 94, 0.15); padding: 1rem; margin-bottom: 1rem; border-radius: 6px; border: 1px solid rgba(34, 197, 94, 0.3);">
+                            <strong style="color: #34d399;">⚡ Rapid Changeover (SMED)</strong>
+                            <p style="font-size: 0.9rem; margin-bottom: 0; color: rgba(255,255,255,0.8);">Reduce turnover 22m → 8m parallel processing. treating the OR turn like a Formula 1 pit stop.</p>
                         </div>
-                        <div class="action-card" style="background: #f0fdf4; padding: 1rem; margin-bottom: 1rem; border-radius: 6px;">
-                            <strong>📋 Standardization</strong>
-                            <p style="font-size: 0.9rem; margin-bottom: 0;">Protocol-driven instrument kits to reduce setup time.</p>
+                        <div class="action-card" style="background: rgba(34, 197, 94, 0.15); padding: 1rem; margin-bottom: 1rem; border-radius: 6px; border: 1px solid rgba(34, 197, 94, 0.3);">
+                            <strong style="color: #34d399;">📋 Standardization</strong>
+                            <p style="font-size: 0.9rem; margin-bottom: 0; color: rgba(255,255,255,0.8);">Protocol-driven instrument kits to reduce setup time.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <hr style="border: 0; border-top: 1px dashed #ccc; margin: 3rem 0;">
+            <hr style="border: 0; border-top: 1px solid rgba(0, 212, 255, 0.2); margin: 3rem 0;">
 
             <!-- HORIZON 2 DETAILS -->
             <div class="horizon-section">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
-                    <h2 style="color: var(--primary); display: flex; align-items: center; gap: 1rem;">
+                    <h2 style="color: #00d4ff; display: flex; align-items: center; gap: 1rem;">
                         <span style="font-size: 2.5rem;">2️⃣</span> 
                         <div>
                             Horizon 2: Strategic Scaling <span style="font-size: 0.8em; opacity: 0.7; font-weight: normal;">(Indicative)</span>
-                            <span style="display: block; font-size: 1rem; color: #666; font-weight: normal;">Months 6-18 • Focus: Expand & Digitize</span>
+                            <span style="display: block; font-size: 1rem; color: rgba(255,255,255,0.6); font-weight: normal;">Months 6-18 • Focus: Expand & Digitize</span>
                         </div>
                     </h2>
                     <div style="text-align: right;">
@@ -226,39 +234,39 @@
 
                 <div class="grid-2-col" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
                     <div>
-                        <h4 style="color: #333; border-bottom: 2px solid var(--primary); padding-bottom: 0.5rem; margin-bottom: 1rem;">Core Frameworks: Six Sigma & Automation</h4>
-                        <p><strong>The Opportunity:</strong> Once flow is established, we must ensure quality scales with volume and revenue is captured efficiently.</p>
-                        <p><strong>The Strategy:</strong> Reduce variance in outcomes and financial capture.</p>
-                        <ul class="feature-list" style="margin-top: 1rem;">
+                        <h4 style="color: #00d4ff; border-bottom: 2px solid var(--primary); padding-bottom: 0.5rem; margin-bottom: 1rem;">Core Frameworks: Six Sigma & Automation</h4>
+                        <p style="color: rgba(255,255,255,0.85);"><strong>The Opportunity:</strong> Once flow is established, we must ensure quality scales with volume and revenue is captured efficiently.</p>
+                        <p style="color: rgba(255,255,255,0.85);"><strong>The Strategy:</strong> Reduce variance in outcomes and financial capture.</p>
+                        <ul class="feature-list" style="margin-top: 1rem; color: rgba(255,255,255,0.8);">
                             <li><strong>Quality (Six Sigma):</strong> Reducing infection rates from 2.1% to <0.8% using DMAIC methodology.</li>
                             <li><strong>Revenue Cycle (Automation):</strong> AI-assisted coding to reduce denial rate from 18% to 3%.</li>
                             <li><strong>Capacity (Scale):</strong> Hiring 15 FTE support staff to feed the maximized OR beast.</li>
                         </ul>
                     </div>
                     <div>
-                        <h4 style="color: #333; border-bottom: 2px solid var(--primary); padding-bottom: 0.5rem; margin-bottom: 1rem;">Key Initiatives</h4>
-                        <div class="action-card" style="background: #eff6ff; padding: 1rem; margin-bottom: 1rem; border-radius: 6px;">
-                            <strong>🤖 Pre-Auth Bot</strong>
-                            <p style="font-size: 0.9rem; margin-bottom: 0;">Automated insurance authorization API integration to cut wait times.</p>
+                        <h4 style="color: #00d4ff; border-bottom: 2px solid var(--primary); padding-bottom: 0.5rem; margin-bottom: 1rem;">Key Initiatives</h4>
+                        <div class="action-card" style="background: rgba(0, 212, 255, 0.15); padding: 1rem; margin-bottom: 1rem; border-radius: 6px; border: 1px solid rgba(0, 212, 255, 0.3);">
+                            <strong style="color: #00d4ff;">🤖 Pre-Auth Bot</strong>
+                            <p style="font-size: 0.9rem; margin-bottom: 0; color: rgba(255,255,255,0.8);">Automated insurance authorization API integration to cut wait times.</p>
                         </div>
-                        <div class="action-card" style="background: #eff6ff; padding: 1rem; margin-bottom: 1rem; border-radius: 6px;">
-                            <strong>🛡️ Zero-Defect Sterilization</strong>
-                            <p style="font-size: 0.9rem; margin-bottom: 0;">RFID instrument tracking to eliminate "missing tool" delays.</p>
+                        <div class="action-card" style="background: rgba(0, 212, 255, 0.15); padding: 1rem; margin-bottom: 1rem; border-radius: 6px; border: 1px solid rgba(0, 212, 255, 0.3);">
+                            <strong style="color: #00d4ff;">🛡️ Zero-Defect Sterilization</strong>
+                            <p style="font-size: 0.9rem; margin-bottom: 0; color: rgba(255,255,255,0.8);">RFID instrument tracking to eliminate "missing tool" delays.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <hr style="border: 0; border-top: 1px dashed #ccc; margin: 3rem 0;">
+            <hr style="border: 0; border-top: 1px solid rgba(0, 212, 255, 0.2); margin: 3rem 0;">
 
             <!-- HORIZON 3 DETAILS -->
             <div class="horizon-section">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
-                    <h2 style="color: #7c3aed; display: flex; align-items: center; gap: 1rem;">
+                    <h2 style="color: #a78bfa; display: flex; align-items: center; gap: 1rem;">
                         <span style="font-size: 2.5rem;">3️⃣</span> 
                         <div>
                             Horizon 3: Market Leadership <span style="font-size: 0.8em; opacity: 0.7; font-weight: normal;">(Future Vision)</span>
-                            <span style="display: block; font-size: 1rem; color: #666; font-weight: normal;">Months 18+ • Focus: Innovate & Dominate</span>
+                            <span style="display: block; font-size: 1rem; color: rgba(255,255,255,0.6); font-weight: normal;">Months 18+ • Focus: Innovate & Dominate</span>
                         </div>
                     </h2>
                     <div style="text-align: right;">
@@ -266,30 +274,30 @@
                     </div>
                 </div>
 
-                <div class="alert alert-warning" style="background-color: #f5f3ff; border-color: #8b5cf6; color: #5b21b6; margin-bottom: 1.5rem;">
-                     <strong>Strategic Outlook:</strong> Horizon 3 represents long-term directional goals. These are well-thought-out transformative concepts that will be validated against market conditions after Year 1.
+                <div class="alert" style="background: rgba(139, 92, 246, 0.15); border: 1px solid rgba(139, 92, 246, 0.3); border-left: 4px solid #8b5cf6; color: rgba(255,255,255,0.85); margin-bottom: 1.5rem;">
+                     <strong style="color: #a78bfa;">Strategic Outlook:</strong> Horizon 3 represents long-term directional goals. These are well-thought-out transformative concepts that will be validated against market conditions after Year 1.
                 </div>
 
                 <div class="grid-2-col" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
                     <div>
-                        <h4 style="color: #333; border-bottom: 2px solid #7c3aed; padding-bottom: 0.5rem; margin-bottom: 1rem;">Core Framework: Blue Ocean Strategy</h4>
-                        <p><strong>The Vision:</strong> Move beyond competing on price or wait times. Create new value curves.</p>
-                        <p><strong>The Strategy:</strong> Redefine the standard of cataract care.</p>
-                        <ul class="feature-list" style="margin-top: 1rem;">
+                        <h4 style="color: #a78bfa; border-bottom: 2px solid #7c3aed; padding-bottom: 0.5rem; margin-bottom: 1rem;">Core Framework: Blue Ocean Strategy</h4>
+                        <p style="color: rgba(255,255,255,0.85);"><strong>The Vision:</strong> Move beyond competing on price or wait times. Create new value curves.</p>
+                        <p style="color: rgba(255,255,255,0.85);"><strong>The Strategy:</strong> Redefine the standard of cataract care.</p>
+                        <ul class="feature-list" style="margin-top: 1rem; color: rgba(255,255,255,0.8);">
                             <li><strong>Hub & Spoke Model:</strong> Open 3 satellite diagnostic centers to funnel patients to the main surgical hub.</li>
                             <li><strong>Premium Services:</strong> Advanced IOL (Lens) program with lifestyle outcomes.</li>
                             <li><strong>Value-Based Care:</strong> Bundled payments with insurers guaranteeing outcomes, locking out competitors.</li>
                         </ul>
                     </div>
                     <div>
-                        <h4 style="color: #333; border-bottom: 2px solid #7c3aed; padding-bottom: 0.5rem; margin-bottom: 1rem;">Key Initiatives</h4>
-                        <div class="action-card" style="background: #f5f3ff; padding: 1rem; margin-bottom: 1rem; border-radius: 6px;">
-                            <strong>🧠 Predictive Analytics</strong>
-                            <p style="font-size: 0.9rem; margin-bottom: 0;">Forecasting patient demand to optimize staffing 3 weeks out.</p>
+                        <h4 style="color: #a78bfa; border-bottom: 2px solid #7c3aed; padding-bottom: 0.5rem; margin-bottom: 1rem;">Key Initiatives</h4>
+                        <div class="action-card" style="background: rgba(139, 92, 246, 0.15); padding: 1rem; margin-bottom: 1rem; border-radius: 6px; border: 1px solid rgba(139, 92, 246, 0.3);">
+                            <strong style="color: #a78bfa;">🧠 Predictive Analytics</strong>
+                            <p style="font-size: 0.9rem; margin-bottom: 0; color: rgba(255,255,255,0.8);">Forecasting patient demand to optimize staffing 3 weeks out.</p>
                         </div>
-                        <div class="action-card" style="background: #f5f3ff; padding: 1rem; margin-bottom: 1rem; border-radius: 6px;">
-                            <strong>🏥 Regional Expansion</strong>
-                            <p style="font-size: 0.9rem; margin-bottom: 0;">Replicating the "ClearSight Operating System" in new markets.</p>
+                        <div class="action-card" style="background: rgba(139, 92, 246, 0.15); padding: 1rem; margin-bottom: 1rem; border-radius: 6px; border: 1px solid rgba(139, 92, 246, 0.3);">
+                            <strong style="color: #a78bfa;">🏥 Regional Expansion</strong>
+                            <p style="font-size: 0.9rem; margin-bottom: 0; color: rgba(255,255,255,0.8);">Replicating the "ClearSight Operating System" in new markets.</p>
                         </div>
                     </div>
                 </div>
@@ -297,10 +305,10 @@
 
             <!-- ROI Table (Preserved but styled) -->
             <div class="subsection" style="margin-top: 4rem;">
-                <h3 style="color: var(--primary); margin-bottom: 1.5rem;">📊 Cumulative Financial Impact (Year 1)</h3>
+                <h3 style="color: #00d4ff; margin-bottom: 1.5rem;">📊 Cumulative Financial Impact (Year 1)</h3>
                 
                 <!-- Financial Impact Chart -->
-                <div class="visual-container" style="background: white; padding: 2rem; border-radius: 12px; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                <div class="visual-container" style="background: linear-gradient(135deg, #0d1321 0%, #0a0f1a 100%); padding: 2rem; border-radius: 12px; margin-bottom: 2rem; border: 1px solid rgba(0, 212, 255, 0.2);">
                     <svg width="100%" height="300" viewBox="0 0 800 300">
                         <defs>
                              <linearGradient id="gradInvestment" x1="0" y1="0" x2="0" y2="1">
@@ -315,75 +323,75 @@
 
                         <!-- Legend -->
                         <rect x="550" y="20" width="15" height="15" fill="url(#gradInvestment)" />
-                        <text x="575" y="32" font-size="12" fill="#555">Investment</text>
+                        <text x="575" y="32" font-size="12" fill="#fff">Investment</text>
                         <rect x="650" y="20" width="15" height="15" fill="url(#gradBenefit)" />
-                        <text x="675" y="32" font-size="12" fill="#555">Benefit (Gain)</text>
+                        <text x="675" y="32" font-size="12" fill="#fff">Benefit (Gain)</text>
 
                         <!-- Axis -->
-                        <line x1="100" y1="250" x2="700" y2="250" stroke="#666" stroke-width="2"/>
+                        <line x1="100" y1="250" x2="700" y2="250" stroke="#00d4ff" stroke-width="2"/>
 
                         <!-- Horizon 1 Group -->
                         <g transform="translate(150, 0)">
-                             <text x="60" y="270" text-anchor="middle" font-weight="bold" fill="#333">Horizon 1</text>
+                             <text x="60" y="270" text-anchor="middle" font-weight="bold" fill="#fff">Horizon 1</text>
                              <!-- Investment -->
                              <rect x="20" y="230" width="30" height="20" fill="url(#gradInvestment)"/>
-                             <text x="35" y="225" text-anchor="middle" font-size="10" fill="#dc2626">$0.8M</text>
+                             <text x="35" y="225" text-anchor="middle" font-size="10" fill="#fca5a5">$0.8M</text>
                              <!-- Benefit -->
                              <rect x="60" y="100" width="30" height="150" fill="url(#gradBenefit)"/>
-                             <text x="75" y="95" text-anchor="middle" font-size="10" fill="#16a34a">$14M</text>
+                             <text x="75" y="95" text-anchor="middle" font-size="10" fill="#86efac">$14M</text>
                         </g>
 
                         <!-- Horizon 2 Group -->
                         <g transform="translate(350, 0)">
-                             <text x="60" y="270" text-anchor="middle" font-weight="bold" fill="#333">Horizon 2</text>
+                             <text x="60" y="270" text-anchor="middle" font-weight="bold" fill="#fff">Horizon 2</text>
                              <!-- Investment -->
                              <rect x="20" y="210" width="30" height="40" fill="url(#gradInvestment)"/>
-                             <text x="35" y="205" text-anchor="middle" font-size="10" fill="#dc2626">$1.5M</td>
+                             <text x="35" y="205" text-anchor="middle" font-size="10" fill="#fca5a5">$1.5M</text>
                              <!-- Benefit -->
                              <rect x="60" y="150" width="30" height="100" fill="url(#gradBenefit)"/>
-                             <text x="75" y="145" text-anchor="middle" font-size="10" fill="#16a34a">$10M</text>
+                             <text x="75" y="145" text-anchor="middle" font-size="10" fill="#86efac">$10M</text>
                         </g>
 
                         <!-- Horizon 3 Group -->
                         <g transform="translate(550, 0)">
-                             <text x="60" y="270" text-anchor="middle" font-weight="bold" fill="#333">Horizon 3</text>
+                             <text x="60" y="270" text-anchor="middle" font-weight="bold" fill="#fff">Horizon 3</text>
                              <!-- Investment -->
                              <rect x="20" y="200" width="30" height="50" fill="url(#gradInvestment)"/>
-                             <text x="35" y="195" text-anchor="middle" font-size="10" fill="#dc2626">$2.2M</text>
+                             <text x="35" y="195" text-anchor="middle" font-size="10" fill="#fca5a5">$2.2M</text>
                              <!-- Benefit -->
                              <rect x="60" y="180" width="30" height="70" fill="url(#gradBenefit)"/>
-                             <text x="75" y="175" text-anchor="middle" font-size="10" fill="#16a34a">TBD</text>
+                             <text x="75" y="175" text-anchor="middle" font-size="10" fill="#86efac">TBD</text>
                         </g>
                     </svg>
                 </div>
 
-                <table style="width: 100%; border-collapse: collapse; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-radius: 8px; overflow: hidden;">
-                    <thead style="background: #1f2937; color: white;">
+                <table style="width: 100%; border-collapse: collapse; border-radius: 8px; overflow: hidden; border: 1px solid rgba(0, 212, 255, 0.2);">
+                    <thead style="background: linear-gradient(135deg, #1a2332 0%, #111827 100%);">
                         <tr>
-                            <th style="padding: 1rem; text-align: left;">Horizon / Phase</th>
-                            <th style="padding: 1rem; text-align: right;">Investment</th>
-                            <th style="padding: 1rem; text-align: right;">Annual Benefit</th>
-                            <th style="padding: 1rem; text-align: right;">ROI %</th>
+                            <th style="padding: 1rem; text-align: left; color: #00d4ff;">Horizon / Phase</th>
+                            <th style="padding: 1rem; text-align: right; color: #00d4ff;">Investment</th>
+                            <th style="padding: 1rem; text-align: right; color: #00d4ff;">Annual Benefit</th>
+                            <th style="padding: 1rem; text-align: right; color: #00d4ff;">ROI %</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr style="background: white; border-bottom: 1px solid #eee;">
-                            <td style="padding: 1rem; font-weight: 500;">Horizon 1: Operational Fix</td>
-                            <td style="padding: 1rem; text-align: right;">$550K</td>
-                            <td style="padding: 1rem; text-align: right;">$13.5M</td>
-                            <td style="padding: 1rem; text-align: right; color: var(--success); font-weight: bold;">2,454%</td>
+                        <tr style="background: rgba(26, 35, 50, 0.5); border-bottom: 1px solid rgba(0, 212, 255, 0.1);">
+                            <td style="padding: 1rem; font-weight: 500; color: rgba(255,255,255,0.9);">Horizon 1: Operational Fix</td>
+                            <td style="padding: 1rem; text-align: right; color: rgba(255,255,255,0.8);">$550K</td>
+                            <td style="padding: 1rem; text-align: right; color: rgba(255,255,255,0.8);">$13.5M</td>
+                            <td style="padding: 1rem; text-align: right; color: #34d399; font-weight: bold;">2,454%</td>
                         </tr>
-                        <tr style="background: white; border-bottom: 1px solid #eee;">
-                            <td style="padding: 1rem; font-weight: 500;">Horizon 2: Scale & Process</td>
-                            <td style="padding: 1rem; text-align: right;">$2.5M</td>
-                            <td style="padding: 1rem; text-align: right;">$14.5M</td>
-                            <td style="padding: 1rem; text-align: right; color: var(--success); font-weight: bold;">580%</td>
+                        <tr style="background: rgba(26, 35, 50, 0.3); border-bottom: 1px solid rgba(0, 212, 255, 0.1);">
+                            <td style="padding: 1rem; font-weight: 500; color: rgba(255,255,255,0.9);">Horizon 2: Scale & Process</td>
+                            <td style="padding: 1rem; text-align: right; color: rgba(255,255,255,0.8);">$2.5M</td>
+                            <td style="padding: 1rem; text-align: right; color: rgba(255,255,255,0.8);">$14.5M</td>
+                            <td style="padding: 1rem; text-align: right; color: #34d399; font-weight: bold;">580%</td>
                         </tr>
-                        <tr style="background: #f0fdf4; font-weight: bold;">
-                            <td style="padding: 1rem;">TOTAL YEAR 1</td>
-                            <td style="padding: 1rem; text-align: right;">$3.05M</td>
-                            <td style="padding: 1rem; text-align: right;">$28M+</td>
-                            <td style="padding: 1rem; text-align: right; color: var(--success);">918%</td>
+                        <tr style="background: rgba(0, 212, 255, 0.1); font-weight: bold;">
+                            <td style="padding: 1rem; color: #00d4ff;">TOTAL YEAR 1</td>
+                            <td style="padding: 1rem; text-align: right; color: #fff;">$3.05M</td>
+                            <td style="padding: 1rem; text-align: right; color: #fff;">$28M+</td>
+                            <td style="padding: 1rem; text-align: right; color: #10b981;">918%</td>
                         </tr>
                     </tbody>
                 </table>
