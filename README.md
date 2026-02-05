@@ -1,2 +1,2 @@
-# clearSight
-clearSight
+# ClearEyes
+ClearEyes

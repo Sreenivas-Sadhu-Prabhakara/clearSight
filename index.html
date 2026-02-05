@@ -35,15 +35,15 @@
             <div class="hero-stats">
                 <div class="stat">
                     <span class="stat-number">42</span>
-                    <span class="stat-label">Days Wait Time</span>
+                    <span class="stat-label">Days Auth Wait</span>
                 </div>
                 <div class="stat">
-                    <span class="stat-number">50%</span>
-                    <span class="stat-label">OR Utilization</span>
+                    <span class="stat-number">30%</span>
+                    <span class="stat-label">Yield Loss</span>
                 </div>
                 <div class="stat">
-                    <span class="stat-number">$3M</span>
-                    <span class="stat-label">Profit Opportunity</span>
+                    <span class="stat-number">$2.4M</span>
+                    <span class="stat-label">Revenue at Risk</span>
                 </div>
             </div>
         </div>
@@ -91,8 +91,8 @@
 
         <!-- Key Constraint Visual -->
         <section class="content-section">
-            <h2>🎯 The Constraint: OR Throughput</h2>
-            <p>Clear Eyes's patient flow bottlenecks at the Operating Room—limiting the entire system to 50% capacity.</p>
+            <h2>🎯 The Constraint: Upstream Yield Loss</h2>
+            <p>The primary operational constraint is upstream yield loss caused by patient no-shows and conversion failures. Insurance authorization adds approximately a 6-week (42-day) lead time for insured patients, increasing the risk of no-shows and patient drop-off.</p>
             
             <div class="visual-container" style="margin-top: 1.5rem; background: linear-gradient(135deg, #0d1321 0%, #0a0f1a 100%); border: 2px solid rgba(0, 212, 255, 0.3);">
                 <svg width="100%" height="180" viewBox="0 0 900 180">
@@ -110,9 +110,9 @@
                         </filter>
                         <linearGradient id="homeFlowLine" x1="0%" y1="0%" x2="100%" y2="0%">
                             <stop offset="0%" stop-color="#00d4ff"/>
-                            <stop offset="45%" stop-color="#00d4ff"/>
-                            <stop offset="50%" stop-color="#ef4444"/>
-                            <stop offset="55%" stop-color="#00d4ff"/>
+                            <stop offset="25%" stop-color="#ef4444"/>
+                            <stop offset="35%" stop-color="#ef4444"/>
+                            <stop offset="50%" stop-color="#00d4ff"/>
                             <stop offset="100%" stop-color="#00d4ff"/>
                         </linearGradient>
                     </defs>
@@ -126,56 +126,57 @@
                         <rect x="-50" y="-30" width="100" height="60" rx="10" fill="#1a2332" stroke="#10b981" stroke-width="2"/>
                         <text y="-8" text-anchor="middle" fill="#34d399" font-size="10" font-weight="bold">INTAKE</text>
                         <text y="8" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">400/mo</text>
-                        <text y="22" text-anchor="middle" fill="#9ca3af" font-size="9">95% flow</text>
+                        <text y="22" text-anchor="middle" fill="#9ca3af" font-size="9">Referrals</text>
                     </g>
                     
-                    <text x="200" y="95" fill="#00d4ff" font-size="22" font-weight="bold">→</text>
+                    <text x="200" y="95" fill="#ef4444" font-size="22" font-weight="bold">⚠</text>
                     
-                    <g transform="translate(300, 90)" filter="url(#homeNodeGlow)">
-                        <rect x="-55" y="-30" width="110" height="60" rx="10" fill="#1a2332" stroke="#f59e0b" stroke-width="2"/>
-                        <text y="-8" text-anchor="middle" fill="#fbbf24" font-size="10" font-weight="bold">PRE-OP</text>
-                        <text y="8" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">350/mo</text>
-                        <text y="22" text-anchor="middle" fill="#9ca3af" font-size="9">Auth delays</text>
-                    </g>
-                    
-                    <text x="390" y="95" fill="#ef4444" font-size="22" font-weight="bold">⚠</text>
-                    
-                    <g transform="translate(500, 90)" filter="url(#homeFlowGlow)">
+                    <g transform="translate(300, 90)" filter="url(#homeFlowGlow)">
                         <rect x="-70" y="-40" width="140" height="80" rx="12" fill="#0d1321" stroke="#ef4444" stroke-width="4"/>
                         <rect x="-65" y="-35" width="130" height="70" rx="10" fill="none" stroke="#ef4444" stroke-width="1" stroke-dasharray="4,2" opacity="0.5"/>
-                        <text y="-15" text-anchor="middle" fill="#ff6b6b" font-size="11" font-weight="bold">⚡ CONSTRAINT</text>
-                        <text y="8" text-anchor="middle" fill="#fff" font-size="18" font-weight="bold">250/mo</text>
-                        <text y="28" text-anchor="middle" fill="#ef4444" font-size="11">50% capacity</text>
+                        <text y="-18" text-anchor="middle" fill="#ff6b6b" font-size="10" font-weight="bold">⚡ CONSTRAINT</text>
+                        <text y="-4" text-anchor="middle" fill="#fbbf24" font-size="9" font-weight="bold">42-DAY AUTH WAIT</text>
+                        <text y="12" text-anchor="middle" fill="#fff" font-size="13" font-weight="bold">280/mo</text>
+                        <text y="28" text-anchor="middle" fill="#ef4444" font-size="10">30% no-show/drop</text>
                     </g>
                     
-                    <text x="610" y="95" fill="#00d4ff" font-size="22" font-weight="bold">→</text>
+                    <text x="405" y="95" fill="#00d4ff" font-size="22" font-weight="bold">→</text>
                     
-                    <g transform="translate(720, 90)" filter="url(#homeNodeGlow)">
+                    <g transform="translate(500, 90)" filter="url(#homeNodeGlow)">
+                        <rect x="-55" y="-30" width="110" height="60" rx="10" fill="#1a2332" stroke="#f59e0b" stroke-width="2"/>
+                        <text y="-8" text-anchor="middle" fill="#fbbf24" font-size="10" font-weight="bold">SURGERY</text>
+                        <text y="8" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">250/mo</text>
+                        <text y="22" text-anchor="middle" fill="#9ca3af" font-size="9">Capacity OK</text>
+                    </g>
+                    
+                    <text x="590" y="95" fill="#00d4ff" font-size="22" font-weight="bold">→</text>
+                    
+                    <g transform="translate(700, 90)" filter="url(#homeNodeGlow)">
                         <rect x="-50" y="-30" width="100" height="60" rx="10" fill="#1a2332" stroke="#10b981" stroke-width="2"/>
                         <text y="-8" text-anchor="middle" fill="#34d399" font-size="10" font-weight="bold">RECOVERY</text>
                         <text y="8" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">250/mo</text>
-                        <text y="22" text-anchor="middle" fill="#9ca3af" font-size="9">Waiting</text>
+                        <text y="22" text-anchor="middle" fill="#9ca3af" font-size="9">Complete</text>
                     </g>
                     
-                    <text x="810" y="95" fill="#00d4ff" font-size="22" font-weight="bold">→</text>
+                    <text x="790" y="95" fill="#00d4ff" font-size="22" font-weight="bold">→</text>
                 </svg>
             </div>
             
             <div class="metrics-grid" style="margin-top: 2rem;">
                 <div class="metric-card">
-                    <h4>Monthly Loss</h4>
-                    <p class="metric-value" style="color: #ef4444;">$250K</p>
-                    <p class="metric-label">Unserved patients</p>
+                    <h4>Auth Lead Time</h4>
+                    <p class="metric-value" style="color: #ef4444;">42 days</p>
+                    <p class="metric-label">Insurance approval wait</p>
                 </div>
                 <div class="metric-card">
-                    <h4>Wait Queue</h4>
-                    <p class="metric-value">42 days</p>
-                    <p class="metric-label">Patient backlog</p>
+                    <h4>Yield Loss</h4>
+                    <p class="metric-value" style="color: #f59e0b;">30%</p>
+                    <p class="metric-label">No-shows & drop-offs</p>
                 </div>
                 <div class="metric-card">
-                    <h4>Current Profit</h4>
-                    <p class="metric-value" style="color: #ef4444;">$0.5M</p>
-                    <p class="metric-label">8.3% margin</p>
+                    <h4>Lost Conversions</h4>
+                    <p class="metric-value" style="color: #ef4444;">120/mo</p>
+                    <p class="metric-label">Patients lost in pipeline</p>
                 </div>
                 <div class="metric-card">
                     <h4>Potential Profit</h4>
@@ -188,14 +189,14 @@
         <!-- TOC Framework -->
         <section class="content-section">
             <h2>🔄 Theory of Constraints: 5 Focusing Steps</h2>
-            <p>Goldratt's systematic approach to identify and remove bottlenecks.</p>
+            <p>Goldratt's systematic approach to identify and address flow constraints.</p>
             
             <div class="toc-steps-visual" style="margin-top: 1.5rem;">
                 <div class="toc-step-visual">
                     <div class="step-number">1</div>
                     <div class="step-content">
                         <h5>IDENTIFY</h5>
-                        <p>OR is the constraint</p>
+                        <p>Upstream yield is the constraint</p>
                     </div>
                 </div>
                 <div class="toc-step-visual">

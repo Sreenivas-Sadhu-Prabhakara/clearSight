@@ -1,10 +1,10 @@
-# 📚 Complete clearSight Website Documentation
+# 📚 Complete ClearEyes Website Documentation
 
 ## Executive Summary
 
-This is a **comprehensive, multi-page, interactive website** analyzing the **clearSight cataract surgery facility** through the lens of **Goldratt's Theory of Constraints** and **Process Engineering Principles**.
+This is a **comprehensive, multi-page, interactive website** analyzing the **ClearEyes cataract surgery facility** through the lens of **Goldratt's Theory of Constraints** and **Process Engineering Principles**.
 
-The analysis reveals a facility facing **74% patient attrition** and **₹10.65 lakhs in annual lost revenue** due to systemic bottlenecks that can be systematically identified and addressed using Theory of Constraints methodology.
+The analysis reveals a facility facing **74% patient attrition** and **₹10.65 lakhs in annual lost revenue** due to multi-factor flow instability that can be systematically identified and addressed using Theory of Constraints methodology.
 
 ---
 
@@ -59,11 +59,11 @@ clearSight-Cataracts/
 ---
 
 ### **PAGE 2: Context (context.html)** ⭐ MAIN PAGE
-**Purpose:** Establish clearSight's business model and operational flow
+**Purpose:** Establish ClearEyes' business model and operational flow
 
 **Sections:**
 
-#### 1. **What is clearSight?**
+#### 1. **What is ClearEyes?**
 - Business overview
 - Mission statement  
 - Key facts about operations
@@ -105,7 +105,7 @@ TOTAL: 74% Attrition | ₹10,65,000 Lost Revenue
 ```
 6:00 AM     → Morning Phase (6:00-8:30)
 8:00 AM     → Surge Phase (8:30-1:00)
-9:00 AM     → Peak Phase (1:00-3:00) [BOTTLENECK]
+9:00 AM     → Peak Phase (1:00-3:00) [HIGH UTILIZATION]
 1:00 PM     → Wind Down (3:00-5:00)
 4:00 PM     → Evening Phase (5:00-8:00)
 6:00 PM     → Night Watch (8:00 PM-6:00 AM)
@@ -113,7 +113,7 @@ TOTAL: 74% Attrition | ₹10,65,000 Lost Revenue
 ```
 
 **Resource Utilization Bars:**
-- Surgeon Time: 90% (PRIMARY CONSTRAINT)
+- Surgeon Time: 90% (HIGH UTILIZATION)
 - Bed Capacity: 90% (SECONDARY CONSTRAINT)
 - Nursing Staff: 80%
 - Operation Theater: 95%
@@ -131,7 +131,7 @@ TOTAL: 74% Attrition | ₹10,65,000 Lost Revenue
 - **Cost Structure:** 60% staff, 25% consumables, 15% overhead
 - **Throughput:** 4-6 surgeries/day, ~100-120/month
 - **Demographics:** Ages 50-75, lower to middle-income
-- **Competition:** Premium (₹30-50K) vs. clearSight (₹8-12K)
+- **Competition:** Premium (₹30-50K) vs. ClearEyes (₹8-12K)
 - **Constraints:** Single surgeon, bed capacity, affordability
 
 #### 5. **Revenue Loss Funnel** (SVG Polygon Funnel)
@@ -411,7 +411,7 @@ Labels:       11px, regular, #555
 ## 📊 How to Read the Context Page
 
 ### Start Here
-1. Read "What is clearSight?" to understand the business
+1. Read "What is ClearEyes?" to understand the business
 2. View Patient Journey Funnel to see where patients are lost
 3. Check Daily Operations Timeline to understand resource constraints
 4. Review Business Model to understand financials
@@ -421,7 +421,7 @@ Labels:       11px, regular, #555
 - At what stage do most patients drop off? (Stage 1: 55%)
 - Which resource is most constrained? (Surgeon at 90%)
 - How much revenue is being lost? (₹10,65,000/year)
-- What's the system bottleneck? (Single surgeon availability)
+- What's the key constraint? (Upstream commitment failures)
 - Why can't we just do more surgeries? (Bed capacity + surgeon time)
 
 ### Expected Insights
@@ -443,7 +443,7 @@ Labels:       11px, regular, #555
 
 ### For Managers/Consultants
 - Analyze operational constraints
-- Identify bottlenecks
+- Identify flow constraints
 - Quantify financial impact
 - Plan improvement strategies
 
@@ -525,7 +525,7 @@ Labels:       11px, regular, #555
 
 After exploring this website, users understand:
 
-1. ✅ How healthcare operations work at clearSight
+1. ✅ How healthcare operations work at ClearEyes
 2. ✅ Where bottlenecks exist (Theory of Constraints)
 3. ✅ Why simple solutions don't work
 4. ✅ The financial impact of constraints

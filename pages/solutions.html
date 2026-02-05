@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solutions Tracker - Clear Eyes Analysis</title>
+    <title>Solutions - ClearEyes Analysis</title>
     <link rel="stylesheet" href="../css/styles.css">
     <style>
         /* Solutions Page Specific Styles */
@@ -241,7 +241,7 @@
     <header class="navbar">
         <div class="navbar-container">
             <div class="logo">
-                <h1>🏥 Clear Eyes</h1>
+                <h1>🏥 ClearEyes</h1>
                 <p class="subtitle">Theory of Constraints Analysis</p>
             </div>
             <nav class="nav-menu" aria-label="Main Navigation">
@@ -262,9 +262,67 @@
         <!-- Hero Section -->
         <section class="content-section" style="text-align: center; margin-bottom: 2rem;">
             <h2 style="color: #00d4ff; margin-bottom: 0.5rem;">💡 Solutions Tracker</h2>
-            <p style="color: rgba(255, 255, 255, 0.7); max-width: 600px; margin: 0 auto;">
-                Document, track, and measure the impact of solutions addressing Clear Eyes's constraints.
+            <p style="color: rgba(255, 255, 255, 0.7); max-width: 700px; margin: 0 auto;">
+                All solutions must tie to <strong>reducing no-shows and patient attrition</strong> — not maximizing OR utilization. 
+                The clinic loses potential throughput due to upstream commitment failures, not insufficient surgical capacity.
             </p>
+        </section>
+
+        <!-- Solution Hierarchy Visual -->
+        <section class="content-section" style="margin-bottom: 2rem;">
+            <h3 style="color: #00d4ff; text-align: center; margin-bottom: 1.5rem;">🎯 Solution Priority Hierarchy</h3>
+            <p style="color: rgba(255,255,255,0.7); text-align: center; margin-bottom: 1.5rem;">
+                <strong>This order matters.</strong> Capacity expansion without solving yield is waste.
+            </p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                <!-- Tier 1 -->
+                <div style="background: linear-gradient(135deg, #1a2332 0%, #111827 100%); padding: 1.5rem; border-radius: 12px; border-top: 4px solid #22c55e; border: 1px solid rgba(34, 197, 94, 0.3);">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                        <span style="background: #22c55e; color: #0a0f1a; padding: 0.25rem 0.75rem; border-radius: 20px; font-weight: bold; font-size: 0.85rem;">TIER 1</span>
+                        <span style="color: #34d399; font-weight: bold;">FIX YIELD FIRST</span>
+                    </div>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 1rem;">Primary focus: Reduce no-shows and patient drop-off</p>
+                    <ul style="color: rgba(255,255,255,0.8); font-size: 0.85rem; padding-left: 1.2rem; margin: 0;">
+                        <li>🚐 Transport support programs</li>
+                        <li>📋 Commitment screening protocols</li>
+                        <li>👥 PSR (Patient Service Rep) training</li>
+                        <li>📱 Patient engagement touchpoints</li>
+                        <li>💰 Financial counseling (cash-pay options)</li>
+                    </ul>
+                </div>
+                
+                <!-- Tier 2 -->
+                <div style="background: linear-gradient(135deg, #1a2332 0%, #111827 100%); padding: 1.5rem; border-radius: 12px; border-top: 4px solid #00d4ff; border: 1px solid rgba(0, 212, 255, 0.3);">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                        <span style="background: #00d4ff; color: #0a0f1a; padding: 0.25rem 0.75rem; border-radius: 20px; font-weight: bold; font-size: 0.85rem;">TIER 2</span>
+                        <span style="color: #00d4ff; font-weight: bold;">STABILIZE FLOW</span>
+                    </div>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 1rem;">Secondary focus: Reliable patient pipeline</p>
+                    <ul style="color: rgba(255,255,255,0.8); font-size: 0.85rem; padding-left: 1.2rem; margin: 0;">
+                        <li>📊 Predictive scheduling models</li>
+                        <li>⚡ Authorization management (API integration)</li>
+                        <li>🔄 Confirmation call workflows</li>
+                        <li>📅 Lead time reduction (42 → 14 days)</li>
+                        <li>📈 No-show pattern analytics</li>
+                    </ul>
+                </div>
+                
+                <!-- Tier 3 -->
+                <div style="background: linear-gradient(135deg, #1a2332 0%, #111827 100%); padding: 1.5rem; border-radius: 12px; border-top: 4px solid #8b5cf6; border: 1px solid rgba(139, 92, 246, 0.3);">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                        <span style="background: #8b5cf6; color: #fff; padding: 0.25rem 0.75rem; border-radius: 20px; font-weight: bold; font-size: 0.85rem;">TIER 3</span>
+                        <span style="color: #a78bfa; font-weight: bold;">EXPAND CAPACITY</span>
+                    </div>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 1rem;"><em>Only after Tier 1–2 succeed</em></p>
+                    <ul style="color: rgba(255,255,255,0.8); font-size: 0.85rem; padding-left: 1.2rem; margin: 0;">
+                        <li>👨‍⚕️ Additional surgeon hours</li>
+                        <li>🏥 OR expansion / satellite sites</li>
+                        <li>👥 Support staff scaling</li>
+                        <li>🛏️ Bed capacity increases</li>
+                        <li style="color: #9ca3af;"><em>⚠️ Premature without Tier 1-2</em></li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <!-- Add New Solution Form -->
@@ -278,24 +336,25 @@
                 
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="constraintType">Constraint Category</label>
+                        <label for="constraintType">Solution Tier</label>
                         <select id="constraintType" required>
-                            <option value="">Select category...</option>
-                            <option value="physical">⚙️ Physical Constraint (OR/Equipment)</option>
-                            <option value="policy">📋 Policy Constraint (Scheduling/Auth)</option>
-                            <option value="behavioral">👥 Behavioral Constraint (Staff/Process)</option>
-                            <option value="quality">✅ Quality Constraint (Defects/Rework)</option>
+                            <option value="">Select tier...</option>
+                            <option value="tier1">🎯 Tier 1 — Yield Fix (no-shows, patient drop-off)</option>
+                            <option value="tier2">� Tier 2 — Flow Stabilization (scheduling, auth)</option>
+                            <option value="tier3">🏥 Tier 3 — Capacity Expansion (only after Tier 1-2)</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="tocAction">TOC Action</label>
+                        <label for="tocAction">Yield Impact Focus</label>
                         <select id="tocAction" required>
-                            <option value="">Select TOC action...</option>
-                            <option value="identify">1. IDENTIFY the constraint</option>
-                            <option value="exploit">2. EXPLOIT the constraint</option>
-                            <option value="subordinate">3. SUBORDINATE everything else</option>
-                            <option value="elevate">4. ELEVATE the constraint</option>
-                            <option value="repeat">5. REPEAT (new constraint)</option>
+                            <option value="">How does this reduce no-shows?</option>
+                            <option value="transport">🚐 Transport/Access barrier</option>
+                            <option value="commitment">📋 Commitment screening</option>
+                            <option value="communication">📱 Patient communication</option>
+                            <option value="financial">💰 Financial counseling</option>
+                            <option value="scheduling">📅 Scheduling reliability</option>
+                            <option value="authorization">⚡ Authorization speed</option>
+                            <option value="other">🔧 Other yield improvement</option>
                         </select>
                     </div>
                 </div>
@@ -347,79 +406,131 @@
             <!-- Filters -->
             <div class="filter-bar">
                 <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="physical">⚙️ Physical</button>
-                <button class="filter-btn" data-filter="policy">📋 Policy</button>
-                <button class="filter-btn" data-filter="behavioral">👥 Behavioral</button>
-                <button class="filter-btn" data-filter="quality">✅ Quality</button>
+                <button class="filter-btn" data-filter="tier1">🎯 Tier 1 — Yield</button>
+                <button class="filter-btn" data-filter="tier2">� Tier 2 — Flow</button>
+                <button class="filter-btn" data-filter="tier3">🏥 Tier 3 — Capacity</button>
             </div>
             
             <div id="solutionsList" class="solutions-list">
-                <!-- Sample Solutions -->
-                <div class="solution-card" data-category="physical">
+                <!-- Tier 1: Yield Solutions -->
+                <div class="solution-card" data-category="tier1">
                     <div class="solution-header">
-                        <h4 class="solution-title">SMED-Based OR Turnaround Optimization</h4>
+                        <h4 class="solution-title">🚐 Transport Support Program</h4>
                         <div class="solution-meta">
-                            <span class="solution-badge badge-constraint">Physical</span>
+                            <span class="solution-badge badge-behavioral">Tier 1 — Yield</span>
                             <span class="solution-badge badge-status in-progress">In Progress</span>
                         </div>
                     </div>
                     <p class="solution-description">
-                        Apply Single-Minute Exchange of Die (SMED) principles to reduce OR turnover from 22 minutes to 8 minutes through parallel processing, pre-staged equipment, and standardized checklists.
+                        Partner with local transport services to provide free/subsidized rides for elderly patients. Address the #1 barrier causing day-of cancellations: "no ride available."
                     </p>
                     <div class="solution-footer">
-                        <span class="solution-impact">💰 +$800K/year | ⏱️ -14 min/case</span>
-                        <span class="solution-date">TOC: EXPLOIT | Owner: OR Team</span>
+                        <span class="solution-impact">💰 +$400K/year | 📉 -8% no-shows</span>
+                        <span class="solution-date">Focus: Transport barrier | Owner: Community Outreach</span>
                     </div>
                 </div>
                 
-                <div class="solution-card" data-category="policy">
+                <div class="solution-card" data-category="tier1">
                     <div class="solution-header">
-                        <h4 class="solution-title">Automated Pre-Authorization Workflow</h4>
+                        <h4 class="solution-title">📋 Commitment Screening Protocol</h4>
                         <div class="solution-meta">
-                            <span class="solution-badge badge-policy">Policy</span>
+                            <span class="solution-badge badge-behavioral">Tier 1 — Yield</span>
                             <span class="solution-badge badge-status">Proposed</span>
                         </div>
                     </div>
                     <p class="solution-description">
-                        Implement RPA bots to auto-submit pre-auth requests to insurance portals, reducing manual entry errors and delays. Integrates with scheduling to prevent booking before auth confirmation.
+                        Implement structured questionnaire at scheduling to identify patients with low commitment signals (hesitant responses, unconfirmed caregiver support, financial concerns). Flag for enhanced follow-up or alternative pathways.
                     </p>
                     <div class="solution-footer">
-                        <span class="solution-impact">💰 +$500K/year | ⏱️ -5 day delay</span>
-                        <span class="solution-date">TOC: SUBORDINATE | Owner: Admin Team</span>
+                        <span class="solution-impact">💰 +$300K/year | 📉 -6% drop-off</span>
+                        <span class="solution-date">Focus: Commitment screening | Owner: Scheduling Team</span>
                     </div>
                 </div>
                 
-                <div class="solution-card" data-category="behavioral">
+                <div class="solution-card" data-category="tier1">
                     <div class="solution-header">
-                        <h4 class="solution-title">Surgeon Protocol Standardization</h4>
+                        <h4 class="solution-title">👥 PSR Training Program</h4>
                         <div class="solution-meta">
-                            <span class="solution-badge badge-behavioral">Behavioral</span>
+                            <span class="solution-badge badge-behavioral">Tier 1 — Yield</span>
+                            <span class="solution-badge badge-status in-progress">In Progress</span>
+                        </div>
+                    </div>
+                    <p class="solution-description">
+                        Train Patient Service Representatives on empathetic communication, barrier identification, and proactive problem-solving. Focus on building patient trust and addressing concerns during the 42-day wait period.
+                    </p>
+                    <div class="solution-footer">
+                        <span class="solution-impact">💰 +$250K/year | 📉 -5% attrition</span>
+                        <span class="solution-date">Focus: Patient communication | Owner: HR & Training</span>
+                    </div>
+                </div>
+
+                <div class="solution-card" data-category="tier1">
+                    <div class="solution-header">
+                        <h4 class="solution-title">💰 Financial Counseling & Cash-Pay Options</h4>
+                        <div class="solution-meta">
+                            <span class="solution-badge badge-behavioral">Tier 1 — Yield</span>
                             <span class="solution-badge badge-status">Proposed</span>
                         </div>
                     </div>
                     <p class="solution-description">
-                        Develop standardized surgical protocols based on best-performer data (32 min procedures). Create pre-configured instrument kits and preference cards to reduce variance from 28-62 minutes to 30-38 minutes.
+                        Offer upfront financial counseling to identify patients who may drop off due to cost concerns. Provide payment plans and cash-pay discounts to bypass insurance auth delays for price-sensitive patients.
                     </p>
                     <div class="solution-footer">
-                        <span class="solution-impact">💰 +$300K/year | ⏱️ -24 min variance</span>
-                        <span class="solution-date">TOC: EXPLOIT | Owner: Dr. Connors</span>
+                        <span class="solution-impact">💰 +$350K/year | 📉 -7% financial drop-off</span>
+                        <span class="solution-date">Focus: Financial counseling | Owner: Finance Team</span>
+                    </div>
+                </div>
+
+                <!-- Tier 2: Flow Stabilization Solutions -->
+                <div class="solution-card" data-category="tier2">
+                    <div class="solution-header">
+                        <h4 class="solution-title">📊 Predictive Scheduling Model</h4>
+                        <div class="solution-meta">
+                            <span class="solution-badge badge-policy">Tier 2 — Flow</span>
+                            <span class="solution-badge badge-status">Proposed</span>
+                        </div>
+                    </div>
+                    <p class="solution-description">
+                        Build data-driven scheduling model that predicts no-show likelihood based on patient demographics, wait time, and engagement signals. Adjust booking density accordingly.
+                    </p>
+                    <div class="solution-footer">
+                        <span class="solution-impact">💰 +$300K/year | 📈 Consistent daily volume</span>
+                        <span class="solution-date">Focus: Scheduling reliability | Owner: Analytics Team</span>
                     </div>
                 </div>
                 
-                <div class="solution-card" data-category="quality">
+                <div class="solution-card" data-category="tier2">
                     <div class="solution-header">
-                        <h4 class="solution-title">Post-Op Follow-Up Automation</h4>
+                        <h4 class="solution-title">⚡ Authorization API Integration</h4>
                         <div class="solution-meta">
-                            <span class="solution-badge badge-quality">Quality</span>
+                            <span class="solution-badge badge-policy">Tier 2 — Flow</span>
                             <span class="solution-badge badge-status completed">Completed</span>
                         </div>
                     </div>
                     <p class="solution-description">
-                        Implemented automated SMS/email follow-up system for all post-op patients at 24h, 48h, and 7-day intervals. Includes symptom checklist and direct escalation path for concerns.
+                        Implement direct API connections with major insurers to auto-submit pre-auth requests and receive real-time status updates. Reduces wait from 42 days to 14 days, cutting patient attrition during the wait period.
                     </p>
                     <div class="solution-footer">
-                        <span class="solution-impact">💰 +$100K/year | 📈 95% follow-up rate</span>
-                        <span class="solution-date">TOC: SUBORDINATE | Owner: Nursing Team</span>
+                        <span class="solution-impact">💰 +$500K/year | ⏱️ 42→14 day wait</span>
+                        <span class="solution-date">Focus: Authorization speed | Owner: IT & Admin</span>
+                    </div>
+                </div>
+                
+                <!-- Tier 3: Capacity (Only after Tier 1-2) -->
+                <div class="solution-card" data-category="tier3">
+                    <div class="solution-header">
+                        <h4 class="solution-title">🏥 Second Surgeon Hours (Conditional)</h4>
+                        <div class="solution-meta">
+                            <span class="solution-badge badge-constraint">Tier 3 — Capacity</span>
+                            <span class="solution-badge badge-status" style="background: rgba(139, 92, 246, 0.15); color: #a78bfa; border-color: #8b5cf6;">Blocked</span>
+                        </div>
+                    </div>
+                    <p class="solution-description">
+                        <strong>⚠️ BLOCKED:</strong> Adding surgeon capacity is premature until Tier 1-2 solutions reduce no-show rate to &lt;10%. Current OR has available capacity; the constraint is upstream yield loss, not surgical capacity.
+                    </p>
+                    <div class="solution-footer">
+                        <span class="solution-impact">⏸️ Deferred | Prerequisite: Tier 1-2 success</span>
+                        <span class="solution-date">Status: Waiting for yield stabilization</span>
                     </div>
                 </div>
             </div>
@@ -430,25 +541,33 @@
             <h3 style="color: #00d4ff; text-align: center; margin-bottom: 1.5rem;">📊 Solution Impact Summary</h3>
             <div class="metrics-grid">
                 <div class="metric-card">
-                    <h4>Total Solutions</h4>
-                    <p class="metric-value" style="color: #00d4ff;">4</p>
-                    <p class="metric-label">Tracked</p>
+                    <h4>Tier 1 — Yield</h4>
+                    <p class="metric-value" style="color: #22c55e;">4</p>
+                    <p class="metric-label">Solutions</p>
                 </div>
                 <div class="metric-card">
-                    <h4>In Progress</h4>
-                    <p class="metric-value" style="color: #f59e0b;">1</p>
-                    <p class="metric-label">Active</p>
+                    <h4>Tier 2 — Flow</h4>
+                    <p class="metric-value" style="color: #00d4ff;">2</p>
+                    <p class="metric-label">Solutions</p>
                 </div>
                 <div class="metric-card">
-                    <h4>Completed</h4>
-                    <p class="metric-value" style="color: #10b981;">1</p>
-                    <p class="metric-label">Done</p>
+                    <h4>Tier 3 — Capacity</h4>
+                    <p class="metric-value" style="color: #8b5cf6;">1</p>
+                    <p class="metric-label">Blocked</p>
                 </div>
                 <div class="metric-card">
-                    <h4>Est. Total Impact</h4>
-                    <p class="metric-value" style="color: #10b981;">+$1.7M</p>
-                    <p class="metric-label">Per Year</p>
+                    <h4>Est. Yield Impact</h4>
+                    <p class="metric-value" style="color: #10b981;">-26%</p>
+                    <p class="metric-label">No-Show Reduction</p>
                 </div>
+            </div>
+            
+            <!-- Key Message -->
+            <div style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(0, 212, 255, 0.1) 100%); border: 1px solid rgba(34, 197, 94, 0.3); border-radius: 12px; padding: 1.5rem; margin-top: 2rem; text-align: center;">
+                <p style="color: rgba(255,255,255,0.9); font-size: 1rem; margin: 0;">
+                    <strong style="color: #34d399;">🎯 Primary Metric:</strong> Reduce no-show rate from 18% → &lt;10% before considering any capacity expansion.
+                    <br><span style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">The clinic loses potential throughput primarily due to upstream commitment failures rather than insufficient surgical capacity.</span>
+                </p>
             </div>
         </section>
     </main>

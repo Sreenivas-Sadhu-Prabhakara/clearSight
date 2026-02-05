@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Context - ClearEyes Analysis</title>
+    <title>Context - ClearEyes Analysis</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
@@ -11,17 +11,17 @@
     <header class="navbar">
         <div class="navbar-container">
             <div class="logo">
-                <h1>🏥 ClearEyes Analysis</h1>
-                <p class="subtitle">Theory of Constraints & Process Engineering</p>
+                <h1>🏥 ClearEyes</h1>
+                <p class="subtitle">Theory of Constraints Analysis</p>
             </div>
             <nav class="nav-menu" aria-label="Main Navigation">
                 <ul>
                     <li><a href="../index.html">Home</a></li>
-                    <li><a href="context.html" class="active">Business Context</a></li>
-                    <li><a href="challenges.html">Challenge Map</a></li>
-                    <li><a href="actual-issues.html">Root Cause Analysis</a></li>
-                    <li><a href="financial-analysis.html">Financial Models</a></li>
-                    <li><a href="strategy.html">Strategic Plan</a></li>
+                    <li><a href="context.html" class="active">Context</a></li>
+                    <li><a href="challenges.html">Challenges</a></li>
+                    <li><a href="actual-issues.html">Root Cause</a></li>
+                    <li><a href="financial-analysis.html">Financials</a></li>
+                    <li><a href="strategy.html">Strategy</a></li>
                     <li><a href="solutions.html">Solutions</a></li>
                 </ul>
             </nav>
@@ -39,7 +39,7 @@
 
         <!-- Key Metrics -->
         <section class="content-section" style="margin-bottom: 2rem;">
-            <div class="overview-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1.5rem;">
+            <div class="overview-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem;">
                 <div class="metric-card">
                     <h4>Annual Surgeries</h4>
                     <p class="metric-value">5,283</p>
@@ -55,10 +55,10 @@
                     <p class="metric-value">$1,338</p>
                     <p class="metric-label">Flat Rate</p>
                 </div>
-                <div class="metric-card">
-                    <h4>Utilization</h4>
-                    <p class="metric-value">50%</p>
-                    <p class="metric-label">Capacity Used</p>
+                <div class="metric-card" style="border-color: #f59e0b;">
+                    <h4 style="color: #f59e0b;">Auth Lead Time</h4>
+                    <p class="metric-value" style="color: #f59e0b;">42 Days</p>
+                    <p class="metric-label">Insurance Wait</p>
                 </div>
             </div>
         </section>
@@ -67,12 +67,12 @@
         <section class="content-section" style="margin-bottom: 2rem;">
             <h2 style="color: var(--accent); margin-bottom: 1rem;">Business Overview</h2>
             <p style="color: var(--text-muted); margin-bottom: 1rem;">
-                <strong style="color: var(--text-primary);">ClearEyes Cataracts</strong> is a specialized ophthalmology center focused on cataract surgery. The organization operates a single high-volume surgical center facing meaningful operational challenges.
+                <strong style="color: var(--text-primary);">ClearEyes Cataracts</strong> is a specialized ophthalmology center focused on cataract surgery. The organization operates a single high-volume surgical center facing meaningful operational challenges—primarily around patient yield and conversion rather than surgical capacity.
             </p>
             <ul style="color: var(--text-muted); padding-left: 1.2rem; margin-bottom: 0;">
                 <li><strong style="color: var(--text-primary);">Mission:</strong> Provide high-quality, efficient cataract surgery services to the local community.</li>
-                <li><strong style="color: var(--text-primary);">Market Position:</strong> Competition from larger hospitals and specialized clinics. Throughput and efficiency are critical.</li>
-                <li><strong style="color: var(--text-primary);">Clinical Excellence:</strong> Dr. Connors (CMO) leads the surgical team, but operational bottlenecks limit growth.</li>
+                <li><strong style="color: var(--text-primary);">Market Position:</strong> Competition from larger hospitals and specialized clinics. Patient retention and conversion are critical.</li>
+                <li><strong style="color: var(--text-primary);">Operational Challenge:</strong> Insurance authorization delays (~42 days) increase patient no-shows and conversion failures, reducing surgical volume.</li>
             </ul>
         </section>
 
@@ -80,7 +80,7 @@
         <section class="content-section" style="margin-bottom: 2rem;">
             <h2 style="color: var(--accent); margin-bottom: 1rem;">End-to-End Operational Flow</h2>
             <div class="visual-container" style="background: linear-gradient(135deg, #0d1321 0%, #0a0f1a 100%); padding: 2rem 1rem; border-radius: 12px; border: 2px solid rgba(0, 212, 255, 0.3);">
-                <svg width="100%" height="160" viewBox="0 0 900 160" xmlns="http://www.w3.org/2000/svg">
+                <svg width="100%" height="200" viewBox="0 0 900 200" xmlns="http://www.w3.org/2000/svg">
                     <defs>
                         <filter id="flowGlowCtx" x="-20%" y="-50%" width="140%" height="200%">
                             <feGaussianBlur stdDeviation="4" result="glow"/>
@@ -92,53 +92,91 @@
                         </filter>
                         <linearGradient id="flowLineCtx" x1="0%" y1="0%" x2="100%" y2="0%">
                             <stop offset="0%" stop-color="#00d4ff"/>
-                            <stop offset="50%" stop-color="#ef4444"/>
+                            <stop offset="35%" stop-color="#f59e0b"/>
+                            <stop offset="60%" stop-color="#00d4ff"/>
                             <stop offset="100%" stop-color="#00d4ff"/>
                         </linearGradient>
                     </defs>
                     
                     <!-- Flow Line Background -->
-                    <line x1="90" y1="80" x2="810" y2="80" stroke="url(#flowLineCtx)" stroke-width="8" opacity="0.2" stroke-linecap="round"/>
-                    <line x1="90" y1="80" x2="810" y2="80" stroke="url(#flowLineCtx)" stroke-width="4" stroke-linecap="round" filter="url(#flowGlowCtx)"/>
+                    <line x1="90" y1="100" x2="810" y2="100" stroke="url(#flowLineCtx)" stroke-width="8" opacity="0.2" stroke-linecap="round"/>
+                    <line x1="90" y1="100" x2="810" y2="100" stroke="url(#flowLineCtx)" stroke-width="4" stroke-linecap="round" filter="url(#flowGlowCtx)"/>
                     
                     <!-- Patient Intake -->
-                    <rect x="30" y="50" width="120" height="60" fill="#1a2332" stroke="#00d4ff" stroke-width="2" rx="10" filter="url(#nodeGlowCtx)"/>
-                    <text x="90" y="85" text-anchor="middle" fill="#00d4ff" font-size="13" font-weight="bold">Patient Intake</text>
+                    <rect x="30" y="70" width="120" height="60" fill="#1a2332" stroke="#00d4ff" stroke-width="2" rx="10" filter="url(#nodeGlowCtx)"/>
+                    <text x="90" y="105" text-anchor="middle" fill="#00d4ff" font-size="13" font-weight="bold">Patient Intake</text>
                     <!-- Arrow 1 -->
-                    <polygon points="165,80 185,74 185,86" fill="#00d4ff"/>
+                    <polygon points="165,100 185,94 185,106" fill="#00d4ff"/>
                     
-                    <!-- Pre-Op -->
-                    <rect x="200" y="50" width="120" height="60" fill="#1a2332" stroke="#00d4ff" stroke-width="2" rx="10" filter="url(#nodeGlowCtx)"/>
-                    <text x="260" y="76" text-anchor="middle" fill="#00d4ff" font-size="12" font-weight="bold">Pre-Op</text>
-                    <text x="260" y="92" text-anchor="middle" fill="#9ca3af" font-size="11">Assessment</text>
+                    <!-- Insurance Auth - CONSTRAINT HIGHLIGHTED -->
+                    <rect x="200" y="50" width="140" height="100" fill="#f59e0b" stroke="#fbbf24" stroke-width="4" rx="12" filter="url(#flowGlowCtx)"/>
+                    <text x="270" y="90" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">⏳ Insurance Auth</text>
+                    <text x="270" y="108" text-anchor="middle" fill="#fff" font-size="11">42-Day Wait</text>
+                    <text x="270" y="125" text-anchor="middle" fill="#fef3c7" font-size="10">Yield Loss Risk</text>
+                    <!-- Constraint Indicator -->
+                    <circle cx="270" cy="32" r="16" fill="#f59e0b" stroke="#fff" stroke-width="3"/>
+                    <text x="270" y="38" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">!</text>
+                    <text x="270" y="18" text-anchor="middle" fill="#fbbf24" font-size="9" font-weight="bold">CONSTRAINT</text>
                     <!-- Arrow 2 -->
-                    <polygon points="335,80 355,74 355,86" fill="#00d4ff"/>
+                    <polygon points="355,100 375,94 375,106" fill="#f59e0b"/>
                     
                     <!-- Scheduling -->
-                    <rect x="370" y="50" width="120" height="60" fill="#1a2332" stroke="#00d4ff" stroke-width="2" rx="10" filter="url(#nodeGlowCtx)"/>
-                    <text x="430" y="76" text-anchor="middle" fill="#00d4ff" font-size="12" font-weight="bold">Scheduling</text>
-                    <text x="430" y="92" text-anchor="middle" fill="#9ca3af" font-size="11">& Admin</text>
+                    <rect x="390" y="70" width="120" height="60" fill="#1a2332" stroke="#00d4ff" stroke-width="2" rx="10" filter="url(#nodeGlowCtx)"/>
+                    <text x="450" y="96" text-anchor="middle" fill="#00d4ff" font-size="12" font-weight="bold">Scheduling</text>
+                    <text x="450" y="112" text-anchor="middle" fill="#9ca3af" font-size="11">& Pre-Op</text>
                     <!-- Arrow 3 -->
-                    <polygon points="505,80 525,74 525,86" fill="#00d4ff"/>
+                    <polygon points="525,100 545,94 545,106" fill="#00d4ff"/>
                     
-                    <!-- Surgery - CONSTRAINT HIGHLIGHTED -->
-                    <rect x="540" y="40" width="140" height="80" fill="#ef4444" stroke="#ff6b6b" stroke-width="4" rx="12" filter="url(#flowGlowCtx)"/>
-                    <text x="610" y="85" text-anchor="middle" fill="#fff" font-size="15" font-weight="bold">⚡ Surgery (OR)</text>
-                    <!-- Constraint Indicator -->
-                    <circle cx="610" cy="22" r="16" fill="#ef4444" stroke="#fff" stroke-width="3"/>
-                    <text x="610" y="28" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">!</text>
-                    <text x="610" y="8" text-anchor="middle" fill="#ff6b6b" font-size="10" font-weight="bold">CONSTRAINT</text>
+                    <!-- Surgery -->
+                    <rect x="560" y="70" width="120" height="60" fill="#1a2332" stroke="#00d4ff" stroke-width="2" rx="10" filter="url(#nodeGlowCtx)"/>
+                    <text x="620" y="105" text-anchor="middle" fill="#00d4ff" font-size="13" font-weight="bold">Surgery (OR)</text>
                     <!-- Arrow 4 -->
-                    <polygon points="695,80 715,74 715,86" fill="#00d4ff"/>
+                    <polygon points="695,100 715,94 715,106" fill="#00d4ff"/>
                     
                     <!-- Post-Op -->
-                    <rect x="730" y="50" width="120" height="60" fill="#1a2332" stroke="#00d4ff" stroke-width="2" rx="10" filter="url(#nodeGlowCtx)"/>
-                    <text x="790" y="85" text-anchor="middle" fill="#00d4ff" font-size="13" font-weight="bold">Post-Op Care</text>
+                    <rect x="730" y="70" width="120" height="60" fill="#1a2332" stroke="#00d4ff" stroke-width="2" rx="10" filter="url(#nodeGlowCtx)"/>
+                    <text x="790" y="105" text-anchor="middle" fill="#00d4ff" font-size="13" font-weight="bold">Post-Op Care</text>
+                    
+                    <!-- Yield Loss Indicator -->
+                    <text x="270" y="175" text-anchor="middle" fill="#f59e0b" font-size="11" font-weight="bold">⚠️ No-Shows &amp; Conversion Failures During Wait</text>
                 </svg>
             </div>
             <p style="text-align: center; color: var(--text-muted); font-style: italic; margin-top: 1rem;">
-                The patient journey from intake to post-op. The OR is the primary constraint limiting throughput.
+                The patient journey from intake to post-op. <strong style="color: #f59e0b;">Insurance authorization delays (~42 days)</strong> are the primary constraint, causing upstream yield loss through no-shows and conversion failures.
             </p>
+        </section>
+
+        <!-- Primary Constraint Section -->
+        <section class="content-section" style="margin-bottom: 2rem; background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(239, 68, 68, 0.05)); border-left: 4px solid #f59e0b; border-radius: 10px;">
+            <h2 style="color: #f59e0b; margin-bottom: 1rem;">🎯 Primary Operational Constraint</h2>
+            <div style="background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 8px; padding: 1.2rem; margin-bottom: 1.5rem;">
+                <p style="color: var(--text-primary); font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">
+                    The primary operational constraint is <span style="color: #f59e0b;">upstream yield loss</span> caused by patient no-shows and conversion failures.
+                </p>
+                <p style="color: var(--text-muted); margin: 0;">
+                    Insurance authorization adds approximately a <strong style="color: #ef4444;">6-week (42-day) lead time</strong> for insured patients, significantly increasing the risk of no-shows and lost conversions.
+                </p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
+                <div style="background: var(--bg-card); border-radius: 8px; padding: 1rem; border: 1px solid rgba(0, 212, 255, 0.2);">
+                    <h4 style="color: #f59e0b; margin-bottom: 0.5rem;">⏳ 42-Day Auth Wait</h4>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin: 0;">
+                        Insurance pre-authorization creates a 6-week delay between patient commitment and surgery, during which patients may disengage or seek alternatives.
+                    </p>
+                </div>
+                <div style="background: var(--bg-card); border-radius: 8px; padding: 1rem; border: 1px solid rgba(0, 212, 255, 0.2);">
+                    <h4 style="color: #ef4444; margin-bottom: 0.5rem;">📉 Patient Attrition</h4>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin: 0;">
+                        Longer wait times increase no-show rates and reduce conversion from consultation to surgery, leading to lost revenue and fewer completed procedures.
+                    </p>
+                </div>
+                <div style="background: var(--bg-card); border-radius: 8px; padding: 1rem; border: 1px solid rgba(0, 212, 255, 0.2);">
+                    <h4 style="color: #00d4ff; margin-bottom: 0.5rem;">💡 The Insight</h4>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin: 0;">
+                        Improving OR efficiency alone won't help if patients never arrive. The constraint is upstream—maximizing yield from scheduled patients is key.
+                    </p>
+                </div>
+            </div>
         </section>
 
         <!-- Organizational Structure -->
@@ -193,39 +231,46 @@
                         <tr>
                             <th>Metric</th>
                             <th>Current Value</th>
-                            <th>Target/Capacity</th>
-                            <th>Gap</th>
+                            <th>Notes</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>Annual Surgeries</td>
                             <td>5,283</td>
-                            <td>10,566 (Optimized Capacity)</td>
-                            <td style="color: var(--danger);">-5,283 (50%)</td>
+                            <td>Cataract procedures performed per year</td>
                         </tr>
-                        <tr>
-                            <td>Utilization</td>
-                            <td>50%</td>
-                            <td>85-90%</td>
-                            <td style="color: var(--danger);">Significant Underutilization</td>
+                        <tr style="background: rgba(245, 158, 11, 0.1);">
+                            <td><strong style="color: #f59e0b;">Insurance Auth Lead Time</strong></td>
+                            <td><strong style="color: #f59e0b;">42 Days</strong></td>
+                            <td style="color: var(--danger);">Primary driver of no-shows and conversion failures</td>
                         </tr>
                         <tr>
                             <td>Operating Profit</td>
                             <td>$2,751,904</td>
-                            <td>$7,014,228</td>
-                            <td style="color: var(--danger);">-$4.26M</td>
+                            <td>Current annual operating profit</td>
+                        </tr>
+                        <tr>
+                            <td>Contribution Margin</td>
+                            <td>$806.80</td>
+                            <td>Per surgery ($1,338 revenue − $531.20 variable costs)</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 1rem; font-style: italic;">
+                <strong style="color: #f59e0b;">Note:</strong> The 42-day insurance authorization wait is the primary driver of patient no-shows and conversion failures. Surgery capacity is often underutilized due to upstream no-shows rather than physical room limitations.
+            </p>
         </section>
 
         <!-- Strategic Insight -->
         <section class="content-section" style="background: var(--bg-card); border-left: 4px solid var(--accent); border-radius: 10px; margin-bottom: 2rem;">
             <h3 style="color: var(--accent); margin-bottom: 1rem;">Strategic Insight</h3>
+            <p style="color: var(--text-muted); line-height: 1.8; margin-bottom: 1rem;">
+                ClearEyes operates in a mature market with commoditized services. The root cause of lost surgical volume is not OR inefficiency—it is <strong style="color: #f59e0b;">upstream yield loss</strong>. Surgery capacity is often underutilized due to upstream no-shows rather than physical room limitations.
+            </p>
             <p style="color: var(--text-muted); line-height: 1.8;">
-                Clear Eyes operates in a mature market with commoditized services. Competitive differentiation requires operational excellence: faster access to surgery, superior outcomes, and best-in-class patient experience. Current underutilization of capacity (50% vs. 85-90% potential) represents both a challenge and an opportunity.
+                The <strong style="color: #ef4444;">42-day insurance authorization wait</strong> creates a critical gap between patient commitment and surgery. During this period, patients disengage, no-show, or seek care elsewhere. Addressing this constraint requires reducing authorization lead times, improving patient engagement during the wait, and optimizing conversion rates—not just speeding up surgeries.
             </p>
         </section>
     </main>

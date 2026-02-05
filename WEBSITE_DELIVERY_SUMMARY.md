@@ -1,8 +1,8 @@
-# 🎉 CLEARSIGHT WEBSITE - PROJECT DELIVERY SUMMARY
+# 🎉 CLEAREYES WEBSITE - PROJECT DELIVERY SUMMARY
 
 ## ✅ What Has Been Delivered
 
-A **comprehensive, professional, multi-page interactive website** analyzing clearSight cataract surgery operations through **Theory of Constraints** and **Process Engineering**.
+A **comprehensive, professional, multi-page interactive website** analyzing ClearEyes cataract surgery operations through **Theory of Constraints** and **Process Engineering**.
 
 ---
 
@@ -132,7 +132,7 @@ Operation OT: ███████████░░ 95%
 | **Costs** | 60% staff + 25% consumables + 15% overhead |
 | **Throughput** | 4-6 surgeries/day = 100-120/month |
 | **Demographics** | Ages 50-75, lower-middle income |
-| **Competition** | Premium: ₹30-50K vs clearSight: ₹8-12K |
+| **Competition** | Premium: ₹30-50K vs ClearEyes: ₹8-12K |
 | **Constraints** | Single surgeon, bed capacity, affordability |
 
 ---
@@ -154,7 +154,8 @@ The problem is NOT:
 - ❌ Nursing care (well-trained staff)
 
 The problem IS:
-- ✅ System bottleneck (single surgeon)
+- ✅ Multi-factor flow instability
+- ✅ Upstream commitment failures
 - ✅ Bed capacity constraint (4-6 overnight)
 - ✅ Patient access limitation
 - ✅ Affordability barrier
@@ -176,7 +177,7 @@ The problem IS:
 - **Opportunity:** 3.8x current revenue possible
 
 ### Resource Utilization
-- **Surgeon:** 90% (BOTTLENECK)
+- **Surgeon:** 90% (Available Capacity)
 - **Beds:** 90% (CONSTRAINT)
 - **Nursing:** 80%
 - **Theater:** 95%
@@ -223,7 +224,7 @@ The problem IS:
 
 ### Navbar (All Pages)
 ```
-[clearSight Logo] | Home | Context | Challenges | Issues | P&L | Strategy
+[ClearEyes Logo] | Home | Context | Challenges | Issues | P&L | Strategy
 ```
 
 ### Page Structure
@@ -297,7 +298,7 @@ Review Strategy (learn solutions)
 
 ### For Learning
 1. Open `context.html` in browser
-2. Read "What is clearSight?" section
+2. Read "What is ClearEyes?" section
 3. Study Patient Journey Funnel
 4. Examine Daily Operations
 5. Review Business Model
@@ -322,7 +323,7 @@ Review Strategy (learn solutions)
 ## 📈 Key Insights from Website
 
 ### Business Reality
-clearSight operates on **high-volume, low-margin model** with structural constraints limiting growth.
+ClearEyes operates on **high-volume, low-margin model** with structural constraints limiting growth.
 
 ### Strategic Position
 **Cost leader** in lower-income segment with opportunity for **systematic efficiency improvements**.
@@ -462,7 +463,7 @@ clearSight operates on **high-volume, low-margin model** with structural constra
 
 You now have a **comprehensive, interactive, professional website** that:
 
-✅ Visualizes clearSight's business model
+✅ Visualizes ClearEyes' business model
 ✅ Shows where patients are lost (74% attrition)
 ✅ Identifies system constraints (surgeon, beds)
 ✅ Quantifies financial impact (₹10.65L lost/year)

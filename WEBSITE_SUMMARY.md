@@ -1,8 +1,8 @@
-# ✨ clearSight Multi-Page Website - Visual Analysis Portal
+# ✨ ClearEyes Multi-Page Website - Visual Analysis Portal
 
 ## 🎯 What Was Built
 
-A **comprehensive, interactive, multi-page website** analyzing the clearSight cataract surgery facility through:
+A **comprehensive, interactive, multi-page website** analyzing the ClearEyes cataract surgery facility through:
 - **Theory of Constraints** (Goldratt's "The Goal")
 - **Process Engineering** principles
 - **Extensive SVG visualizations**
@@ -30,7 +30,7 @@ A **comprehensive, interactive, multi-page website** analyzing the clearSight ca
    - ⏰ **Daily Operations Flow (Timeline-Based)**
      * 6 AM - 8:30 AM: Morning Phase
      * 8:30 AM - 1:00 PM: Surge Phase
-     * 1:00 PM - 3:00 PM: Peak Phase (BOTTLENECK)
+     * 1:00 PM - 3:00 PM: Peak Phase (High Utilization)
      * 3:00 PM - 5:00 PM: Wind Down
      * 5:00 PM - 8:00 PM: Evening Phase
      * 8:00 PM - 6:00 AM: Night Watch & Overnight Care
@@ -75,7 +75,7 @@ A **comprehensive, interactive, multi-page website** analyzing the clearSight ca
 
 ### 3️⃣ **Actual Issues Page** (actual-issues.html) ✅ COMPLETE
    - Root cause analysis using systems thinking
-   - Real bottlenecks vs. perceived problems
+   - Real constraints vs. perceived problems
    - Identification of constraints per Goldratt
    - Hidden inefficiencies and waste
 
@@ -220,7 +220,7 @@ Current Throughput:      100-120 surgeries/month
 ## 💻 File Structure
 
 ```
-clearSight-Cataracts/
+ClearEyes-Cataracts/
 ├── index.html                 ← Home page (navigation hub)
 ├── context.html               ← Context page with SVG diagrams ✅
 ├── challenges.html            ← Challenges page ✅
@@ -242,7 +242,7 @@ clearSight-Cataracts/
 
 ### Context Page Highlights
 
-1. **What is clearSight?**
+1. **What is ClearEyes?**
    - Business overview
    - Mission and positioning
    - Operational model

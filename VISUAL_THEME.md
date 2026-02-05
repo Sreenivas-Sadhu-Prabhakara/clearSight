@@ -1,4 +1,4 @@
-# ClearSight Visual Theme & Design System
+# ClearEyes Visual Theme & Design System
 
 ## Color Palette
 

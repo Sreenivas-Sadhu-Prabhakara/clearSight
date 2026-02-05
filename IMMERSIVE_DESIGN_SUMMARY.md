@@ -1,12 +1,12 @@
-# ClearSight Visual Enhancement - Complete Summary
+# ClearEyes Visual Enhancement - Complete Summary
 
 ## 🎨 Project Overview
 
-The ClearSight-Cataracts analysis portal has been completely redesigned with a visually immersive, modern medical-grade color theme and enhanced interactivity. The new design emphasizes clarity, professionalism, and engaging user experience.
+The ClearEyes-Cataracts analysis portal has been completely redesigned with a visually immersive, modern medical-grade color theme and enhanced interactivity. The new design emphasizes clarity, professionalism, and engaging user experience.
 
 ---
 
-## 🌈 Color Theme - "ClearSight Medical Azure"
+## 🌈 Color Theme - "ClearEyes Medical Azure"
 
 ### Primary Color Palette
 - **Primary Dark**: `#0f4c75` - Deep Ocean Blue (main brand color)
@@ -132,7 +132,7 @@ The ClearSight-Cataracts analysis portal has been completely redesigned with a v
 
 ### CSS Files
 1. **css/styles.css** - Complete redesigned stylesheet with:
-   - New ClearSight color variables
+   - New ClearEyes color variables
    - Enhanced component styling
    - Immersive visual effects
    - Responsive design rules
@@ -212,7 +212,7 @@ background: linear-gradient(135deg, var(--primary) 0%, var(--accent-teal) 100%);
 
 ### Navigation Structure
 ```
-ClearSight Portal (index.html)
+ClearEyes Portal (index.html)
 ├── Business Context (pages/context.html)
 ├── Key Challenges (pages/challenges.html)
 ├── Root Cause Analysis (pages/actual-issues.html)
@@ -349,7 +349,7 @@ To customize the theme, update the CSS variables at the top of `styles.css` and 
 
 ## 🎉 Result
 
-The ClearSight-Cataracts website is now a **visually immersive, professionally-designed medical analysis portal** that:
+The ClearEyes-Cataracts website is now a **visually immersive, professionally-designed medical analysis portal** that:
 - Engages users with modern, smooth interactions
 - Builds trust through medical-grade color psychology
 - Ensures clarity through excellent typography and hierarchy
